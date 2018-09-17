@@ -1,7 +1,6 @@
-#include "scene.h"
-
 #include <thread>
-#include "ext/yocto_utils.h"
+#include "../yocto/yocto_gl.h"
+using namespace ygl;
 
 ray3f eval_camera(const camera* cam, const vec2f& uv) {
     auto h = 2 * std::tan(cam->fovy / 2);

@@ -1,7 +1,8 @@
 #include <vector>
-#include "scene.h"
-#include "ext/yocto_math.h"
-#include "ext/yocto_utils.h"
+#include "../yocto/yocto_gl.h"
+//#include "../yocto/yocto_gltf.h"
+
+using namespace ygl;
 
 shape* make_building(shape* base, float height) {
 	//initial shape is only a single quad, the base of the building
