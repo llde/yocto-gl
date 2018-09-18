@@ -43,13 +43,16 @@ material* make_material(const std::string& name, const vec3f& kd,
 void add_instance(scene* scn, const std::string& name, const frame3f& f,
 	shape* shp, material* mat) {
 	if (!shp || !mat) return;
-	// IL TUO CODICE VA QUA
-	instance* inst = new instance{ name, f, mat, shp };
+	
+	shape_group* shpgrp = new shape_group{};
+	shpgrp->shapes.push_back(shp);
+
+	instance* inst = new instance{ name, f, shpgrp }; //material?
 	if (std::find(scn->instances.begin(), scn->instances.end(), inst) == scn->instances.end()) {
 		scn->instances.push_back(inst);
 	}
 	if (std::find(scn->shapes.begin(), scn->shapes.end(), shp) == scn->shapes.end()) {
-		scn->shapes.push_back(shp);
+		scn->shapes.push_back(shpgrp);
 	}
 	if (std::find(scn->materials.begin(), scn->materials.end(), mat) == scn->materials.end()) {
 		scn->materials.push_back(mat);
@@ -73,22 +76,26 @@ scene* init_scene() {
 	shp->norm = { { 0, 1, 0 },{ 0, 1, 0 },{ 0, 1, 0 },{ 0, 1, 0 } };
 	shp->texcoord = { { -10, -10 },{ 10, -10 },{ 10, 10 },{ -10, 10 } };
 	shp->triangles = { { 0, 1, 2 },{ 0, 2, 3 } };
-	scn->shapes.push_back(shp);
-	scn->instances.push_back(new instance{ "floor", identity_frame3f, mat, shp });
+	shape_group* shpgrp = new shape_group{};
+	shpgrp->shapes.push_back(shp);
+	scn->shapes.push_back(shpgrp);
+	scn->instances.push_back(new instance{ "floor", identity_frame3f, shpgrp }); //material?
 	// add light
 	auto lshp = new shape{ "light" };
 	lshp->pos = { { 1.4f, 8, 6 },{ -1.4f, 8, 6 } };
 	lshp->points = { 0, 1 };
-	scn->shapes.push_back(lshp);
+	shape_group* lshpgrp = new shape_group{};
+	lshpgrp->shapes.push_back(lshp);
+	scn->shapes.push_back(lshpgrp);
 	auto lmat = new material{ "light" };
 	lmat->ke = { 100, 100, 100 };
 	scn->materials.push_back(lmat);
 	scn->instances.push_back(
-		new instance{ "light", identity_frame3f, lmat, lshp });
+		new instance{ "light", identity_frame3f, lshpgrp }); //material?
 	// add camera
 	auto cam = new camera{ "cam" };
 	cam->frame = lookat_frame3f({ 0, 4, 10 }, { 0, 1, 0 }, { 0, 1, 0 });
-	cam->fovy = 15 * pif / 180.f;
+	cam->yfov= 15 * pif / 180.f;
 	cam->aspect = 16.0f / 9.0f;
 	cam->aperture = 0;
 	cam->focus = length(vec3f{ 0, 4, 10 } -vec3f{ 0, 1, 0 });
@@ -99,10 +106,10 @@ scene* init_scene() {
 int main(int argc, char** argv ) {
 	//parsing
 	auto parser =
-		yu::cmdline::make_parser(argc, argv, "model", "creates simple scenes");
-	auto sceneout = yu::cmdline::parse_opts(
+		ygl::cmdline::make_parser(argc, argv, "model", "creates simple scenes");
+	auto sceneout = ygl::cmdline::parse_opts(
 		parser, "--output", "-o", "output scene", "out.obj");
-	yu::cmdline::check_parser(parser);
+	ygl::cmdline::check_parser(parser);
 
 	//printf("creating scene %s\n", type.c_str());
 

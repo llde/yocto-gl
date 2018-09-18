@@ -3,7 +3,7 @@
 using namespace ygl;
 
 ray3f eval_camera(const camera* cam, const vec2f& uv) {
-    auto h = 2 * std::tan(cam->fovy / 2);
+    auto h = 2 * std::tan(cam->yfov / 2);
     auto w = h * cam->aspect;
     auto o = cam->frame.o;
     auto q = cam->frame.x * w * (uv.x - 0.5f) +
@@ -120,18 +120,18 @@ image4f raytrace(
 int main(int argc, char** argv) {
     // command line parsing
     auto parser =
-        yu::cmdline::make_parser(argc, argv, "raytrace", "raytrace scene");
-    auto resolution = yu::cmdline::parse_opti(
+        ygl::cmdline::make_parser(argc, argv, "raytrace", "raytrace scene");
+    auto resolution = ygl::cmdline::parse_opti(
         parser, "--resolution", "-r", "vertical resolution", 720);
-    auto samples = yu::cmdline::parse_opti(
+    auto samples = ygl::cmdline::parse_opti(
         parser, "--samples", "-s", "per-pixel samples", 1);
-    auto amb = yu::cmdline::parse_optf(
+    auto amb = ygl::cmdline::parse_optf(
         parser, "--ambient", "-a", "ambient color", 0.1f);
-    auto imageout = yu::cmdline::parse_opts(
+    auto imageout = ygl::cmdline::parse_opts(
         parser, "--output", "-o", "output image", "out.png");
-    auto scenein = yu::cmdline::parse_args(
+    auto scenein = ygl::cmdline::parse_args(
         parser, "scenein", "input scene", "scene.obj", true);
-    yu::cmdline::check_parser(parser);
+    ygl::cmdline::check_parser(parser);
 
     // load scene
     printf("loading scene %s\n", scenein.c_str());
