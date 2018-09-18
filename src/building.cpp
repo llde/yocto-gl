@@ -51,7 +51,7 @@ void add_instance(scene* scn, const std::string& name, const frame3f& f,
 	if (std::find(scn->instances.begin(), scn->instances.end(), inst) == scn->instances.end()) {
 		scn->instances.push_back(inst);
 	}
-	if (std::find(scn->shapes.begin(), scn->shapes.end(), shp) == scn->shapes.end()) {
+	if (std::find(scn->shapes.begin(), scn->shapes.end(), shpgrp) == scn->shapes.end()) {
 		scn->shapes.push_back(shpgrp);
 	}
 	if (std::find(scn->materials.begin(), scn->materials.end(), mat) == scn->materials.end()) {
@@ -94,7 +94,10 @@ scene* init_scene() {
 		new instance{ "light", identity_frame3f, lshpgrp }); //material?
 	// add camera
 	auto cam = new camera{ "cam" };
-	cam->frame = lookat_frame3f({ 0, 4, 10 }, { 0, 1, 0 }, { 0, 1, 0 });
+	vec3f x = vec3f{0,4,10};
+	vec3f y =  vec3f{0,1,0};
+	vec3f z =  vec3f{0,1,0};
+	cam->frame = lookat_frame(x,y,z);
 	cam->yfov= 15 * pif / 180.f;
 	cam->aspect = 16.0f / 9.0f;
 	cam->aperture = 0;
@@ -106,10 +109,9 @@ scene* init_scene() {
 int main(int argc, char** argv ) {
 	//parsing
 	auto parser =
-		ygl::cmdline::make_parser(argc, argv, "model", "creates simple scenes");
-	auto sceneout = ygl::cmdline::parse_opts(
-		parser, "--output", "-o", "output scene", "out.obj");
-	ygl::cmdline::check_parser(parser);
+		make_parser(argc, argv, "model", "creates simple scenes");
+	auto sceneout = parse_opt(
+		parser, "--output", "-o", "output scene", "out.obj"s);
 
 	//printf("creating scene %s\n", type.c_str());
 
@@ -143,8 +145,9 @@ int main(int argc, char** argv ) {
 	add_instance(scn, "building2", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, building2, mat);
 
 	//save
+	save_options sopt = save_options();
 	printf("saving scene %s\n", sceneout.c_str());
-	save_scene(sceneout, scn);
+	save_scene(sceneout, scn, sopt );
 	delete scn;
 	return 0;
 }
