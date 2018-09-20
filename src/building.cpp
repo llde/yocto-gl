@@ -26,6 +26,14 @@ shape* make_building(shape* base, float height) {
 	return base;
 }
 
+void translate(shape* shp, const vec3f t) {
+	for (int i = 0; i < shp->pos.size(); i++) {
+		shp->pos.at(i).x += t.x;
+		shp->pos.at(i).y += t.y;
+		shp->pos.at(i).z += t.z;
+	}
+}
+
 //copied from model.cpp
 material* make_material(const std::string& name, const vec3f& kd,
 	const std::string& kd_txt, const vec3f& ks = { 0.04f, 0.04f, 0.04f },
@@ -47,7 +55,7 @@ void add_instance(scene* scn, const std::string& name, const frame3f& f,
 	shape_group* shpgrp = new shape_group{};
 	shpgrp->shapes.push_back(shp);
 
-	instance* inst = new instance{ name, f, shpgrp }; //material?
+	instance* inst = new instance{ name, f, shpgrp };
 	if (std::find(scn->instances.begin(), scn->instances.end(), inst) == scn->instances.end()) {
 		scn->instances.push_back(inst);
 	}
@@ -68,7 +76,7 @@ scene* init_scene() {
 	// add floor
 	auto mat = new material{ "floor" };
 	mat->kd = { 0.4f, 0.6f, 0.3f }; //0.2f
-	mat->kd_txt = new texture{ "textures/grid.png" };
+	mat->kd_txt = new texture{ "grid", "textures/grid.png" };
 	scn->textures.push_back(mat->kd_txt);
 	scn->materials.push_back(mat);
 	auto shp = new shape{ "floor" };
@@ -80,7 +88,7 @@ scene* init_scene() {
 	shape_group* shpgrp = new shape_group{};
 	shpgrp->shapes.push_back(shp);
 	scn->shapes.push_back(shpgrp);
-	scn->instances.push_back(new instance{ "floor", identity_frame3f, shpgrp }); //material?
+	scn->instances.push_back(new instance{ "floor", identity_frame3f, shpgrp });
 	// add light
 	auto lmat = new material{ "light" };
 	lmat->ke = { 100, 100, 100 };
@@ -93,7 +101,7 @@ scene* init_scene() {
 	scn->shapes.push_back(lshpgrp);
 	scn->materials.push_back(lmat);
 	scn->instances.push_back(
-		new instance{ "light", identity_frame3f, lshpgrp }); //material?
+		new instance{ "light", identity_frame3f, lshpgrp });
 	// add camera
 	auto cam = new camera{ "cam" };
 	vec3f x = vec3f{0,4,10};
@@ -120,35 +128,49 @@ int main(int argc, char** argv ) {
 
 	//make base
 	shape* base = new shape();
-	base->pos.push_back(vec3f{ -1, 0, -1 });
-	base->pos.push_back(vec3f{ -1, 0,  1 });
-	base->pos.push_back(vec3f{  1, 0,  1 });
-	base->pos.push_back(vec3f{  1, 0, -1 });
+	base->pos.push_back(vec3f{ -1,  0, -1 });
+	base->pos.push_back(vec3f{ -1,  0,  1 });
+	base->pos.push_back(vec3f{  1,  0,  1 });
+	base->pos.push_back(vec3f{  1,  0, -1 });
 
 	base->quads.push_back(vec4i{ 0, 1, 2, 3 });
 
 	//make base 2
 	shape* base2 = new shape();
-	base2->pos.push_back(vec3f{  3, 0, -1 });
-	base2->pos.push_back(vec3f{  3, 0,  1 });
-	base2->pos.push_back(vec3f{  9, 0,  3 });
-	base2->pos.push_back(vec3f{  9, 0, -3 });
+	base2->pos.push_back(vec3f{  3,  0, -1 });
+	base2->pos.push_back(vec3f{  3,  0,  1 });
+	base2->pos.push_back(vec3f{  9,  0,  3 });
+	base2->pos.push_back(vec3f{  9,  0, -3 });
 
 	base2->quads.push_back(vec4i{ 0, 1, 2, 3 });
 
 	//make buildings from basement
-	material* mat = make_material("building", { 1, 0.8, 0.6 }, "textures/colored.png");
+	material* mat = make_material("building", { 0.23f, 0.11f, 0.76f }, "textures/colored.png");
 	shape* building = make_building(base, 4.0f);
 	shape* building2 = make_building(base2, 10.0f);
 	building->mat = mat;
 	building2->mat = mat;
 
+	//translate buildings
+	translate(building, vec3f{ -1,  0, -3 });
+
+	//make a single vertical facade
+	shape* facade = new shape();
+	facade->pos.push_back(vec3f{ -1,  0,  0 });
+	facade->pos.push_back(vec3f{ -1,  2,  0 });
+	facade->pos.push_back(vec3f{  1,  2,  0 });
+	facade->pos.push_back(vec3f{  1,  0,  0 });
+
+	facade->quads.push_back({ 0, 1, 2, 3 });
+	facade->mat = mat;
 
 	//make scene
 	scene* scn = init_scene();
+	scn->materials.push_back(mat);
 	scn->textures.push_back(mat->kd_txt);
-	add_instance(scn, "building", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, building, mat);
+	add_instance(scn, "building",  frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, building, mat);
 	add_instance(scn, "building2", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, building2, mat);
+	add_instance(scn, "facade",    frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, facade, mat);
 
 	//save
 	save_options sopt = save_options();
