@@ -4,6 +4,29 @@
 
 using namespace ygl;
 
+//copied from model.cpp
+void add_instance(scene* scn, const std::string& name, const frame3f& f,
+	shape* shp, material* mat) {
+	if (!shp || !mat) return;
+
+	shape_group* shpgrp = new shape_group{};
+	shpgrp->shapes.push_back(shp);
+
+	instance* inst = new instance{ name, f, shpgrp };
+	if (std::find(scn->instances.begin(), scn->instances.end(), inst) == scn->instances.end()) {
+		scn->instances.push_back(inst);
+	}
+	if (std::find(scn->shapes.begin(), scn->shapes.end(), shpgrp) == scn->shapes.end()) {
+		scn->shapes.push_back(shpgrp);
+	}
+	if (std::find(scn->materials.begin(), scn->materials.end(), mat) == scn->materials.end()) {
+		scn->materials.push_back(mat);
+	}
+	if (std::find(scn->textures.begin(), scn->textures.end(), mat->kd_txt) == scn->textures.end()) {
+		scn->textures.push_back(mat->kd_txt);
+	}
+}
+
 shape* make_building(shape* base, float height) {
 	//initial shape is only a single quad, the base of the building
 	if ( (base->quads.size() != 1) && (base->pos.size() != 4) ) {
@@ -26,12 +49,47 @@ shape* make_building(shape* base, float height) {
 	return base;
 }
 
+//translate shapes
 void translate(shape* shp, const vec3f t) {
 	for (int i = 0; i < shp->pos.size(); i++) {
 		shp->pos.at(i).x += t.x;
 		shp->pos.at(i).y += t.y;
 		shp->pos.at(i).z += t.z;
 	}
+}
+
+//vertical facade splitting
+scene* split(scene* scn, shape* shp, std::vector<float> v) {
+	int check = 0;
+	for (int i = 0; i < v.size(); i++) {
+		check += v.at(i);
+	}
+	if (check != 1) {
+		return scn;
+	}
+
+	float x0 = shp->pos.at(0).x; //same x for v0 and v3
+	float x1 = shp->pos.at(1).x; //same x for v1 and v2
+	float z0 = shp->pos.at(0).z; //same z for v0 and v3
+	float z1 = shp->pos.at(1).z; //same z for v1 and v2
+	float y = shp->pos.at(0).y;  //same y for v0 and v1
+	float h = shp->pos.at(2).y - shp->pos.at(1).y;//height
+
+	for (int j = 0; j < v.size(); j++) {
+		shape* nshp = new shape();
+		nshp->pos.push_back(vec3f{ x0, y, z0 });
+		nshp->pos.push_back(vec3f{ x1, y, z1 });
+		nshp->pos.push_back(vec3f{ x1, y + v.at(j)*h, z1 });
+		nshp->pos.push_back(vec3f{ x0, y + v.at(j)*h, z0 });
+		nshp->quads.push_back(vec4i{ 0, 1, 2, 3 });
+		nshp->mat = shp->mat;
+		add_instance(scn, "", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, nshp, nshp->mat); //add shape group?
+		//must add texture
+		y = y + v.at(j)*h;
+	}
+
+	//must remove previous shape
+	return scn;
 }
 
 //copied from model.cpp
@@ -47,28 +105,6 @@ material* make_material(const std::string& name, const vec3f& kd,
 	return mat;
 }
 
-//copied from model.cpp
-void add_instance(scene* scn, const std::string& name, const frame3f& f,
-	shape* shp, material* mat) {
-	if (!shp || !mat) return;
-	
-	shape_group* shpgrp = new shape_group{};
-	shpgrp->shapes.push_back(shp);
-
-	instance* inst = new instance{ name, f, shpgrp };
-	if (std::find(scn->instances.begin(), scn->instances.end(), inst) == scn->instances.end()) {
-		scn->instances.push_back(inst);
-	}
-	if (std::find(scn->shapes.begin(), scn->shapes.end(), shpgrp) == scn->shapes.end()) {
-		scn->shapes.push_back(shpgrp);
-	}
-	if (std::find(scn->materials.begin(), scn->materials.end(), mat) == scn->materials.end()) {
-		scn->materials.push_back(mat);
-	}
-	if (std::find(scn->textures.begin(), scn->textures.end(), mat->kd_txt) == scn->textures.end()) {
-		scn->textures.push_back(mat->kd_txt);
-	}
-}
 
 //copied from model.cpp
 scene* init_scene() {
@@ -157,9 +193,9 @@ int main(int argc, char** argv ) {
 	//make a single vertical facade
 	shape* facade = new shape();
 	facade->pos.push_back(vec3f{ -1,  0,  0 });
-	facade->pos.push_back(vec3f{ -1,  2,  0 });
-	facade->pos.push_back(vec3f{  1,  2,  0 });
 	facade->pos.push_back(vec3f{  1,  0,  0 });
+	facade->pos.push_back(vec3f{  1,  2,  0 });
+	facade->pos.push_back(vec3f{ -1,  2,  0 });
 
 	facade->quads.push_back({ 0, 1, 2, 3 });
 	facade->mat = mat;
@@ -171,6 +207,9 @@ int main(int argc, char** argv ) {
 	add_instance(scn, "building",  frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, building, mat);
 	add_instance(scn, "building2", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, building2, mat);
 	add_instance(scn, "facade",    frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, facade, mat);
+
+	//split facade
+	split(scn, facade, std::vector<float>{ 0.2, 0.1, 0.7 });
 
 	//save
 	save_options sopt = save_options();
