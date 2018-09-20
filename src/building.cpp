@@ -30,7 +30,7 @@ shape* make_building(shape* base, float height) {
 material* make_material(const std::string& name, const vec3f& kd,
 	const std::string& kd_txt, const vec3f& ks = { 0.04f, 0.04f, 0.04f },
 	float rs = 0.01f) {
-	// IL TUO CODICE VA QUA
+
 	material* mat = new material{ name };
 	mat->kd = kd;
 	mat->kd_txt = new texture{ kd_txt };
@@ -67,11 +67,12 @@ scene* init_scene() {
 	auto scn = new scene();
 	// add floor
 	auto mat = new material{ "floor" };
-	mat->kd = { 0.2f, 0.2f, 0.2f };
-	mat->kd_txt = new texture{ "grid.png" };
+	mat->kd = { 0.4f, 0.6f, 0.3f }; //0.2f
+	mat->kd_txt = new texture{ "textures/grid.png" };
 	scn->textures.push_back(mat->kd_txt);
 	scn->materials.push_back(mat);
 	auto shp = new shape{ "floor" };
+	shp->mat = mat;
 	shp->pos = { { -20, 0, -20 },{ 20, 0, -20 },{ 20, 0, 20 },{ -20, 0, 20 } };
 	shp->norm = { { 0, 1, 0 },{ 0, 1, 0 },{ 0, 1, 0 },{ 0, 1, 0 } };
 	shp->texcoord = { { -10, -10 },{ 10, -10 },{ 10, 10 },{ -10, 10 } };
@@ -81,14 +82,15 @@ scene* init_scene() {
 	scn->shapes.push_back(shpgrp);
 	scn->instances.push_back(new instance{ "floor", identity_frame3f, shpgrp }); //material?
 	// add light
+	auto lmat = new material{ "light" };
+	lmat->ke = { 100, 100, 100 };
 	auto lshp = new shape{ "light" };
+	lshp->mat = lmat;
 	lshp->pos = { { 1.4f, 8, 6 },{ -1.4f, 8, 6 } };
 	lshp->points = { 0, 1 };
 	shape_group* lshpgrp = new shape_group{};
 	lshpgrp->shapes.push_back(lshp);
 	scn->shapes.push_back(lshpgrp);
-	auto lmat = new material{ "light" };
-	lmat->ke = { 100, 100, 100 };
 	scn->materials.push_back(lmat);
 	scn->instances.push_back(
 		new instance{ "light", identity_frame3f, lshpgrp }); //material?
@@ -135,12 +137,16 @@ int main(int argc, char** argv ) {
 	base2->quads.push_back(vec4i{ 0, 1, 2, 3 });
 
 	//make buildings from basement
+	material* mat = make_material("building", { 1, 0.8, 0.6 }, "textures/colored.png");
 	shape* building = make_building(base, 4.0f);
 	shape* building2 = make_building(base2, 10.0f);
-	material* mat = make_material("building", { 1, 1, 1 }, "colored.png");
+	building->mat = mat;
+	building2->mat = mat;
+
 
 	//make scene
 	scene* scn = init_scene();
+	scn->textures.push_back(mat->kd_txt);
 	add_instance(scn, "building", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, building, mat);
 	add_instance(scn, "building2", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, building2, mat);
 

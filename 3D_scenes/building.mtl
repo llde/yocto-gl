@@ -1,0 +1,19 @@
+newmtl floor
+  illum 2
+  Kd 0.4 0.6 0.3
+  Ns 2e+16
+  Ni 1
+
+newmtl light
+  illum 2
+  Ke 100 100 100
+  Ns 2e+16
+  Ni 1
+
+newmtl building
+  illum 2
+  Kd 1 0.8 0.6
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+
