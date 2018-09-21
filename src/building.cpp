@@ -100,6 +100,8 @@ scene* split(scene* scn, shape* shp, std::vector<float> v) {
 	float h = shp->pos.at(2).y - shp->pos.at(1).y;//height
 
 	for (int j = 0; j < v.size(); j++) {
+		material* mat = new material{ "facade2" };
+		mat->kd = vec3f{ 0.6f, 0.2f, 0.2f }; //this is only for test
 		shape* nshp = new shape();
 		nshp->pos.push_back(vec3f{ x0, y, z0 });
 		nshp->pos.push_back(vec3f{ x1, y, z1 });
@@ -107,8 +109,7 @@ scene* split(scene* scn, shape* shp, std::vector<float> v) {
 		nshp->pos.push_back(vec3f{ x0, y + v.at(j)*h, z0 });
 		nshp->quads.push_back(vec4i{ 0, 1, 2, 3 });
 		nshp->mat = shp->mat;
-		nshp->mat->kd = vec3f{ 0.6f, 0.2f, 0.2f }; //this is only for test... must change only facade color
-		add_instance(scn, "facade", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, nshp, nshp->mat);
+		add_instance(scn, "facade2", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, nshp, nshp->mat);
 		//must add texture
 		y = y + v.at(j)*h;
 		printf("splitting\n"); //
@@ -137,7 +138,7 @@ scene* init_scene() {
 	auto scn = new scene();
 	// add floor
 	auto mat = new material{ "floor" };
-	mat->kd = { 0.4f, 0.6f, 0.3f }; //0.2f
+	mat->kd = { 0.2f, 0.2f, 0.2f };
 	mat->kd_txt = new texture{ "grid", "textures/grid.png" };
 	scn->textures.push_back(mat->kd_txt);
 	scn->materials.push_back(mat);
@@ -166,10 +167,10 @@ scene* init_scene() {
 		new instance{ "light", identity_frame3f, lshpgrp });
 	// add camera
 	auto cam = new camera{ "cam" };
-	vec3f x = vec3f{0,4,10};
-	vec3f y =  vec3f{0,1,0};
-	vec3f z =  vec3f{0,1,0};
-	cam->frame = lookat_frame(x,y,z);
+	vec3f x = vec3f{ 0, 4, 10 };
+	vec3f y = vec3f{ 0, 1, 0 };
+	vec3f z = vec3f{ 0, 1, 0 };
+	cam->frame = lookat_frame(x,y,z); 
 	cam->yfov= 15 * pif / 180.f;
 	cam->aspect = 16.0f / 9.0f;
 	cam->aperture = 0;
@@ -213,7 +214,7 @@ int main(int argc, char** argv ) {
 	building->mat = mat;
 	building2->mat = mat;
 
-	//translate buildings
+	//translate building
 	translate(building, vec3f{ -1,  0, -3 });
 
 	//make a single vertical facade
