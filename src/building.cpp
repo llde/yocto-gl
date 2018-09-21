@@ -4,7 +4,7 @@
 
 using namespace ygl;
 
-//copied from model.cpp
+//modified from model.cpp
 void add_instance(scene* scn, const std::string& name, const frame3f& f,
 	shape* shp, material* mat) {
 	if (!shp || !mat) return;
@@ -24,6 +24,28 @@ void add_instance(scene* scn, const std::string& name, const frame3f& f,
 	}
 	if (std::find(scn->textures.begin(), scn->textures.end(), mat->kd_txt) == scn->textures.end()) {
 		scn->textures.push_back(mat->kd_txt);
+	}
+}
+
+void remove_instance(scene* scn, shape* shp) {
+	//remove shape and instance
+	//material and texture?
+
+	std::vector<shape_group*>::iterator shp_i;
+	std::vector<instance*>::iterator inst_i;
+
+	//assuming every shape_group containst one shape / every shape is stored in a different group
+	for (shp_i = scn->shapes.begin(); shp_i < scn->shapes.end(); shp_i++) {
+		if ((*shp_i)->shapes.at(0) == shp) {
+			shp_i = scn->shapes.erase(shp_i);
+			printf("removing\n");
+		}
+	}
+
+	for (inst_i = scn->instances.begin(); inst_i < scn->instances.end(); inst_i++) {
+		if ((*inst_i)->shp->shapes.at(0) == shp) {
+			inst_i = scn->instances.erase(inst_i);
+		}
 	}
 }
 
@@ -60,11 +82,13 @@ void translate(shape* shp, const vec3f t) {
 
 //vertical facade splitting
 scene* split(scene* scn, shape* shp, std::vector<float> v) {
-	int check = 0;
+	printf("check\n"); //
+	float check = 0;
 	for (int i = 0; i < v.size(); i++) {
 		check += v.at(i);
 	}
 	if (check != 1) {
+		printf("fail\n"); //
 		return scn;
 	}
 
@@ -83,12 +107,14 @@ scene* split(scene* scn, shape* shp, std::vector<float> v) {
 		nshp->pos.push_back(vec3f{ x0, y + v.at(j)*h, z0 });
 		nshp->quads.push_back(vec4i{ 0, 1, 2, 3 });
 		nshp->mat = shp->mat;
-		add_instance(scn, "", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, nshp, nshp->mat); //add shape group?
+		nshp->mat->kd = vec3f{ 0.6f, 0.2f, 0.2f }; //this is only for test... must change only facade color
+		add_instance(scn, "facade", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, nshp, nshp->mat);
 		//must add texture
 		y = y + v.at(j)*h;
+		printf("splitting\n"); //
 	}
 
-	//must remove previous shape
+	remove_instance(scn, shp);
 	return scn;
 }
 
@@ -106,7 +132,7 @@ material* make_material(const std::string& name, const vec3f& kd,
 }
 
 
-//copied from model.cpp
+//modified from model.cpp
 scene* init_scene() {
 	auto scn = new scene();
 	// add floor
