@@ -99,18 +99,21 @@ scene* split(scene* scn, shape* shp, std::vector<float> v) {
 	float y = shp->pos.at(0).y;  //same y for v0 and v1
 	float h = shp->pos.at(2).y - shp->pos.at(1).y;//height
 
+	auto mat = new material{ "facade2" };
+	mat->kd = vec3f{ 1.0f, 0.0f, 0.0f }; //this is only for test
+	mat->kd_txt = new texture{ "grid", "textures/colored.png" };
+	//note : a material without texture triggers a segmentation fault because add_instance pushes back a nullptr in a vector
+
 	for (int j = 0; j < v.size(); j++) {
-		material* mat = new material{ "facade2" };
-		mat->kd = vec3f{ 0.6f, 0.2f, 0.2f }; //this is only for test
 		shape* nshp = new shape();
 		nshp->pos.push_back(vec3f{ x0, y, z0 });
 		nshp->pos.push_back(vec3f{ x1, y, z1 });
 		nshp->pos.push_back(vec3f{ x1, y + v.at(j)*h, z1 });
 		nshp->pos.push_back(vec3f{ x0, y + v.at(j)*h, z0 });
 		nshp->quads.push_back(vec4i{ 0, 1, 2, 3 });
-		nshp->mat = shp->mat;
-		add_instance(scn, "facade2", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, nshp, nshp->mat);
-		//must add texture
+		nshp->mat = mat;
+		add_instance(scn, "facade2", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, nshp, mat);
+		
 		y = y + v.at(j)*h;
 		printf("splitting\n"); //
 	}
@@ -170,7 +173,7 @@ scene* init_scene() {
 	vec3f x = vec3f{ 0, 4, 10 };
 	vec3f y = vec3f{ 0, 1, 0 };
 	vec3f z = vec3f{ 0, 1, 0 };
-	cam->frame = lookat_frame(x,y,z); 
+	cam->frame = lookat_frame(x,y,z);
 	cam->yfov= 15 * pif / 180.f;
 	cam->aspect = 16.0f / 9.0f;
 	cam->aperture = 0;
@@ -208,7 +211,7 @@ int main(int argc, char** argv ) {
 	base2->quads.push_back(vec4i{ 0, 1, 2, 3 });
 
 	//make buildings from basement
-	material* mat = make_material("building", { 0.23f, 0.11f, 0.76f }, "textures/colored.png");
+	material* mat = make_material("building", { 0.0f, 0.0f, 1.0f }, "textures/colored.png");
 	shape* building = make_building(base, 4.0f);
 	shape* building2 = make_building(base2, 10.0f);
 	building->mat = mat;
