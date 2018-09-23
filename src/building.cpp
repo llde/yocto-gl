@@ -80,7 +80,7 @@ void translate(shape* shp, const vec3f t) {
 	}
 }
 
-//vertical facade splitting
+//vertical facade split
 scene* split(scene* scn, shape* shp, std::vector<float> v, const std::string& type) {
 	printf("check\n"); //
 	float check = 0;
@@ -99,7 +99,7 @@ scene* split(scene* scn, shape* shp, std::vector<float> v, const std::string& ty
 	float y = shp->pos.at(0).y;  //same y for v0 and v1
 	float h = shp->pos.at(2).y - shp->pos.at(1).y;//height
 
-	auto mat = new material{ type };
+	material* mat = new material{ type };
 	mat->kd = vec3f{ 1.0f, 0.0f, 0.0f }; //this is only for test
 	mat->kd_txt = new texture{ "grid", "textures/colored.png" };
 	//note : a material without texture triggers a segmentation fault because add_instance pushes back a nullptr in a vector
@@ -120,6 +120,11 @@ scene* split(scene* scn, shape* shp, std::vector<float> v, const std::string& ty
 
 	remove_instance(scn, shp);
 	return scn;
+}
+
+//vertical facade repeat
+scene* repeat(scene* scn, shape* shp, int parts, const std::string& type) {
+	
 }
 
 //copied from model.cpp
