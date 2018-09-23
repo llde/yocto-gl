@@ -1,9 +1,9 @@
 newmtl floor
   illum 2
   Kd 0.2 0.2 0.2
-  Ns 2e+16
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
   Ni 1
-  map_Kd textures/grid.png
 
 newmtl light
   illum 2
@@ -18,7 +18,7 @@ newmtl building
   Ns 2e+08
   Ni 1
 
-newmtl facade2
+newmtl facade
   illum 2
   Kd 1 0 0
   Ns 2e+16

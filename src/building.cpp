@@ -22,7 +22,7 @@ void add_instance(scene* scn, const std::string& name, const frame3f& f,
 	if (std::find(scn->materials.begin(), scn->materials.end(), mat) == scn->materials.end()) {
 		scn->materials.push_back(mat);
 	}
-	if (std::find(scn->textures.begin(), scn->textures.end(), mat->kd_txt) == scn->textures.end()) {
+	if (std::find(scn->textures.begin(), scn->textures.end(), mat->kd_txt) == scn->textures.end()) { //add texture check
 		scn->textures.push_back(mat->kd_txt);
 	}
 }
@@ -81,7 +81,7 @@ void translate(shape* shp, const vec3f t) {
 }
 
 //vertical facade splitting
-scene* split(scene* scn, shape* shp, std::vector<float> v) {
+scene* split(scene* scn, shape* shp, std::vector<float> v, const std::string& type) {
 	printf("check\n"); //
 	float check = 0;
 	for (int i = 0; i < v.size(); i++) {
@@ -99,7 +99,7 @@ scene* split(scene* scn, shape* shp, std::vector<float> v) {
 	float y = shp->pos.at(0).y;  //same y for v0 and v1
 	float h = shp->pos.at(2).y - shp->pos.at(1).y;//height
 
-	auto mat = new material{ "facade2" };
+	auto mat = new material{ type };
 	mat->kd = vec3f{ 1.0f, 0.0f, 0.0f }; //this is only for test
 	mat->kd_txt = new texture{ "grid", "textures/colored.png" };
 	//note : a material without texture triggers a segmentation fault because add_instance pushes back a nullptr in a vector
@@ -112,7 +112,7 @@ scene* split(scene* scn, shape* shp, std::vector<float> v) {
 		nshp->pos.push_back(vec3f{ x0, y + v.at(j)*h, z0 });
 		nshp->quads.push_back(vec4i{ 0, 1, 2, 3 });
 		nshp->mat = mat;
-		add_instance(scn, "facade2", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, nshp, mat);
+		add_instance(scn, type, frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, nshp, mat);
 		
 		y = y + v.at(j)*h;
 		printf("splitting\n"); //
@@ -140,21 +140,18 @@ material* make_material(const std::string& name, const vec3f& kd,
 scene* init_scene() {
 	auto scn = new scene();
 	// add floor
-	auto mat = new material{ "floor" };
-	mat->kd = { 0.2f, 0.2f, 0.2f };
-	mat->kd_txt = new texture{ "grid", "textures/grid.png" };
-	scn->textures.push_back(mat->kd_txt);
-	scn->materials.push_back(mat);
+	auto mat = make_material( "floor", { 0.2f, 0.2f, 0.2f }, "textures/grid.png" );
+	//mat->kd_txt = new texture{ "grid", "textures/grid.png" };
+
 	auto shp = new shape{ "floor" };
 	shp->mat = mat;
 	shp->pos = { { -20, 0, -20 },{ 20, 0, -20 },{ 20, 0, 20 },{ -20, 0, 20 } };
 	shp->norm = { { 0, 1, 0 },{ 0, 1, 0 },{ 0, 1, 0 },{ 0, 1, 0 } };
 	shp->texcoord = { { -10, -10 },{ 10, -10 },{ 10, 10 },{ -10, 10 } };
 	shp->triangles = { { 0, 1, 2 },{ 0, 2, 3 } };
-	shape_group* shpgrp = new shape_group{};
-	shpgrp->shapes.push_back(shp);
-	scn->shapes.push_back(shpgrp);
-	scn->instances.push_back(new instance{ "floor", identity_frame3f, shpgrp });
+
+	add_instance(scn, "floor", identity_frame3f, shp, mat);
+
 	// add light
 	auto lmat = new material{ "light" };
 	lmat->ke = { 100, 100, 100 };
@@ -239,7 +236,7 @@ int main(int argc, char** argv ) {
 	add_instance(scn, "facade",    frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, facade, mat);
 
 	//split facade
-	split(scn, facade, std::vector<float>{ 0.2, 0.1, 0.7 });
+	split(scn, facade, std::vector<float>{ 0.2, 0.1, 0.7 }, "facade");
 
 	//save
 	save_options sopt = save_options();
