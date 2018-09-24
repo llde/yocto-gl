@@ -4,6 +4,9 @@
 
 using namespace ygl;
 
+
+//note : obj files, mtl files and png files for textures must be all in the same folder!
+
 //modified from model.cpp
 void add_instance(scene* scn, const std::string& name, const frame3f& f,
 	shape* shp, material* mat) {
@@ -38,7 +41,7 @@ void remove_instance(scene* scn, shape* shp) {
 	//assuming every shape_group containst one shape / every shape is stored in a different group
         if(shp_group->shapes.at(0) == shp){
             index.push_back(currentIndex); 
-            std::cout << "Removing index " << currentIndex << " \n" << std::endl;
+            std::cout << "Removing index " << currentIndex << std::endl;
         }
         currentIndex++;
     }
@@ -55,7 +58,7 @@ void remove_instance(scene* scn, shape* shp) {
 	//assuming every shape_group containst one shape / every shape is stored in a different group
         if(inst->shp->shapes.at(0) == shp){
             index.push_back(currentIndex); 
-            std::cout << "Removing index " << currentIndex << " \n" << std::endl;
+            std::cout << "Removing index " << currentIndex << std::endl;
         }
         currentIndex++;
     }
@@ -118,7 +121,7 @@ scene* split(scene* scn, shape* shp, std::vector<float> v, const std::string& ty
 
 	material* mat = new material{ type };
 	mat->kd = vec3f{ 1.0f, 0.0f, 0.0f }; //this is only for test
-	mat->kd_txt = new texture{ type, "textures/colored.png" };
+	mat->kd_txt = new texture{ type, "colored.png" };
 	//note : a material without texture triggers a segmentation fault because add_instance pushes back a nullptr in a vector
 
 	for (int j = 0; j < v.size(); j++) {
@@ -169,8 +172,7 @@ material* make_material(const std::string& name, const vec3f& kd,
 scene* init_scene() {
 	auto scn = new scene();
 	// add floor
-	material* mat = make_material( "floor", { 0.2f, 0.2f, 0.2f }, "textures/grid.png" );
-	//mat->kd_txt = new texture{ "grid", "textures/grid.png" };
+	material* mat = make_material( "floor", { 0.2f, 0.2f, 0.2f }, "grid.png" );
 
 	shape* shp = new shape{ "floor" };
 	shp->mat = mat;
@@ -237,7 +239,7 @@ int main(int argc, char** argv ) {
 	base2->quads.push_back(vec4i{ 0, 1, 2, 3 });
 
 	//make buildings from basement
-	material* mat = make_material("building", { 0.0f, 0.0f, 1.0f }, "textures/colored.png");
+	material* mat = make_material("building", { 0.0f, 0.0f, 1.0f }, "colored.png");
 	shape* building = make_building(base, 4.0f);
 	shape* building2 = make_building(base2, 10.0f);
 	building->mat = mat;
