@@ -124,7 +124,14 @@ scene* split(scene* scn, shape* shp, std::vector<float> v, const std::string& ty
 
 //vertical facade repeat
 scene* repeat(scene* scn, shape* shp, int parts, const std::string& type) {
-	
+	if (parts < 1) {
+		return scn;
+	}
+	std::vector<float> v = std::vector<float>();
+	for (int i = 0; i < parts; i++) {
+		v.push_back(1.0f / (float)parts);
+	}
+	return split(scn, shp, v, type);
 }
 
 //copied from model.cpp
