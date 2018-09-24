@@ -101,7 +101,7 @@ scene* split(scene* scn, shape* shp, std::vector<float> v, const std::string& ty
 
 	material* mat = new material{ type };
 	mat->kd = vec3f{ 1.0f, 0.0f, 0.0f }; //this is only for test
-	mat->kd_txt = new texture{ "grid", "textures/colored.png" };
+	mat->kd_txt = new texture{ type, "textures/colored.png" };
 	//note : a material without texture triggers a segmentation fault because add_instance pushes back a nullptr in a vector
 
 	for (int j = 0; j < v.size(); j++) {
@@ -134,14 +134,14 @@ scene* repeat(scene* scn, shape* shp, int parts, const std::string& type) {
 	return split(scn, shp, v, type);
 }
 
-//copied from model.cpp
+//modified from model.cpp
 material* make_material(const std::string& name, const vec3f& kd,
 	const std::string& kd_txt, const vec3f& ks = { 0.04f, 0.04f, 0.04f },
 	float rs = 0.01f) {
 
 	material* mat = new material{ name };
 	mat->kd = kd;
-	mat->kd_txt = new texture{ kd_txt };
+	mat->kd_txt = new texture{ name, kd_txt };
 	mat->ks = ks;
 	mat->rs = rs;
 	return mat;
@@ -152,10 +152,10 @@ material* make_material(const std::string& name, const vec3f& kd,
 scene* init_scene() {
 	auto scn = new scene();
 	// add floor
-	auto mat = make_material( "floor", { 0.2f, 0.2f, 0.2f }, "textures/grid.png" );
+	material* mat = make_material( "floor", { 0.2f, 0.2f, 0.2f }, "textures/grid.png" );
 	//mat->kd_txt = new texture{ "grid", "textures/grid.png" };
 
-	auto shp = new shape{ "floor" };
+	shape* shp = new shape{ "floor" };
 	shp->mat = mat;
 	shp->pos = { { -20, 0, -20 },{ 20, 0, -20 },{ 20, 0, 20 },{ -20, 0, 20 } };
 	shp->norm = { { 0, 1, 0 },{ 0, 1, 0 },{ 0, 1, 0 },{ 0, 1, 0 } };
@@ -241,14 +241,12 @@ int main(int argc, char** argv ) {
 
 	//make scene
 	scene* scn = init_scene();
-	scn->materials.push_back(mat);
-	scn->textures.push_back(mat->kd_txt);
 	add_instance(scn, "building",  frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, building, mat);
-	add_instance(scn, "building2", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, building2, mat);
+	add_instance(scn, "building", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, building2, mat);
 	add_instance(scn, "facade",    frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, facade, mat);
 
 	//split facade
-	split(scn, facade, std::vector<float>{ 0.2, 0.1, 0.7 }, "facade");
+	split(scn, facade, std::vector<float>{ 0.2, 0.1, 0.7 }, "floors");
 
 	//save
 	save_options sopt = save_options();
