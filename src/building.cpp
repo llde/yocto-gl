@@ -30,23 +30,40 @@ void add_instance(scene* scn, const std::string& name, const frame3f& f,
 void remove_instance(scene* scn, shape* shp) {
 	//remove shape and instance
 	//material and texture?
-
-	std::vector<shape_group*>::iterator shp_i;
-	std::vector<instance*>::iterator inst_i;
-
+    
+    std::vector<int> index = std::vector<int>();
+    size_t currentIndex = 0;
+    
+    for (auto shp_group : scn->shapes){
 	//assuming every shape_group containst one shape / every shape is stored in a different group
-	for (shp_i = scn->shapes.begin(); shp_i < scn->shapes.end(); shp_i++) {
-		if ((*shp_i)->shapes.at(0) == shp) {
-			shp_i = scn->shapes.erase(shp_i);
-			printf("removing\n");
-		}
-	}
-
-	for (inst_i = scn->instances.begin(); inst_i < scn->instances.end(); inst_i++) {
-		if ((*inst_i)->shp->shapes.at(0) == shp) {
-			inst_i = scn->instances.erase(inst_i);
-		}
-	}
+        if(shp_group->shapes.at(0) == shp){
+            index.push_back(currentIndex); 
+            std::cout << "Removing index " << currentIndex << " \n" << std::endl;
+        }
+        currentIndex++;
+    }
+    for (auto ind = index.rbegin() ; ind != index.rend(); ind++){
+        auto curr_iter = scn->shapes.begin();
+        std::advance(curr_iter, *ind);
+        scn->shapes.erase(curr_iter);
+    }
+    
+    index.clear();
+    currentIndex = 0;
+    
+    for (auto inst : scn->instances){
+	//assuming every shape_group containst one shape / every shape is stored in a different group
+        if(inst->shp->shapes.at(0) == shp){
+            index.push_back(currentIndex); 
+            std::cout << "Removing index " << currentIndex << " \n" << std::endl;
+        }
+        currentIndex++;
+    }
+    for (auto ind = index.rbegin() ; ind != index.rend(); ind++){
+        auto curr_iter = scn->instances.begin();
+        std::advance(curr_iter, *ind);
+        scn->instances.erase(curr_iter);
+    }
 }
 
 shape* make_building(shape* base, float height) {
