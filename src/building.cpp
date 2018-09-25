@@ -101,7 +101,7 @@ void translate(shape* shp, const vec3f t) {
 }
 
 //vertical facade split
-scene* split(scene* scn, shape* shp, std::vector<float> v, const std::string& type) {
+scene* split_y(scene* scn, shape* shp, std::vector<float> v, const std::string& type) {
 	printf("check\n"); //
 	float check = 0;
 	for (int i = 0; i < v.size(); i++) {
@@ -120,7 +120,7 @@ scene* split(scene* scn, shape* shp, std::vector<float> v, const std::string& ty
 	float h = shp->pos.at(2).y - shp->pos.at(1).y;//height
 
 	material* mat = new material{ type };
-	mat->kd = vec3f{ 1.0f, 0.0f, 0.0f }; //this is only for test
+	mat->kd = vec3f{ 1.0f, 1.0f, 1.0f }; //this is only for test
 	mat->kd_txt = new texture{ type, "colored.png" };
 	//note : a material without texture triggers a segmentation fault because add_instance pushes back a nullptr in a vector
 
@@ -130,6 +130,10 @@ scene* split(scene* scn, shape* shp, std::vector<float> v, const std::string& ty
 		nshp->pos.push_back(vec3f{ x1, y, z1 });
 		nshp->pos.push_back(vec3f{ x1, y + v.at(j)*h, z1 });
 		nshp->pos.push_back(vec3f{ x0, y + v.at(j)*h, z0 });
+		nshp->texcoord.push_back(vec2f{ 0, 0 });
+		nshp->texcoord.push_back(vec2f{ 0, 1 });
+		nshp->texcoord.push_back(vec2f{ 1, 1 });
+		nshp->texcoord.push_back(vec2f{ 1, 0 });
 		nshp->quads.push_back(vec4i{ 0, 1, 2, 3 });
 		nshp->mat = mat;
 		add_instance(scn, type, frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, nshp, mat);
@@ -143,7 +147,7 @@ scene* split(scene* scn, shape* shp, std::vector<float> v, const std::string& ty
 }
 
 //vertical facade repeat
-scene* repeat(scene* scn, shape* shp, int parts, const std::string& type) {
+scene* repeat_y(scene* scn, shape* shp, int parts, const std::string& type) {
 	if (parts < 1) {
 		return scn;
 	}
@@ -151,7 +155,13 @@ scene* repeat(scene* scn, shape* shp, int parts, const std::string& type) {
 	for (int i = 0; i < parts; i++) {
 		v.push_back(1.0f / (float)parts);
 	}
-	return split(scn, shp, v, type);
+	return split_y(scn, shp, v, type);
+}
+
+scene* split_x(scene* scn, shape* shp, std::vector<float> v, const std::string& type) {
+
+
+	return scn;
 }
 
 //modified from model.cpp
@@ -242,6 +252,7 @@ int main(int argc, char** argv ) {
 	material* mat = make_material("building", { 0.0f, 0.0f, 1.0f }, "colored.png");
 	shape* building = make_building(base, 4.0f);
 	shape* building2 = make_building(base2, 10.0f);
+
 	building->mat = mat;
 	building2->mat = mat;
 
@@ -265,7 +276,7 @@ int main(int argc, char** argv ) {
 	add_instance(scn, "facade",    frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, facade, mat);
 
 	//split facade
-	split(scn, facade, std::vector<float>{ 0.2, 0.1, 0.7 }, "floors");
+	split_y(scn, facade, std::vector<float>{ 0.2, 0.1, 0.7 }, "floors");
 
 	//save
 	save_options sopt = save_options();
