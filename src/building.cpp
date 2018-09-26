@@ -101,14 +101,14 @@ void translate(shape* shp, const vec3f t) {
 }
 
 //facade split on y-axis
-scene* split_y(scene* scn, shape* shp, std::vector<float> v, const std::string& type) {
+scene* split_y(scene* scn, shape* shp, const std::vector<float> v, const std::vector<std::string> types) {
 	printf("check\n"); //
 	float check = 0;
 	for (int i = 0; i < v.size(); i++) {
 		check += v.at(i);
 	}
-	if (check != 1) {
-		printf("fail\n"); //
+	if (check != 1 || v.size() != types.size()) {
+		printf("unconsistent data\n"); //
 		return scn;
 	}
 
@@ -118,11 +118,6 @@ scene* split_y(scene* scn, shape* shp, std::vector<float> v, const std::string& 
 	float z1 = shp->pos.at(1).z; //same z for v1 and v2
 	float y = shp->pos.at(0).y;  //same y for v0 and v1
 	float h = shp->pos.at(2).y - shp->pos.at(1).y;//height
-
-	material* mat = new material{ type };
-	mat->kd = vec3f{ 1.0f, 1.0f, 1.0f }; //this is only for test
-	mat->kd_txt = new texture{ type, "colored.png" };
-	//note : a material without texture triggers a segmentation fault because add_instance pushes back a nullptr in a vector
 
 	for (int j = 0; j < v.size(); j++) {
 		shape* nshp = new shape();
@@ -135,8 +130,12 @@ scene* split_y(scene* scn, shape* shp, std::vector<float> v, const std::string& 
 		nshp->texcoord.push_back(vec2f{ 1, 1 });
 		nshp->texcoord.push_back(vec2f{ 1, 0 });
 		nshp->quads.push_back(vec4i{ 0, 1, 2, 3 });
+		material* mat = new material{ types.at(j) };
+		mat->kd = vec3f{ 1.0f, 1.0f, 1.0f }; //this is only for test
+		mat->kd_txt = new texture{ types.at(j), "colored.png" };
+		//note : a material without texture triggers a segmentation fault because add_instance pushes back a nullptr in a vector
 		nshp->mat = mat;
-		add_instance(scn, type, frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, nshp, mat);
+		add_instance(scn, types.at(j), frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, nshp, mat);
 		
 		y += v.at(j)*h;
 		printf("splitting\n"); //
@@ -152,14 +151,16 @@ scene* repeat_y(scene* scn, shape* shp, int parts, const std::string& type) {
 		return scn;
 	}
 	std::vector<float> v = std::vector<float>();
+	std::vector<std::string> types = std::vector<std::string>();
 	for (int i = 0; i < parts; i++) {
 		v.push_back(1.0f / (float)parts);
+		types.push_back(type);
 	}
-	return split_y(scn, shp, v, type);
+	return split_y(scn, shp, v, types);
 }
 
 //facade split on x-axis
-scene* split_x(scene* scn, shape* shp, std::vector<float> v, const std::string& type) {
+scene* split_x(scene* scn, shape* shp, std::vector<float> v, const std::vector<std::string> types) {
 	printf("check\n"); //
 	float check = 0;
 	for (int i = 0; i < v.size(); i++) {
@@ -177,10 +178,6 @@ scene* split_x(scene* scn, shape* shp, std::vector<float> v, const std::string& 
 	float w = shp->pos.at(1).x - shp->pos.at(0).x; //width
 	float l = shp->pos.at(1).z - shp->pos.at(0).z; //length
 
-	material* mat = new material{ type };
-	mat->kd = vec3f{ 1.0f, 1.0f, 1.0f }; //this is only for test
-	mat->kd_txt = new texture{ type, "colored.png" };
-	//note : a material without texture triggers a segmentation fault because add_instance pushes back a nullptr in a vector
 
 	for (int j = 0; j < v.size(); j++) {
 		shape* nshp = new shape();
@@ -193,8 +190,12 @@ scene* split_x(scene* scn, shape* shp, std::vector<float> v, const std::string& 
 		nshp->texcoord.push_back(vec2f{ 1, 1 });
 		nshp->texcoord.push_back(vec2f{ 1, 0 });
 		nshp->quads.push_back(vec4i{ 0, 1, 2, 3 });
+		material* mat = new material{ types.at(j) };
+		mat->kd = vec3f{ 1.0f, 1.0f, 1.0f }; //this is only for test
+		mat->kd_txt = new texture{ types.at(j), "colored.png" };
+		//note : a material without texture triggers a segmentation fault because add_instance pushes back a nullptr in a vector
 		nshp->mat = mat;
-		add_instance(scn, type, frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, nshp, mat);
+		add_instance(scn, types.at(j), frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, nshp, mat);
 
 		x += v.at(j)*w;
 		z += v.at(j)*l;
@@ -211,10 +212,13 @@ scene* repeat_x(scene* scn, shape* shp, int parts, const std::string& type) {
 		return scn;
 	}
 	std::vector<float> v = std::vector<float>();
+	std::vector<std::string> types = std::vector<std::string>();
 	for (int i = 0; i < parts; i++) {
 		v.push_back(1.0f / (float)parts);
+		types.push_back(type);
+
 	}
-	return split_x(scn, shp, v, type);
+	return split_x(scn, shp, v, types);
 }
 
 //modified from model.cpp
