@@ -29,6 +29,38 @@ void add_instance(scene* scn, const std::string& name, const frame3f& f,
 		scn->textures.push_back(mat->kd_txt);
 	}
 }
+/**
+ * Add the shape to the instance
+*/
+void add_shape_in_instance(instance* inst , shape* shp){
+	inst->shp->shapes.push_back(shp);
+}
+
+void remove_shape_from_instance(instance* inst, shape* shp){
+	int idx = -1;
+	int i = 0;
+	for(auto shps : inst->shp->shapes){
+		if(shps == shp){
+			idx = i;
+			break;
+		}
+		i++;
+	}
+	auto ret = inst->shp->shapes.begin();
+	std::advance(ret, idx);
+	std::cout << "Erasing index " << idx << "Shape " << inst->shp->shapes.at(idx) << std::endl;
+	inst->shp->shapes.erase(ret);
+}
+
+auto get_instance_by_shape(scene* scn ,shape* shp) -> instance*{
+    for (auto instance : scn->instances){
+	//assuming every shape_group containst one shape / every shape is stored in a different group
+        if(instance->shp->shapes.at(0)  == shp){
+			return instance;
+        }
+    }
+	return nullptr;
+}
 
 void remove_instance(scene* scn, shape* shp) {
 	//remove shape and instance
