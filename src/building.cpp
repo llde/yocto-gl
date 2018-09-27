@@ -46,11 +46,35 @@ void remove_shape_from_instance(instance* inst, shape* shp){
 		}
 		i++;
 	}
+	if(idx == -1) {
+		std::cout << "No shape in the specified instance " << std::endl; 
+		return;
+	}
 	auto ret = inst->shp->shapes.begin();
 	std::advance(ret, idx);
-	std::cout << "Erasing index " << idx << "Shape " << inst->shp->shapes.at(idx) << std::endl;
+	std::cout << "Erasing index " << idx << std::endl;
 	inst->shp->shapes.erase(ret);
 }
+
+void remove_shape_from_scene(scene* scn, shape* shp){
+	for(auto shps : scn->shapes){
+		auto res = std::find(shps->shapes.begin(), shps->shapes.end(), shp);
+		if(res != shps->shapes.end()){
+			shps->shapes.erase(res);
+			break;
+		}
+	}
+	auto res1 = std::find(scn->materials.begin(), scn->materials.end(), shp->mat);
+	if(res1 != scn->materials.end()){
+		scn->materials.erase(res1);
+	}
+	auto res2 = std::find(scn->textures.begin(), scn->textures.end(), shp->mat->kd_txt);
+	if(res2 != scn->textures.end()){
+		scn->textures.erase(res2);
+	}
+
+}
+
 
 auto get_instance_by_shape(scene* scn ,shape* shp) -> instance*{
     for (auto instance : scn->instances){
@@ -163,15 +187,16 @@ void translate(shape* shp, const vec3f t) {
 }
 
 //facade split on y-axis
-scene* split_y(scene* scn, shape* shp, const std::vector<float> v, const std::vector<std::string> types) {
+std::vector<shape*> split_y(scene* scn, shape* shp, const std::vector<float> v, const std::vector<std::string> types) {
 	printf("check\n"); //
 	float check = 0;
 	for (int i = 0; i < v.size(); i++) {
 		check += v.at(i);
 	}
+	std::vector<shape*> app = std::vector<shape*>();
 	if (check != 1 || v.size() != types.size()) {
 		printf("unconsistent data\n"); //
-		return scn;
+		return app;
 	}
 
 	float x0 = shp->pos.at(0).x; //same x for v0 and v3
@@ -183,6 +208,7 @@ scene* split_y(scene* scn, shape* shp, const std::vector<float> v, const std::ve
 
 	for (int j = 0; j < v.size(); j++) {
 		shape* nshp = new shape();
+		nshp->name = types.at(j);
 		nshp->pos.push_back(vec3f{ x0, y, z0 });
 		nshp->pos.push_back(vec3f{ x1, y, z1 });
 		nshp->pos.push_back(vec3f{ x1, y + v.at(j)*h, z1 });
@@ -197,23 +223,30 @@ scene* split_y(scene* scn, shape* shp, const std::vector<float> v, const std::ve
 		mat->kd_txt = new texture{ types.at(j), "colored.png" };
 		//note : a material without texture triggers a segmentation fault because add_instance pushes back a nullptr in a vector
 		nshp->mat = mat;
-		add_instance(scn, types.at(j), frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, nshp, mat);
+		app.push_back(nshp);
+//		instance* inst = get_instance_by_shape(scn, shp);
+	//	add_instance(scn, types.at(j), frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, nshp, mat);
+//		add_shape_in_instance(inst, nshp);
+//		scn->materials.push_back(mat);
+//		scn->textures.push_back(mat->kd_txt); //TODO add this to the helper functions or reuse existing materials/texture
 		
 		y += v.at(j)*h;
 		printf("splitting\n"); //
 	}
+//	remove_shape_from_instance(get_instance_by_shape(scn, shp), shp);
 
-	remove_instance(scn, shp);
-	return scn;
+//	remove_instance(scn, shp);
+	return app;
 }
 
 //facade repeat on y-axis
-scene* repeat_y(scene* scn, shape* shp, int parts, const std::string& type) {
+std::vector<shape*> repeat_y(scene* scn, shape* shp, int parts, const std::string& type) {
 	if (parts < 1) {
-		return scn;
+		return std::vector<shape*>();
 	}
 	std::vector<float> v = std::vector<float>();
 	std::vector<std::string> types = std::vector<std::string>();
+
 	for (int i = 0; i < parts; i++) {
 		v.push_back(1.0f / (float)parts);
 		types.push_back(type);
@@ -222,15 +255,16 @@ scene* repeat_y(scene* scn, shape* shp, int parts, const std::string& type) {
 }
 
 //facade split on x-axis
-scene* split_x(scene* scn, shape* shp, std::vector<float> v, const std::vector<std::string> types) {
+std::vector<shape*> split_x(scene* scn, shape* shp, std::vector<float> v, const std::vector<std::string> types) {
 	printf("check\n"); //
 	float check = 0;
 	for (int i = 0; i < v.size(); i++) {
 		check += v.at(i);
 	}
+	std::vector<shape*> app = std::vector<shape*>();
 	if (check != 1) {
 		printf("fail\n"); //
-		return scn;
+		return app;
 	}
 
 	float y0 = shp->pos.at(0).y; //same y for v0 and v1
@@ -239,7 +273,6 @@ scene* split_x(scene* scn, shape* shp, std::vector<float> v, const std::vector<s
 	float z = shp->pos.at(0).z;  //same z for v0 and v3
 	float w = shp->pos.at(1).x - shp->pos.at(0).x; //width
 	float l = shp->pos.at(1).z - shp->pos.at(0).z; //length
-
 
 	for (int j = 0; j < v.size(); j++) {
 		shape* nshp = new shape();
@@ -257,21 +290,26 @@ scene* split_x(scene* scn, shape* shp, std::vector<float> v, const std::vector<s
 		mat->kd_txt = new texture{ types.at(j), "colored.png" };
 		//note : a material without texture triggers a segmentation fault because add_instance pushes back a nullptr in a vector
 		nshp->mat = mat;
-		add_instance(scn, types.at(j), frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, nshp, mat);
-
+		app.push_back(nshp);
+//		instance* inst = get_instance_by_shape(scn, shp);
+		//add_instance(scn, types.at(j), frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, nshp, mat);
+//		add_shape_in_instance(inst, nshp);
+//		scn->materials.push_back(mat);
+//		scn->textures.push_back(mat->kd_txt); //TODO add this to the helper functions or reuse existing materials/texture
 		x += v.at(j)*w;
 		z += v.at(j)*l;
 
 	}
-
-	remove_instance(scn, shp);
-	return scn;
+//	remove_shape_from_instance(get_instance_by_shape(scn, shp), shp);
+	//TODO remove or reuse shp textures;
+	//remove_instance(scn, shp);
+	return app;
 }
 
 //facade repeat on x-axis
-scene* repeat_x(scene* scn, shape* shp, int parts, const std::string& type) {
+std::vector<shape*> repeat_x(scene* scn, shape* shp, int parts, const std::string& type) {
 	if (parts < 1) {
-		return scn;
+		return std::vector<shape*>();
 	}
 	std::vector<float> v = std::vector<float>();
 	std::vector<std::string> types = std::vector<std::string>();
@@ -410,12 +448,43 @@ int main(int argc, char** argv ) {
 	extrude(scn, base2, 10.0f); //extrude call introduces a bug in the facade split. WTF?
 
 	//split facade test
-	repeat_y(scn, facade, 3, "floors");
+	std::vector<shape*> ss = std::vector<shape*>();
+	instance* inst = get_instance_by_shape(scn, facade);
+	for(shape* shpe : repeat_y(scn, facade, 3, "floors")){			
+		ss.push_back(shpe);
+		scn->textures.push_back(shpe->mat->kd_txt);
+		scn->materials.push_back(shpe->mat);
+		auto res = std::find(scn->shapes.begin(), scn->shapes.end(), inst->shp);
+		if(res == scn->shapes.end()) {
+			std::cout << "Heeeeeeelp" << std::endl;
+			continue;
+		}
+		(*res)->shapes.push_back(shpe);
+	}
+	
+	inst->shp->shapes = ss;
+	remove_shape_from_scene(scn, facade);
 	//split floors test
 	for (instance* inst : scn->instances) {
-		if (inst->name == "floors") {
-			repeat_x(scn, inst->shp->shapes.at(0), 3, "tile");
+		std::vector<shape*> appoggio = std::vector<shape*>();
+		for(shape* shp : inst->shp->shapes){
+			if(shp->name == "floors") {
+				for(shape* shpe : repeat_x(scn, shp , 3, "tile")){
+					appoggio.push_back(shpe);
+					scn->textures.push_back(shpe->mat->kd_txt);
+					scn->materials.push_back(shpe->mat);
+					auto res = std::find(scn->shapes.begin(), scn->shapes.end(), inst->shp);
+					if(res == scn->shapes.end()) {
+						std::cout << "Heeeeeeelp" << std::endl;
+						continue;
+					}
+					(*res)->shapes.push_back(shpe);
+				}
+				remove_shape_from_scene(scn, shp);
+			}
+			appoggio.push_back(shp);
 		}
+		inst->shp->shapes = appoggio; 
 	}
 	
 	//subdiv_facade(scn);
