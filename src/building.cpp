@@ -69,26 +69,56 @@ void remove_instance(scene* scn, shape* shp) {
     }
 }
 
-shape* make_building(shape* base, float height) {
+//modified from model.cpp
+material* make_material(const std::string& name, const vec3f& kd,
+	const std::string& kd_txt, const vec3f& ks = { 0.04f, 0.04f, 0.04f },
+	float rs = 0.01f) {
+
+	material* mat = new material{ name };
+	mat->kd = kd;
+	mat->kd_txt = new texture{ name, kd_txt };
+	mat->ks = ks;
+	mat->rs = rs;
+	return mat;
+}
+
+scene* extrude(scene* scn, shape* base, float height) {
 	//initial shape is only a single quad, the base of the building
 	if ( (base->quads.size() != 1) && (base->pos.size() != 4) ) {
 		return nullptr;
 	}
+	//make building material
+	material* mat = make_material("building", vec3f{ 1.0, 1.0, 1.0 }, "texture.png");
 	//make the entire building, creating the other 5 faces
-	std::vector<vec3f> roof_vertex = std::vector<vec3f>();
+	shape* roof = new shape();
 	for (int i = 0; i < base->pos.size(); i++) {
 		vec3f vertex = vec3f{ base->pos.at(i).x, base->pos.at(i).y + height, base->pos.at(i).z }; //the x axis is for lenght, the y axis is for height, the z axis is for depth
-		roof_vertex.push_back(vertex);
+		roof->pos.push_back(vertex);
 	}
-	for (vec3f v : roof_vertex) {
-		base->pos.push_back(v);
+	roof->quads.push_back(vec4i{ 0, 1, 2, 3 });
+	roof->mat = mat;
+	roof->texcoord.push_back(vec2f{ 0, 0 });
+	roof->texcoord.push_back(vec2f{ 0, 1 });
+	roof->texcoord.push_back(vec2f{ 1, 1 });
+	roof->texcoord.push_back(vec2f{ 1, 0 });
+	add_instance(scn, "roof", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, roof, mat);
+
+	for (int j = 0; j < base->pos.size(); j++) {
+		shape* facade = new shape();
+		facade->pos.push_back(vec3f{ base->pos.at(j).x, base->pos.at(j).y, base->pos.at(j).z });
+		facade->pos.push_back(vec3f{ base->pos.at((j + 1) % 4).x, base->pos.at((j + 1) % 4).y, base->pos.at((j + 1) % 4).z });
+		facade->pos.push_back(vec3f{ base->pos.at((j + 1) % 4).x, base->pos.at((j + 1) % 4).y + height, base->pos.at((j + 1) % 4).z });
+		facade->pos.push_back(vec3f{ base->pos.at(j).x, base->pos.at(j).y + height, base->pos.at(j).z });
+		facade->quads.push_back(vec4i{ 0, 1, 2, 3 });
+		facade->mat = mat;
+		facade->texcoord.push_back(vec2f{ 0, 0 });
+		facade->texcoord.push_back(vec2f{ 0, 1 });
+		facade->texcoord.push_back(vec2f{ 1, 1 });
+		facade->texcoord.push_back(vec2f{ 1, 0 });
+		add_instance(scn, "facade", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, facade, mat);
 	}
-	for (int j = 0; j < 4; j++) {
-		vec4i side = vec4i{ j, (j+1)%4, (j+1)%4+4, j+4 };
-		base->quads.push_back(side);
-	}
-	base->quads.push_back(vec4i{ 4, 5, 6, 7 });
-	return base;
+
+	return scn;
 }
 
 //translate shapes
@@ -221,19 +251,37 @@ scene* repeat_x(scene* scn, shape* shp, int parts, const std::string& type) {
 	return split_x(scn, shp, v, types);
 }
 
-//modified from model.cpp
-material* make_material(const std::string& name, const vec3f& kd,
-	const std::string& kd_txt, const vec3f& ks = { 0.04f, 0.04f, 0.04f },
-	float rs = 0.01f) {
+//bugged. not used for now.
+scene* subdiv_facade(scene* scn) {
+	for (instance* inst : scn->instances) {
+		if (inst->name == "facade") {
+			repeat_y(scn, inst->shp->shapes.at(0), 4, "floors");
+			subdiv_facade(scn);
+		}
+		else if (inst->name == "floors") {
+			repeat_x(scn, inst->shp->shapes.at(0), 4, "tile");
+			subdiv_facade(scn);
+		}
+		else if (inst->name == "tile") {
+			split_x(scn, inst->shp->shapes.at(0), std::vector<float>{ 0.1, 0.8, 0.1 }, std::vector<std::string>{ "vwall", "windcol", "vwall" });
+			subdiv_facade(scn);
+		}
+		else if (inst->name == "windcol") {
+			split_y(scn, inst->shp->shapes.at(0), std::vector<float>{ 0.1, 0.8, 0.1 }, std::vector<std::string>{ "hwall", "window", "hwall" });
+			subdiv_facade(scn);
+		}
+		else if (inst->name == "vwall") {
+			
+		}
+		else if (inst->name == "hwall") {
 
-	material* mat = new material{ name };
-	mat->kd = kd;
-	mat->kd_txt = new texture{ name, kd_txt };
-	mat->ks = ks;
-	mat->rs = rs;
-	return mat;
+		}
+		else if (inst->name == "window") {
+
+		}
+	}
+	return scn;
 }
-
 
 //modified from model.cpp
 scene* init_scene() {
@@ -286,6 +334,8 @@ int main(int argc, char** argv ) {
 
 	//printf("creating scene %s\n", type.c_str());
 
+	//make material
+	material* mat = make_material("building", { 1.0f, 1.0f, 1.0f }, "colored.png");
 
 	//make base
 	shape* base = new shape();
@@ -293,8 +343,8 @@ int main(int argc, char** argv ) {
 	base->pos.push_back(vec3f{ -1,  0,  1 });
 	base->pos.push_back(vec3f{  1,  0,  1 });
 	base->pos.push_back(vec3f{  1,  0, -1 });
-
 	base->quads.push_back(vec4i{ 0, 1, 2, 3 });
+	base->mat = mat;
 
 	//make base 2
 	shape* base2 = new shape();
@@ -302,19 +352,11 @@ int main(int argc, char** argv ) {
 	base2->pos.push_back(vec3f{  3,  0,  1 });
 	base2->pos.push_back(vec3f{  9,  0,  3 });
 	base2->pos.push_back(vec3f{  9,  0, -3 });
-
 	base2->quads.push_back(vec4i{ 0, 1, 2, 3 });
+	base2->mat = mat;
 
-	//make buildings from basement
-	material* mat = make_material("building", { 0.0f, 0.0f, 1.0f }, "colored.png");
-	shape* building = make_building(base, 4.0f);
-	shape* building2 = make_building(base2, 10.0f);
-
-	building->mat = mat;
-	building2->mat = mat;
-
-	//translate building
-	translate(building, vec3f{ -1,  0, -3 });
+	//translate base
+	translate(base, vec3f{ -1,  0, -3 });
 
 	//make a single vertical facade
 	shape* facade = new shape();
@@ -322,15 +364,18 @@ int main(int argc, char** argv ) {
 	facade->pos.push_back(vec3f{  1,  0,  0 });
 	facade->pos.push_back(vec3f{  1,  2,  0 });
 	facade->pos.push_back(vec3f{ -1,  2,  0 });
-
 	facade->quads.push_back({ 0, 1, 2, 3 });
 	facade->mat = mat;
 
 	//make scene
 	scene* scn = init_scene();
-	add_instance(scn, "building",  frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, building, mat);
-	add_instance(scn, "building", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, building2, mat);
-	add_instance(scn, "facade",    frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, facade, mat);
+	add_instance(scn, "base",  frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, base, mat);
+	add_instance(scn, "base", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, base2, mat);
+	add_instance(scn, "facade", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, facade, mat);
+
+	//make buildings from basement
+	extrude(scn, base, 4.0f);
+	extrude(scn, base2, 10.0f); //extrude call introduces a bug in the facade split. WTF?
 
 	//split facade test
 	repeat_y(scn, facade, 3, "floors");
@@ -340,6 +385,8 @@ int main(int argc, char** argv ) {
 			repeat_x(scn, inst->shp->shapes.at(0), 3, "tile");
 		}
 	}
+	
+	//subdiv_facade(scn);
 
 	//save
 	save_options sopt = save_options();

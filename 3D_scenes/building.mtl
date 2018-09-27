@@ -14,18 +14,27 @@ newmtl light
 
 newmtl building
   illum 2
-  Kd 0 0 1
+  Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
   map_Kd colored.png
 
-newmtl floors
+newmtl building
   illum 2
   Kd 1 1 1
-  Ns 2e+16
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
   Ni 1
-  map_Kd colored.png
+  map_Kd texture.png
+
+newmtl building
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd texture.png
 
 newmtl floors
   illum 2
@@ -41,21 +50,7 @@ newmtl floors
   Ni 1
   map_Kd colored.png
 
-newmtl tile
-  illum 2
-  Kd 1 1 1
-  Ns 2e+16
-  Ni 1
-  map_Kd colored.png
-
-newmtl tile
-  illum 2
-  Kd 1 1 1
-  Ns 2e+16
-  Ni 1
-  map_Kd colored.png
-
-newmtl tile
+newmtl floors
   illum 2
   Kd 1 1 1
   Ns 2e+16
