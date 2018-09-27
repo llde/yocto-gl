@@ -41,18 +41,30 @@ v 0.333333 0 0
 v 1 0 0
 v 1 0.666667 0
 v 0.333333 0.666667 0
-v -1 0 0
-v 1 0 0
-v 1 0.666667 0
-v -1 0.666667 0
-v -0.333333 0 0
-v 0.333333 0 0
-v 0.333333 0.666667 0
-v -0.333333 0.666667 0
-v 0.333333 0 0
-v 1 0 0
-v 1 0.666667 0
-v 0.333333 0.666667 0
+v -1 1.33333 0
+v -0.333333 1.33333 0
+v -0.333333 2 0
+v -1 2 0
+v -0.333333 1.33333 0
+v 0.333333 1.33333 0
+v 0.333333 2 0
+v -0.333333 2 0
+v 0.333333 1.33333 0
+v 1 1.33333 0
+v 1 2 0
+v 0.333333 2 0
+v -1 1.33333 0
+v -0.333333 1.33333 0
+v -0.333333 2 0
+v -1 2 0
+v -0.333333 1.33333 0
+v 0.333333 1.33333 0
+v 0.333333 2 0
+v -0.333333 2 0
+v 0.333333 1.33333 0
+v 1 1.33333 0
+v 1 2 0
+v 0.333333 2 0
 v -2 4 -4
 v -2 4 -2
 v 0 4 -2
@@ -161,6 +173,18 @@ vt 0 1
 vt 0 0
 vt 1 0
 vt 1 1
+vt 0 1
+vt 0 0
+vt 1 0
+vt 1 1
+vt 0 1
+vt 0 0
+vt 1 0
+vt 1 1
+vt 0 1
+vt 0 0
+vt 1 0
+vt 1 1
 vn 0 1 0
 vn 0 1 0
 vn 0 1 0
@@ -177,51 +201,76 @@ p 5
 p 6 
 o 
 usemtl building
+g building2
 f 7 8 9 10 
 o 
 usemtl building
 f 11 12 13 14 
 o 
 usemtl tile
+g tile
 f 15/5 16/6 17/7 18/8 
 usemtl tile
+g tile
 f 19/9 20/10 21/11 22/12 
 usemtl tile
+g tile
 f 23/13 24/14 25/15 26/16 
-usemtl floors
-g floors
+usemtl tile
+g tile
 f 27/17 28/18 29/19 30/20 
 usemtl tile
+g tile
 f 31/21 32/22 33/23 34/24 
 usemtl tile
+g tile
 f 35/25 36/26 37/27 38/28 
-o 
-usemtl building
+usemtl tile
+g tile
 f 39/29 40/30 41/31 42/32 
-o 
-usemtl building
+usemtl tile
+g tile
 f 43/33 44/34 45/35 46/36 
-o 
-usemtl building
+usemtl tile
+g tile
 f 47/37 48/38 49/39 50/40 
 o 
 usemtl building
+g roof
 f 51/41 52/42 53/43 54/44 
 o 
 usemtl building
+g gfacade
 f 55/45 56/46 57/47 58/48 
 o 
 usemtl building
+g gfacade
 f 59/49 60/50 61/51 62/52 
 o 
 usemtl building
+g gfacade
 f 63/53 64/54 65/55 66/56 
 o 
 usemtl building
+g gfacade
 f 67/57 68/58 69/59 70/60 
 o 
 usemtl building
+g roof
 f 71/61 72/62 73/63 74/64 
 o 
 usemtl building
+g gfacade
 f 75/65 76/66 77/67 78/68 
+o 
+usemtl building
+g gfacade
+f 79/69 80/70 81/71 82/72 
+o 
+usemtl building
+g gfacade
+f 83/73 84/74 85/75 86/76 
+o 
+usemtl building
+g gfacade
+f 87/77 88/78 89/79 90/80 

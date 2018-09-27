@@ -35,7 +35,7 @@ void add_instance(scene* scn, const std::string& name, const frame3f& f,
 void add_shape_in_instance(instance* inst , shape* shp){
 	inst->shp->shapes.push_back(shp);
 }
-
+/*
 void remove_shape_from_instance(instance* inst, shape* shp){
 	int idx = -1;
 	int i = 0;
@@ -52,15 +52,16 @@ void remove_shape_from_instance(instance* inst, shape* shp){
 	}
 	auto ret = inst->shp->shapes.begin();
 	std::advance(ret, idx);
-	std::cout << "Erasing index " << idx << std::endl;
+    std::cout << "Removing shape of index " << idx << " Shape "<< shp->name << std::endl;
 	inst->shp->shapes.erase(ret);
-}
+}*/
 
 void remove_shape_from_scene(scene* scn, shape* shp){
 	for(auto shps : scn->shapes){
 		auto res = std::find(shps->shapes.begin(), shps->shapes.end(), shp);
 		if(res != shps->shapes.end()){
 			shps->shapes.erase(res);
+			std::cout << "Removing shape " << shp->name << std::endl;
 			break;
 		}
 	}
@@ -78,14 +79,14 @@ void remove_shape_from_scene(scene* scn, shape* shp){
 
 auto get_instance_by_shape(scene* scn ,shape* shp) -> instance*{
     for (auto instance : scn->instances){
-	//assuming every shape_group containst one shape / every shape is stored in a different group
-        if(instance->shp->shapes.at(0)  == shp){
+		auto res = std::find(instance->shp->shapes.begin(), instance->shp->shapes.end(), shp);
+        if(res != instance->shp->shapes.end()){
 			return instance;
         }
     }
 	return nullptr;
 }
-
+/*
 void remove_instance(scene* scn, shape* shp) {
 	//remove shape and instance
 	//material and texture?
@@ -97,7 +98,7 @@ void remove_instance(scene* scn, shape* shp) {
 	//assuming every shape_group containst one shape / every shape is stored in a different group
         if(shp_group->shapes.at(0) == shp){
             index.push_back(currentIndex); 
-            std::cout << "Removing index " << currentIndex << std::endl;
+            std::cout << "Removing shape of index " << currentIndex << " Shape "<< shp->name << std::endl;
         }
         currentIndex++;
     }
@@ -123,7 +124,7 @@ void remove_instance(scene* scn, shape* shp) {
         std::advance(curr_iter, *ind);
         scn->instances.erase(curr_iter);
     }
-}
+}*/
 
 //modified from model.cpp
 material* make_material(const std::string& name, const vec3f& kd,
@@ -146,7 +147,7 @@ scene* extrude(scene* scn, shape* base, float height) {
 	//make building material
 	material* mat = make_material("building", vec3f{ 1.0, 1.0, 1.0 }, "texture.png");
 	//make the entire building, creating the other 5 faces
-	shape* roof = new shape();
+	shape* roof = new shape{"roof"};
 	for (int i = 0; i < base->pos.size(); i++) {
 		vec3f vertex = vec3f{ base->pos.at(i).x, base->pos.at(i).y + height, base->pos.at(i).z }; //the x axis is for lenght, the y axis is for height, the z axis is for depth
 		roof->pos.push_back(vertex);
@@ -160,7 +161,7 @@ scene* extrude(scene* scn, shape* base, float height) {
 	add_instance(scn, "roof", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, roof, mat);
 
 	for (int j = 0; j < base->pos.size(); j++) {
-		shape* facade = new shape();
+		shape* facade = new shape{"gfacade"};
 		facade->pos.push_back(vec3f{ base->pos.at(j).x, base->pos.at(j).y, base->pos.at(j).z });
 		facade->pos.push_back(vec3f{ base->pos.at((j + 1) % 4).x, base->pos.at((j + 1) % 4).y, base->pos.at((j + 1) % 4).z });
 		facade->pos.push_back(vec3f{ base->pos.at((j + 1) % 4).x, base->pos.at((j + 1) % 4).y + height, base->pos.at((j + 1) % 4).z });
@@ -188,7 +189,7 @@ void translate(shape* shp, const vec3f t) {
 
 //facade split on y-axis
 std::vector<shape*> split_y(scene* scn, shape* shp, const std::vector<float> v, const std::vector<std::string> types) {
-	printf("check\n"); //
+	std::cout << "Splitting y axis of shape " << shp->name << std::endl;
 	float check = 0;
 	for (int i = 0; i < v.size(); i++) {
 		check += v.at(i);
@@ -231,7 +232,7 @@ std::vector<shape*> split_y(scene* scn, shape* shp, const std::vector<float> v, 
 //		scn->textures.push_back(mat->kd_txt); //TODO add this to the helper functions or reuse existing materials/texture
 		
 		y += v.at(j)*h;
-		printf("splitting\n"); //
+		std::cout << "Generating  shape " << nshp->name << std::endl;
 	}
 //	remove_shape_from_instance(get_instance_by_shape(scn, shp), shp);
 
@@ -256,7 +257,7 @@ std::vector<shape*> repeat_y(scene* scn, shape* shp, int parts, const std::strin
 
 //facade split on x-axis
 std::vector<shape*> split_x(scene* scn, shape* shp, std::vector<float> v, const std::vector<std::string> types) {
-	printf("check\n"); //
+	std::cout << "Splitting x axis of shape " << shp->name << std::endl;
 	float check = 0;
 	for (int i = 0; i < v.size(); i++) {
 		check += v.at(i);
@@ -276,6 +277,7 @@ std::vector<shape*> split_x(scene* scn, shape* shp, std::vector<float> v, const 
 
 	for (int j = 0; j < v.size(); j++) {
 		shape* nshp = new shape();
+		nshp->name = types.at(j);
 		nshp->pos.push_back(vec3f{ x, y0, z });
 		nshp->pos.push_back(vec3f{ x + v.at(j)*w, y0, z + v.at(j)*l });
 		nshp->pos.push_back(vec3f{ x + v.at(j)*w, y1, z + v.at(j)*l });
@@ -298,6 +300,7 @@ std::vector<shape*> split_x(scene* scn, shape* shp, std::vector<float> v, const 
 //		scn->textures.push_back(mat->kd_txt); //TODO add this to the helper functions or reuse existing materials/texture
 		x += v.at(j)*w;
 		z += v.at(j)*l;
+		std::cout << "Generating  shape " << nshp->name << std::endl;
 
 	}
 //	remove_shape_from_instance(get_instance_by_shape(scn, shp), shp);
@@ -409,6 +412,7 @@ int main(int argc, char** argv ) {
 
 	//make base
 	shape* base = new shape();
+	base->name = "building1";
 	base->pos.push_back(vec3f{ -1,  0, -1 });
 	base->pos.push_back(vec3f{ -1,  0,  1 });
 	base->pos.push_back(vec3f{  1,  0,  1 });
@@ -418,6 +422,7 @@ int main(int argc, char** argv ) {
 
 	//make base 2
 	shape* base2 = new shape();
+	base->name = "building2";
 	base2->pos.push_back(vec3f{  3,  0, -1 });
 	base2->pos.push_back(vec3f{  3,  0,  1 });
 	base2->pos.push_back(vec3f{  9,  0,  3 });
@@ -430,6 +435,7 @@ int main(int argc, char** argv ) {
 
 	//make a single vertical facade
 	shape* facade = new shape();
+	facade->name = "facade";
 	facade->pos.push_back(vec3f{ -1,  0,  0 });
 	facade->pos.push_back(vec3f{  1,  0,  0 });
 	facade->pos.push_back(vec3f{  1,  2,  0 });
@@ -454,12 +460,7 @@ int main(int argc, char** argv ) {
 		ss.push_back(shpe);
 		scn->textures.push_back(shpe->mat->kd_txt);
 		scn->materials.push_back(shpe->mat);
-		auto res = std::find(scn->shapes.begin(), scn->shapes.end(), inst->shp);
-		if(res == scn->shapes.end()) {
-			std::cout << "Heeeeeeelp" << std::endl;
-			continue;
-		}
-		(*res)->shapes.push_back(shpe);
+		std::cout << "What I'm doing with my life" << std::endl;
 	}
 	
 	inst->shp->shapes = ss;
@@ -467,22 +468,19 @@ int main(int argc, char** argv ) {
 	//split floors test
 	for (instance* inst : scn->instances) {
 		std::vector<shape*> appoggio = std::vector<shape*>();
+		if(inst->shp == nullptr) continue;
 		for(shape* shp : inst->shp->shapes){
+			std::cout << "Shape name " << shp->name << std::endl;
 			if(shp->name == "floors") {
 				for(shape* shpe : repeat_x(scn, shp , 3, "tile")){
+					std::cout << "Processing shape " << shpe->name << std::endl;
 					appoggio.push_back(shpe);
 					scn->textures.push_back(shpe->mat->kd_txt);
 					scn->materials.push_back(shpe->mat);
-					auto res = std::find(scn->shapes.begin(), scn->shapes.end(), inst->shp);
-					if(res == scn->shapes.end()) {
-						std::cout << "Heeeeeeelp" << std::endl;
-						continue;
-					}
-					(*res)->shapes.push_back(shpe);
 				}
 				remove_shape_from_scene(scn, shp);
 			}
-			appoggio.push_back(shp);
+			else  appoggio.push_back(shp);
 		}
 		inst->shp->shapes = appoggio; 
 	}

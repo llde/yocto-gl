@@ -17,6 +17,7 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
+add_definitions(-g)  
 # compile flags
 if(APPLE)
     add_definitions(-Wno-missing-braces)
@@ -66,6 +67,7 @@ add_executable(yscnproc apps/yscnproc.cpp)
 add_executable(yimproc apps/yimproc.cpp)
 #add_executable(raytrace src/raytrace.cpp)
 add_executable(building src/building.cpp)
+target_compile_definitions(building PRIVATE Wall Wextra )
 
 #target_link_libraries(raytrace yocto_gl)
 target_link_libraries(building yocto_gl)
