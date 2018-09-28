@@ -2,18 +2,8 @@ mtllib building.mtl
 c  cam 0 0.261799 1.77778 0 10.4403 1 0 0 0 0.957826 -0.287348 0 0.287348 0.957826 0 4 10
 n floor "" "" "" "" 1 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1 1 1
 n light "" "" "" "" 1 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1 1 1
-n base "" "" "" "" 1 0 0 0 1 0 0 0 1 0 1.25 0 0 0 0 0 0 0 1 1 1 1
-n base "" "" "" "" 1 0 0 0 1 0 0 0 1 0 1.25 0 0 0 0 0 0 0 1 1 1 1
-n lammorte "" "" "" "" 1 0 0 0 1 0 0 0 1 0 1.25 0 0 0 0 0 0 0 1 1 1 1
-n roof "" "" "" "" 1 0 0 0 1 0 0 0 1 0 1.25 0 0 0 0 0 0 0 1 1 1 1
-n facade "" "" "" "" 1 0 0 0 1 0 0 0 1 0 1.25 0 0 0 0 0 0 0 1 1 1 1
-n facade "" "" "" "" 1 0 0 0 1 0 0 0 1 0 1.25 0 0 0 0 0 0 0 1 1 1 1
-n facade "" "" "" "" 1 0 0 0 1 0 0 0 1 0 1.25 0 0 0 0 0 0 0 1 1 1 1
-n facade "" "" "" "" 1 0 0 0 1 0 0 0 1 0 1.25 0 0 0 0 0 0 0 1 1 1 1
-n roof "" "" "" "" 1 0 0 0 1 0 0 0 1 0 1.25 0 0 0 0 0 0 0 1 1 1 1
-n facade "" "" "" "" 1 0 0 0 1 0 0 0 1 0 1.25 0 0 0 0 0 0 0 1 1 1 1
-n facade "" "" "" "" 1 0 0 0 1 0 0 0 1 0 1.25 0 0 0 0 0 0 0 1 1 1 1
-n facade "" "" "" "" 1 0 0 0 1 0 0 0 1 0 1.25 0 0 0 0 0 0 0 1 1 1 1
+n building "" "" "" "" 1 0 0 0 1 0 0 0 1 0 1.25 0 0 0 0 0 0 0 1 1 1 1
+n building "" "" "" "" 1 0 0 0 1 0 0 0 1 0 1.25 0 0 0 0 0 0 0 1 1 1 1
 n facade "" "" "" "" 1 0 0 0 1 0 0 0 1 0 1.25 0 0 0 0 0 0 0 1 1 1 1
 v -20 0 -20
 v 20 0 -20
@@ -25,10 +15,114 @@ v -2 0 -4
 v -2 0 -2
 v 0 0 -2
 v 0 0 -4
+v -2 4 -4
+v -2 4 -2
+v 0 4 -2
+v 0 4 -4
+v -2 0 -4
+v -2 0 -2
+v -2 1.33333 -2
+v -2 1.33333 -4
+v -2 1.33333 -4
+v -2 1.33333 -2
+v -2 2.66667 -2
+v -2 2.66667 -4
+v -2 2.66667 -4
+v -2 2.66667 -2
+v -2 4 -2
+v -2 4 -4
+v -2 0 -2
+v 0 0 -2
+v 0 1.33333 -2
+v -2 1.33333 -2
+v -2 1.33333 -2
+v 0 1.33333 -2
+v 0 2.66667 -2
+v -2 2.66667 -2
+v -2 2.66667 -2
+v 0 2.66667 -2
+v 0 4 -2
+v -2 4 -2
+v 0 0 -2
+v 0 0 -4
+v 0 1.33333 -4
+v 0 1.33333 -2
+v 0 1.33333 -2
+v 0 1.33333 -4
+v 0 2.66667 -4
+v 0 2.66667 -2
+v 0 2.66667 -2
+v 0 2.66667 -4
+v 0 4 -4
+v 0 4 -2
+v 0 0 -4
+v -2 0 -4
+v -2 1.33333 -4
+v 0 1.33333 -4
+v 0 1.33333 -4
+v -2 1.33333 -4
+v -2 2.66667 -4
+v 0 2.66667 -4
+v 0 2.66667 -4
+v -2 2.66667 -4
+v -2 4 -4
+v 0 4 -4
 v 3 0 -1
 v 3 0 1
 v 9 0 3
 v 9 0 -3
+v 3 10 -1
+v 3 10 1
+v 9 10 3
+v 9 10 -3
+v 3 0 -1
+v 3 0 1
+v 3 3.33333 1
+v 3 3.33333 -1
+v 3 3.33333 -1
+v 3 3.33333 1
+v 3 6.66667 1
+v 3 6.66667 -1
+v 3 6.66667 -1
+v 3 6.66667 1
+v 3 10 1
+v 3 10 -1
+v 3 0 1
+v 9 0 3
+v 9 3.33333 3
+v 3 3.33333 1
+v 3 3.33333 1
+v 9 3.33333 3
+v 9 6.66667 3
+v 3 6.66667 1
+v 3 6.66667 1
+v 9 6.66667 3
+v 9 10 3
+v 3 10 1
+v 9 0 3
+v 9 0 -3
+v 9 3.33333 -3
+v 9 3.33333 3
+v 9 3.33333 3
+v 9 3.33333 -3
+v 9 6.66667 -3
+v 9 6.66667 3
+v 9 6.66667 3
+v 9 6.66667 -3
+v 9 10 -3
+v 9 10 3
+v 9 0 -3
+v 3 0 -1
+v 3 3.33333 -1
+v 9 3.33333 -3
+v 9 3.33333 -3
+v 3 3.33333 -1
+v 3 6.66667 -1
+v 9 6.66667 -3
+v 9 6.66667 -3
+v 3 6.66667 -1
+v 3 10 -1
+v 9 10 -3
 v -1 0 0
 v -0.333333 0 0
 v -0.333333 0.666667 0
@@ -65,50 +159,74 @@ v 0.333333 1.33333 0
 v 1 1.33333 0
 v 1 2 0
 v 0.333333 2 0
-v -2 4 -4
-v -2 4 -2
-v 0 4 -2
-v 0 4 -4
-v -2 0 -4
-v -2 0 -2
-v -2 4 -2
-v -2 4 -4
-v -2 0 -2
-v 0 0 -2
-v 0 4 -2
-v -2 4 -2
-v 0 0 -2
-v 0 0 -4
-v 0 4 -4
-v 0 4 -2
-v 0 0 -4
-v -2 0 -4
-v -2 4 -4
-v 0 4 -4
-v 3 10 -1
-v 3 10 1
-v 9 10 3
-v 9 10 -3
-v 3 0 -1
-v 3 0 1
-v 3 10 1
-v 3 10 -1
-v 3 0 1
-v 9 0 3
-v 9 10 3
-v 3 10 1
-v 9 0 3
-v 9 0 -3
-v 9 10 -3
-v 9 10 3
-v 9 0 -3
-v 3 0 -1
-v 3 10 -1
-v 9 10 -3
 vt -10 11
 vt 10 11
 vt 10 -9
 vt -10 -9
+vt 0 1
+vt 0 0
+vt 1 0
+vt 1 1
+vt 0 1
+vt 0 0
+vt 1 0
+vt 1 1
+vt 0 1
+vt 0 0
+vt 1 0
+vt 1 1
+vt 0 1
+vt 0 0
+vt 1 0
+vt 1 1
+vt 0 1
+vt 0 0
+vt 1 0
+vt 1 1
+vt 0 1
+vt 0 0
+vt 1 0
+vt 1 1
+vt 0 1
+vt 0 0
+vt 1 0
+vt 1 1
+vt 0 1
+vt 0 0
+vt 1 0
+vt 1 1
+vt 0 1
+vt 0 0
+vt 1 0
+vt 1 1
+vt 0 1
+vt 0 0
+vt 1 0
+vt 1 1
+vt 0 1
+vt 0 0
+vt 1 0
+vt 1 1
+vt 0 1
+vt 0 0
+vt 1 0
+vt 1 1
+vt 0 1
+vt 0 0
+vt 1 0
+vt 1 1
+vt 0 1
+vt 0 0
+vt 1 0
+vt 1 1
+vt 0 1
+vt 0 0
+vt 1 0
+vt 1 1
+vt 0 1
+vt 0 0
+vt 1 0
+vt 1 1
 vt 0 1
 vt 0 0
 vt 1 0
@@ -201,76 +319,115 @@ p 5
 p 6 
 o 
 usemtl building
-g building2
+g base
 f 7 8 9 10 
-o 
-usemtl building
-f 11 12 13 14 
-o 
-usemtl tile
-g tile
-f 15/5 16/6 17/7 18/8 
-usemtl tile
-g tile
-f 19/9 20/10 21/11 22/12 
-usemtl tile
-g tile
-f 23/13 24/14 25/15 26/16 
-usemtl tile
-g tile
-f 27/17 28/18 29/19 30/20 
-usemtl tile
-g tile
-f 31/21 32/22 33/23 34/24 
-usemtl tile
-g tile
-f 35/25 36/26 37/27 38/28 
-usemtl tile
-g tile
-f 39/29 40/30 41/31 42/32 
-usemtl tile
-g tile
-f 43/33 44/34 45/35 46/36 
-usemtl tile
-g tile
-f 47/37 48/38 49/39 50/40 
-o 
 usemtl building
 g roof
-f 51/41 52/42 53/43 54/44 
+f 11/5 12/6 13/7 14/8 
+usemtl floors
+g floors
+f 15/9 16/10 17/11 18/12 
+usemtl floors
+g floors
+f 19/13 20/14 21/15 22/16 
+usemtl floors
+g floors
+f 23/17 24/18 25/19 26/20 
+usemtl floors
+g floors
+f 27/21 28/22 29/23 30/24 
+usemtl floors
+g floors
+f 31/25 32/26 33/27 34/28 
+usemtl floors
+g floors
+f 35/29 36/30 37/31 38/32 
+usemtl floors
+g floors
+f 39/33 40/34 41/35 42/36 
+usemtl floors
+g floors
+f 43/37 44/38 45/39 46/40 
+usemtl floors
+g floors
+f 47/41 48/42 49/43 50/44 
+usemtl floors
+g floors
+f 51/45 52/46 53/47 54/48 
+usemtl floors
+g floors
+f 55/49 56/50 57/51 58/52 
+usemtl floors
+g floors
+f 59/53 60/54 61/55 62/56 
 o 
 usemtl building
-g facade
-f 55/45 56/46 57/47 58/48 
-o 
+g base
+f 63 64 65 66 
 usemtl building
-g facade
-f 59/49 60/50 61/51 62/52 
-o 
-usemtl building
-g facade
-f 63/53 64/54 65/55 66/56 
-o 
-usemtl building
-g facade
+g roof
 f 67/57 68/58 69/59 70/60 
-o 
-usemtl building
-g roof
+usemtl floors
+g floors
 f 71/61 72/62 73/63 74/64 
-o 
-usemtl building
-g facade
+usemtl floors
+g floors
 f 75/65 76/66 77/67 78/68 
-o 
-usemtl building
-g facade
+usemtl floors
+g floors
 f 79/69 80/70 81/71 82/72 
-o 
-usemtl building
-g facade
+usemtl floors
+g floors
 f 83/73 84/74 85/75 86/76 
-o 
-usemtl building
-g facade
+usemtl floors
+g floors
 f 87/77 88/78 89/79 90/80 
+usemtl floors
+g floors
+f 91/81 92/82 93/83 94/84 
+usemtl floors
+g floors
+f 95/85 96/86 97/87 98/88 
+usemtl floors
+g floors
+f 99/89 100/90 101/91 102/92 
+usemtl floors
+g floors
+f 103/93 104/94 105/95 106/96 
+usemtl floors
+g floors
+f 107/97 108/98 109/99 110/100 
+usemtl floors
+g floors
+f 111/101 112/102 113/103 114/104 
+usemtl floors
+g floors
+f 115/105 116/106 117/107 118/108 
+o 
+usemtl tile
+g tile
+f 119/109 120/110 121/111 122/112 
+usemtl tile
+g tile
+f 123/113 124/114 125/115 126/116 
+usemtl tile
+g tile
+f 127/117 128/118 129/119 130/120 
+usemtl tile
+g tile
+f 131/121 132/122 133/123 134/124 
+usemtl tile
+g tile
+f 135/125 136/126 137/127 138/128 
+usemtl tile
+g tile
+f 139/129 140/130 141/131 142/132 
+usemtl tile
+g tile
+f 143/133 144/134 145/135 146/136 
+usemtl tile
+g tile
+f 147/137 148/138 149/139 150/140 
+usemtl tile
+g tile
+f 151/141 152/142 153/143 154/144 
