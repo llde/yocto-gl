@@ -28,13 +28,6 @@ newmtl building
   Ni 1
   map_Kd texture.png
 
-newmtl floors
-  illum 2
-  Kd 1 1 1
-  Ns 2e+16
-  Ni 1
-  map_Kd colored.png
-
 newmtl tile
   illum 2
   Kd 1 1 1

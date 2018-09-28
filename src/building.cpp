@@ -35,26 +35,7 @@ void add_instance(scene* scn, const std::string& name, const frame3f& f,
 void add_shape_in_instance(instance* inst , shape* shp){
 	inst->shp->shapes.push_back(shp);
 }
-/*
-void remove_shape_from_instance(instance* inst, shape* shp){
-	int idx = -1;
-	int i = 0;
-	for(auto shps : inst->shp->shapes){
-		if(shps == shp){
-			idx = i;
-			break;
-		}
-		i++;
-	}
-	if(idx == -1) {
-		std::cout << "No shape in the specified instance " << std::endl; 
-		return;
-	}
-	auto ret = inst->shp->shapes.begin();
-	std::advance(ret, idx);
-    std::cout << "Removing shape of index " << idx << " Shape "<< shp->name << std::endl;
-	inst->shp->shapes.erase(ret);
-}*/
+
 
 void remove_shape_from_scene(scene* scn, shape* shp){
 	for(auto shps : scn->shapes){
@@ -65,6 +46,7 @@ void remove_shape_from_scene(scene* scn, shape* shp){
 			break;
 		}
 	}
+	std::cout << "Porcoddio " << shp->name << std::endl;
 	auto res1 = std::find(scn->materials.begin(), scn->materials.end(), shp->mat);
 	if(res1 != scn->materials.end()){
 		scn->materials.erase(res1);
@@ -77,14 +59,29 @@ void remove_shape_from_scene(scene* scn, shape* shp){
 }
 
 
+
+void remove_shapes_from_scene(scene* scn, std::vector<shape*>& vecshp){
+	for(auto shp : vecshp){
+		remove_shape_from_scene(scn, shp);
+	}
+}
+
+void print_vector(std::vector<shape*>& vec){
+	for(shape* shp : vec){
+		std::cout << shp->name << "   "    << shp << std::endl;
+	}
+}
+
 auto get_instance_by_shape(scene* scn ,shape* shp) -> instance*{
+	instance* r = nullptr;
     for (auto instance : scn->instances){
 		auto res = std::find(instance->shp->shapes.begin(), instance->shp->shapes.end(), shp);
         if(res != instance->shp->shapes.end()){
-			return instance;
+			if(r != nullptr) std::cout << "Aiuto " << std::endl;
+			r = instance;
         }
     }
-	return nullptr;
+	return r;
 }
 /*
 void remove_instance(scene* scn, shape* shp) {
@@ -447,7 +444,7 @@ int main(int argc, char** argv ) {
 	scene* scn = init_scene();
 	add_instance(scn, "base",  frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, base, mat);
 	add_instance(scn, "base", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, base2, mat);
-	add_instance(scn, "facade", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, facade, mat);
+	add_instance(scn, "lammorte", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, facade, mat);
 
 	//make buildings from basement
 	extrude(scn, base, 4.0f);
@@ -460,31 +457,30 @@ int main(int argc, char** argv ) {
 		ss.push_back(shpe);
 		scn->textures.push_back(shpe->mat->kd_txt);
 		scn->materials.push_back(shpe->mat);
-		std::cout << "What I'm doing with my life" << std::endl;
 	}
-	
+	remove_shape_from_scene(scn, facade);	
 	inst->shp->shapes = ss;
-	remove_shape_from_scene(scn, facade);
 	//split floors test
-	for (instance* inst : scn->instances) {
+	for (instance* insta : scn->instances) {
 		std::vector<shape*> appoggio = std::vector<shape*>();
-		if(inst->shp == nullptr) continue;
+		std::vector<shape*> tremove = std::vector<shape*>();
+		//if(insta->shp == nullptr) continue;
 		for(shape* shp : inst->shp->shapes){
-			std::cout << "Shape name " << shp->name << std::endl;
 			if(shp->name == "floors") {
 				for(shape* shpe : repeat_x(scn, shp , 3, "tile")){
-					std::cout << "Processing shape " << shpe->name << std::endl;
+					std::cout << "Processing shape " << shpe->name  << std::endl;
 					appoggio.push_back(shpe);
 					scn->textures.push_back(shpe->mat->kd_txt);
 					scn->materials.push_back(shpe->mat);
 				}
-				remove_shape_from_scene(scn, shp);
+				tremove.push_back(shp);
 			}
 			else  appoggio.push_back(shp);
 		}
+		remove_shapes_from_scene(scn,tremove);
 		inst->shp->shapes = appoggio; 
 	}
-	
+
 	//subdiv_facade(scn);
 
 	//save
