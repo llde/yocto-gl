@@ -134,6 +134,14 @@ material* make_material(const std::string& name, const vec3f& kd,
 	return mat;
 }
 
+//add texture coordinates to mono-quad shapes.
+void add_texcoord_to_quad_shape(shape* shp) {
+	shp->texcoord.push_back(vec2f{ 0, 1 });
+	shp->texcoord.push_back(vec2f{ 1, 1 });
+	shp->texcoord.push_back(vec2f{ 1, 0 });
+	shp->texcoord.push_back(vec2f{ 0, 0 });
+}
+
 scene* extrude(scene* scn, instance* building, float height) {
 	//initial shape is only a single quad, the base of the building
 	shape* base = building->shp->shapes.at(0);
@@ -143,6 +151,7 @@ scene* extrude(scene* scn, instance* building, float height) {
 	//make building material
 	material* mat = make_material("building", vec3f{ 1.0, 1.0, 1.0 }, "texture.png");
 	scn->materials.push_back(mat);
+	scn->textures.push_back(mat->kd_txt);
 	//make the entire building, creating the other 5 faces
 	shape* roof = new shape{"roof"};
 	for (int i = 0; i < base->pos.size(); i++) {
@@ -151,10 +160,7 @@ scene* extrude(scene* scn, instance* building, float height) {
 	}
 	roof->quads.push_back(vec4i{ 0, 1, 2, 3 });
 	roof->mat = mat;
-	roof->texcoord.push_back(vec2f{ 0, 0 });
-	roof->texcoord.push_back(vec2f{ 0, 1 });
-	roof->texcoord.push_back(vec2f{ 1, 1 });
-	roof->texcoord.push_back(vec2f{ 1, 0 });
+	add_texcoord_to_quad_shape(roof); //roof doesnt take texture. fix it.
 	building->shp->shapes.push_back(roof);
 	//add_instance(scn, "roof", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, roof, mat);
 
@@ -166,10 +172,7 @@ scene* extrude(scene* scn, instance* building, float height) {
 		facade->pos.push_back(vec3f{ base->pos.at(j).x, base->pos.at(j).y + height, base->pos.at(j).z });
 		facade->quads.push_back(vec4i{ 0, 1, 2, 3 });
 		facade->mat = mat;
-		facade->texcoord.push_back(vec2f{ 0, 0 });
-		facade->texcoord.push_back(vec2f{ 0, 1 });
-		facade->texcoord.push_back(vec2f{ 1, 1 });
-		facade->texcoord.push_back(vec2f{ 1, 0 });
+		add_texcoord_to_quad_shape(facade);
 		building->shp->shapes.push_back(facade);
 		//add_instance(scn, "facade", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, facade, mat);
 	}
@@ -214,10 +217,7 @@ std::vector<shape*> split_y(scene* scn, shape* shp, const std::vector<float> v, 
 		nshp->pos.push_back(vec3f{ x1, y, z1 });
 		nshp->pos.push_back(vec3f{ x1, y + v.at(j)*h, z1 });
 		nshp->pos.push_back(vec3f{ x0, y + v.at(j)*h, z0 });
-		nshp->texcoord.push_back(vec2f{ 0, 0 });
-		nshp->texcoord.push_back(vec2f{ 0, 1 });
-		nshp->texcoord.push_back(vec2f{ 1, 1 });
-		nshp->texcoord.push_back(vec2f{ 1, 0 });
+		add_texcoord_to_quad_shape(nshp);
 		nshp->quads.push_back(vec4i{ 0, 1, 2, 3 });
 		material* mat = make_material(types.at(j), vec3f{ 1.0f, 1.0f, 1.0f }, "texture.png"); //this is only for test
 		//note : a material without texture triggers a segmentation fault because add_instance pushes back a nullptr in a vector
@@ -275,12 +275,9 @@ std::vector<shape*> split_x(scene* scn, shape* shp, std::vector<float> v, const 
 		nshp->pos.push_back(vec3f{ x + v.at(j)*w, y0, z + v.at(j)*l });
 		nshp->pos.push_back(vec3f{ x + v.at(j)*w, y1, z + v.at(j)*l });
 		nshp->pos.push_back(vec3f{ x, y1, z });
-		nshp->texcoord.push_back(vec2f{ 0, 0 });
-		nshp->texcoord.push_back(vec2f{ 0, 1 });
-		nshp->texcoord.push_back(vec2f{ 1, 1 });
-		nshp->texcoord.push_back(vec2f{ 1, 0 });
+		add_texcoord_to_quad_shape(nshp);
 		nshp->quads.push_back(vec4i{ 0, 1, 2, 3 });
-		material* mat = make_material(types.at(j), vec3f{ 1.0f, 1.0f, 1.0f }, "texture.png"); //this is only for test
+		material* mat = make_material(types.at(j), vec3f{ 1.0f, 1.0f, 1.0f }, "colored.png"); //this is only for test
 		//note : a material without texture triggers a segmentation fault because add_instance pushes back a nullptr in a vector
 		nshp->mat = mat;
 		newv.push_back(nshp);
@@ -505,4 +502,3 @@ int main(int argc, char** argv ) {
 	delete scn;
 	return 0;
 }
-
