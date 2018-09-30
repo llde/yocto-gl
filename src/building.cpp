@@ -44,7 +44,7 @@ void remove_shape_from_scene(scene* scn, shape* shp){
 			break;
 		}
 	}
-	std::cout << "Porcoddio " << shp->name << std::endl;
+	std::cout << "Shape " << shp->name << std::endl;
 	auto res1 = std::find(scn->materials.begin(), scn->materials.end(), shp->mat);
 	if(res1 != scn->materials.end()){
 		scn->materials.erase(res1);
@@ -70,12 +70,12 @@ void print_vector(std::vector<shape*>& vec){
 	}
 }
 
-auto get_instance_by_shape(scene* scn ,shape* shp) -> instance*{
+auto get_instance_by_shape(scene* scn, shape* shp) -> instance*{
 	instance* r = nullptr;
     for (auto instance : scn->instances){
 		auto res = std::find(instance->shp->shapes.begin(), instance->shp->shapes.end(), shp);
         if(res != instance->shp->shapes.end()){
-			if(r != nullptr) std::cout << "Aiuto " << std::endl;
+			if(r != nullptr) std::cout << "Aiuto" << std::endl;
 			r = instance;
         }
     }
@@ -160,7 +160,7 @@ scene* extrude(scene* scn, instance* building, float height) {
 	}
 	roof->quads.push_back(vec4i{ 0, 1, 2, 3 });
 	roof->mat = mat;
-	add_texcoord_to_quad_shape(roof); //roof doesnt take texture. fix it.
+	add_texcoord_to_quad_shape(roof);
 	building->shp->shapes.push_back(roof);
 	//add_instance(scn, "roof", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, roof, mat);
 
@@ -308,32 +308,43 @@ std::vector<shape*> repeat_x(scene* scn, shape* shp, int parts, const std::strin
 	return split_x(scn, shp, v, types);
 }
 
-//bugged. not used for now.
-scene* subdiv_facade(scene* scn, shape* shp) {
-	if (inst->name == "facade") {
-		repeat_y(scn, inst->shp->shapes.at(0), 4, "floors");
-		subdiv_facade(scn);
+//causes segfault. Not used for now
+scene* subdiv_facade(scene* scn, instance* inst, shape* shp) {
+	if (shp->name == "facade") {
+		for (shape* nshp : repeat_y(scn, shp, 4, "floors")) {
+			subdiv_facade(scn, inst, nshp);
+			remove_shape_from_scene(scn, shp);
+		}
 	}
-	else if (inst->name == "floors") {
-		repeat_x(scn, inst->shp->shapes.at(0), 4, "tile");
-		subdiv_facade(scn);
+	else if (shp->name == "floors") {
+		for (shape* nshp : repeat_x(scn, shp, 4, "tile")) {
+			subdiv_facade(scn, inst, nshp);
+		}
 	}
-	else if (inst->name == "tile") {
-		split_x(scn, inst->shp->shapes.at(0), std::vector<float>{ 0.1, 0.8, 0.1 }, std::vector<std::string>{ "vwall", "windcol", "vwall" });
-		subdiv_facade(scn);
+	else if (shp->name == "tile") {
+		for (shape* nshp : split_x(scn, shp, std::vector<float>{ 0.1, 0.8, 0.1 }, std::vector<std::string>{ "vwall", "windcol", "vwall" })) {
+			subdiv_facade(scn, inst, nshp);
+		}
 	}
-	else if (inst->name == "windcol") {
-		split_y(scn, inst->shp->shapes.at(0), std::vector<float>{ 0.1, 0.8, 0.1 }, std::vector<std::string>{ "hwall", "window", "hwall" });
-		subdiv_facade(scn);
+	else if (shp->name == "windcol") {
+		for (shape* nshp : split_y(scn, inst->shp->shapes.at(0), std::vector<float>{ 0.1, 0.8, 0.1 }, std::vector<std::string>{ "hwall", "window", "hwall" })) {
+			subdiv_facade(scn, inst, nshp);
+		}
 	}
-	else if (inst->name == "vwall") {
-		
+	else if (shp->name == "vwall") {
+		inst->shp->shapes.push_back(shp);
+		scn->textures.push_back(shp->mat->kd_txt);
+		scn->materials.push_back(shp->mat);
 	}
-	else if (inst->name == "hwall") {
-
+	else if (shp->name == "hwall") {
+		inst->shp->shapes.push_back(shp);
+		scn->textures.push_back(shp->mat->kd_txt);
+		scn->materials.push_back(shp->mat);
 	}
-	else if (inst->name == "window") {
-
+	else if (shp->name == "window") {
+		inst->shp->shapes.push_back(shp);
+		scn->textures.push_back(shp->mat->kd_txt);
+		scn->materials.push_back(shp->mat);
 	}
 	return scn;
 }
@@ -433,21 +444,8 @@ int main(int argc, char** argv ) {
 	instance* building2 = get_instance_by_shape(scn, base2);
 	extrude(scn, building, 4.0f);
 	extrude(scn, building2, 10.0f);
-
-	/*
-	//split facade test
-	std::vector<shape*> ss = std::vector<shape*>();
-	instance* facadeinst = get_instance_by_shape(scn, facade);
-	for(shape* shpe : repeat_y(scn, facade, 3, "floors")){			
-		ss.push_back(shpe);
-		scn->textures.push_back(shpe->mat->kd_txt);
-		scn->materials.push_back(shpe->mat);
-	}
-	remove_shape_from_scene(scn, facade);	
-	facadeinst->shp->shapes = ss;
-	*/
 	
-	//split buildings facades test
+	//split buildings facades test. Issue : roof loses its texture. Fix it.
 	for (instance* inst : scn->instances) {
 		if (inst->name == "building") {
 			std::vector<shape*> appoggio = std::vector<shape*>();
@@ -492,7 +490,15 @@ int main(int argc, char** argv ) {
 		remove_shapes_from_scene(scn, tremove);
 	}
 
-	//subdiv_facade(scn);
+	/*
+	for (instance* inst : scn->instances) {
+		for (shape* shp : inst->shp->shapes) {
+			if (shp->name == "facade") {
+				subdiv_facade(scn, inst, shp);
+			}
+		}
+	}
+	*/
 
 	//save
 	save_options sopt = save_options();
