@@ -292,13 +292,43 @@ std::vector<shape*> repeat_x(scene* scn, shape* shp, int parts, const std::strin
 std::vector<shape*> subdiv_facade(scene* scn, instance* inst, shape* shp) {
 	std::vector<shape*> to_add = std::vector<shape*>();
 	if (shp->name == "facade") {
-		for (shape* nshp : repeat_y(scn, shp, 4, "floors")) {
+		for (shape* nshp : split_y(scn, shp, std::vector<float>{ 0.1, 0.9 }, std::vector<std::string>{ "bottomfloor", "topfloors" })) {
 			auto res = subdiv_facade(scn, inst, nshp);
 			std::copy(res.begin(), res.end(), back_inserter(to_add));
 		}		
 	}
-	else if (shp->name == "floors") {
-		for (shape* nshp : repeat_x(scn, shp, 4, "tile")) {
+	else if (shp->name == "topfloors") {
+		for (shape* nshp : repeat_y(scn, shp, 9, "floor")) {
+			auto res = subdiv_facade(scn, inst, nshp);
+			std::copy(res.begin(), res.end(), back_inserter(to_add));
+		}
+	}
+	else if (shp->name == "bottomfloor") {
+		for (shape* nshp : split_x(scn, shp, std::vector<float>{ 0.4, 0.2, 0.4 }, std::vector<std::string>{ "tiles", "doortile", "tiles" })) {
+			auto res = subdiv_facade(scn, inst, nshp);
+			std::copy(res.begin(), res.end(), back_inserter(to_add));
+		}
+	}
+	else if (shp->name == "doortile") {
+		for (shape* nshp : split_x(scn, shp, std::vector<float>{ 0.1, 0.8, 0.1 }, std::vector<std::string>{ "vwall", "doorcol", "vwall" })) {
+			auto res = subdiv_facade(scn, inst, nshp);
+			std::copy(res.begin(), res.end(), back_inserter(to_add));
+		}
+	}
+	else if (shp->name == "doorcol") {
+		for (shape* nshp : split_x(scn, shp, std::vector<float>{ 0.9, 0.1 }, std::vector<std::string>{ "door", "hwall" })) {
+			auto res = subdiv_facade(scn, inst, nshp);
+			std::copy(res.begin(), res.end(), back_inserter(to_add));
+		}
+	}
+	else if (shp->name == "tiles") {
+		for (shape* nshp : repeat_x(scn, shp, 2, "tile")) {
+			auto res = subdiv_facade(scn, inst, nshp);
+			std::copy(res.begin(), res.end(), back_inserter(to_add));
+		}
+	}
+	else if (shp->name == "floor") {
+		for (shape* nshp : repeat_x(scn, shp, 5, "tile")) {
 			auto res = subdiv_facade(scn, inst, nshp);
 			std::copy(res.begin(), res.end(), back_inserter(to_add));
 		}
@@ -315,13 +345,7 @@ std::vector<shape*> subdiv_facade(scene* scn, instance* inst, shape* shp) {
 			std::copy(res.begin(), res.end(), back_inserter(to_add));
 		}
 	}
-	else if (shp->name == "vwall") {
-		to_add.push_back(shp);
-	}
-	else if (shp->name == "hwall") {
-		to_add.push_back(shp);
-	}
-	else if (shp->name == "window") {
+	else {
 		to_add.push_back(shp);
 	}
 	return to_add;
@@ -330,11 +354,20 @@ std::vector<shape*> subdiv_facade(scene* scn, instance* inst, shape* shp) {
 //apply texture
 void apply_material_and_texture(scene* scn, instance* inst) {
 	for (shape* shp : inst->shp->shapes) {
-		if (shp->name == "hwall" || shp->name == "vwall" || shp->name == "roof") {
-			shp->mat = make_material("texture", vec3f{ 1.0f, 1.0f, 1.0f }, "texture.png");
+		if (shp->name == "roof") {
+			shp->mat = make_material("roof", vec3f{ 1.0f, 1.0f, 1.0f }, "roof.png");
+		}
+		if (shp->name == "vwall") {
+			shp->mat = make_material("vwall", vec3f{ 1.0f, 1.0f, 1.0f }, "vwall.png");
+		}
+		if (shp->name == "hwall") {
+			shp->mat = make_material("hwall", vec3f{ 1.0f, 1.0f, 1.0f }, "hwall.png");
 		}
 		else if (shp->name == "window") {
-			shp->mat = make_material("window", vec3f{ 1.0f, 1.0f, 1.0f }, "window_test.png");
+			shp->mat = make_material("window", vec3f{ 1.0f, 1.0f, 1.0f }, "window.png", vec3f{ 0.4f, 0.4f, 0.4f });
+		}
+		else if (shp->name == "door") {
+			shp->mat = make_material("door", vec3f{ 1.0f, 1.0f, 1.0f }, "door.png");
 		}
 		scn->textures.push_back(shp->mat->kd_txt);
 		scn->materials.push_back(shp->mat);
@@ -400,10 +433,10 @@ int main(int argc, char** argv ) {
 
 	//make base
 	shape* base = new shape{ "base" };
-	base->pos.push_back(vec3f{ -1,  0, -1 });
-	base->pos.push_back(vec3f{ -1,  0,  1 });
-	base->pos.push_back(vec3f{  1,  0,  1 });
-	base->pos.push_back(vec3f{  1,  0, -1 });
+	base->pos.push_back(vec3f{ -5,  0, -5 });
+	base->pos.push_back(vec3f{ -5,  0,  5 });
+	base->pos.push_back(vec3f{  5,  0,  5 });
+	base->pos.push_back(vec3f{  5,  0, -5 });
 	base->quads.push_back(vec4i{ 0, 1, 2, 3 });
 	//base->mat = mat;
 
@@ -419,13 +452,13 @@ int main(int argc, char** argv ) {
 	//make scene
 	scene* scn = init_scene();
 	add_instance(scn, "base",  frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, base);
-	add_instance(scn, "base", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, base2);
+	//add_instance(scn, "base", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, base2);
 
 	//make buildings from basement
 	instance* building = get_instance_by_shape(scn, base);
-	instance* building2 = get_instance_by_shape(scn, base2);
-	extrude(scn, building, 4.0f);
-	extrude(scn, building2, 10.0f);
+	//instance* building2 = get_instance_by_shape(scn, base2);
+	extrude(scn, building, 30.0f);
+	//extrude(scn, building2, 10.0f);
 	remove_shape_from_scene(scn, base);
 	remove_shape_from_scene(scn, base2);
 

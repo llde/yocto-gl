@@ -12,5139 +12,7979 @@ newmtl light
   Ns 2e+16
   Ni 1
 
-newmtl texture
+newmtl roof
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd roof.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl door
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd door.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl door
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd door.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
   Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl door
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd door.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl window
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl window
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl window
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl window
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl window
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl door
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd door.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl window
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl window
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
 newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
   Ns 2e+08
   Ni 1
-  map_Kd window_test.png
+  map_Kd window.png
 
-newmtl texture
+newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd hwall.png
 
-newmtl texture
+newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 2e+08
   Ni 1
-  map_Kd texture.png
+  map_Kd vwall.png
 
