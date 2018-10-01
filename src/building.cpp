@@ -39,15 +39,15 @@ void remove_shape_from_scene(scene* scn, shape* shp){
 		}
 	}
 	std::cout << "Shape " << shp->name << std::endl;
-//	auto res1 = std::find(scn->materials.begin(), scn->materials.end(), shp->mat);
-//	if(res1 != scn->materials.end()){
-//		scn->materials.erase(res1);
-//	}
-//	auto res2 = std::find(scn->textures.begin(), scn->textures.end(), shp->mat->kd_txt);
-//	if(res2 != scn->textures.end()){
-//		scn->textures.erase(res2);
-//	}
-
+	if (shp->mat == nullptr) return;
+	auto res1 = std::find(scn->materials.begin(), scn->materials.end(), shp->mat);
+	if(res1 != scn->materials.end()){
+		scn->materials.erase(res1);
+	}
+	auto res2 = std::find(scn->textures.begin(), scn->textures.end(), shp->mat->kd_txt);
+	if(res2 != scn->textures.end()){
+		scn->textures.erase(res2);
+	}
 }
 
 
@@ -328,16 +328,13 @@ std::vector<shape*> subdiv_facade(scene* scn, instance* inst, shape* shp) {
 }
 
 //apply texture
-void apply_texture(scene* scn, instance* inst) {
-	material* text = make_material("texture", vec3f{ 1.0f, 1.0f, 1.0f }, "texture.png");
-	material* wind = make_material("window", vec3f{ 1.0f, 1.0f, 1.0f }, "window_test.png");
-	//note : a material without texture triggers a segmentation fault because add_instance pushes back a nullptr in a vector
+void apply_material_and_texture(scene* scn, instance* inst) {
 	for (shape* shp : inst->shp->shapes) {
 		if (shp->name == "hwall" || shp->name == "vwall" || shp->name == "roof") {
-			shp->mat = text;
+			shp->mat = make_material("texture", vec3f{ 1.0f, 1.0f, 1.0f }, "texture.png");
 		}
 		else if (shp->name == "window") {
-			shp->mat = wind;
+			shp->mat = make_material("window", vec3f{ 1.0f, 1.0f, 1.0f }, "window_test.png");
 		}
 		scn->textures.push_back(shp->mat->kd_txt);
 		scn->materials.push_back(shp->mat);
@@ -452,7 +449,7 @@ int main(int argc, char** argv ) {
 	//
 	for (instance* inst : scn->instances) {
 		if (inst->name == "building") {
-			apply_texture(scn, inst);
+			apply_material_and_texture(scn, inst);
 		}
 	}
 
@@ -460,6 +457,6 @@ int main(int argc, char** argv ) {
 	save_options sopt = save_options();
 	printf("saving scene %s\n", sceneout.c_str());
 	save_scene(sceneout, scn, sopt );
-	//delete scn;
+	delete scn;
 	return 0;
 }
