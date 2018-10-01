@@ -316,7 +316,7 @@ std::vector<shape*> subdiv_facade(scene* scn, instance* inst, shape* shp) {
 		}
 	}
 	else if (shp->name == "doorcol") {
-		for (shape* nshp : split_x(scn, shp, std::vector<float>{ 0.9, 0.1 }, std::vector<std::string>{ "door", "hwall" })) {
+		for (shape* nshp : split_y(scn, shp, std::vector<float>{ 0.9, 0.1 }, std::vector<std::string>{ "door", "hwall" })) {
 			auto res = subdiv_facade(scn, inst, nshp);
 			std::copy(res.begin(), res.end(), back_inserter(to_add));
 		}
