@@ -7,8 +7,8 @@ using namespace ygl;
 
 //add instance
 void add_instance(scene* scn, const std::string& name, const frame3f& f,
-	shape* shp, material* mat) {
-	if (!shp || !mat) return;
+	shape* shp) {
+	if (!shp) return;
 
 	shape_group* shpgrp = new shape_group{};
 	shpgrp->shapes.push_back(shp);
@@ -20,12 +20,7 @@ void add_instance(scene* scn, const std::string& name, const frame3f& f,
 	if (std::find(scn->shapes.begin(), scn->shapes.end(), shpgrp) == scn->shapes.end()) {
 		scn->shapes.push_back(shpgrp);
 	}
-	if (std::find(scn->materials.begin(), scn->materials.end(), mat) == scn->materials.end()) {
-		scn->materials.push_back(mat);
-	}
-	if (std::find(scn->textures.begin(), scn->textures.end(), mat->kd_txt) == scn->textures.end()) { //add texture check
-		scn->textures.push_back(mat->kd_txt);
-	}
+	//TODO add material to scene must be in a function to add a shape to an instance.
 }
 
 //Add the shape to the instance
@@ -44,14 +39,14 @@ void remove_shape_from_scene(scene* scn, shape* shp){
 		}
 	}
 	std::cout << "Shape " << shp->name << std::endl;
-	auto res1 = std::find(scn->materials.begin(), scn->materials.end(), shp->mat);
-	if(res1 != scn->materials.end()){
-		scn->materials.erase(res1);
-	}
-	auto res2 = std::find(scn->textures.begin(), scn->textures.end(), shp->mat->kd_txt);
-	if(res2 != scn->textures.end()){
-		scn->textures.erase(res2);
-	}
+//	auto res1 = std::find(scn->materials.begin(), scn->materials.end(), shp->mat);
+//	if(res1 != scn->materials.end()){
+//		scn->materials.erase(res1);
+//	}
+//	auto res2 = std::find(scn->textures.begin(), scn->textures.end(), shp->mat->kd_txt);
+//	if(res2 != scn->textures.end()){
+//		scn->textures.erase(res2);
+//	}
 
 }
 
@@ -150,9 +145,9 @@ scene* extrude(scene* scn, instance* building, float height) {
 		return nullptr;
 	}
 	//make building material
-	material* mat = make_material("building", vec3f{ 1.0, 1.0, 1.0 }, "texture.png");
-	scn->materials.push_back(mat);
-	scn->textures.push_back(mat->kd_txt);
+	//material* mat = make_material("building", vec3f{ 1.0, 1.0, 1.0 }, "texture.png");
+//	scn->materials.push_back(mat);
+//	scn->textures.push_back(mat->kd_txt);
 	//make the entire building, creating the other 5 faces
 	shape* roof = new shape{"roof"};
 	for (int i = 0; i < base->pos.size(); i++) {
@@ -160,7 +155,7 @@ scene* extrude(scene* scn, instance* building, float height) {
 		roof->pos.push_back(vertex);
 	}
 	roof->quads.push_back(vec4i{ 0, 1, 2, 3 });
-	roof->mat = mat;
+	//roof->mat = mat;
 	add_texcoord_to_quad_shape(roof);
 	building->shp->shapes.push_back(roof);
 
@@ -171,7 +166,7 @@ scene* extrude(scene* scn, instance* building, float height) {
 		facade->pos.push_back(vec3f{ base->pos.at((j + 1) % 4).x, base->pos.at((j + 1) % 4).y + height, base->pos.at((j + 1) % 4).z });
 		facade->pos.push_back(vec3f{ base->pos.at(j).x, base->pos.at(j).y + height, base->pos.at(j).z });
 		facade->quads.push_back(vec4i{ 0, 1, 2, 3 });
-		facade->mat = mat;
+		//facade->mat = mat;
 		add_texcoord_to_quad_shape(facade);
 		building->shp->shapes.push_back(facade);
 	}
@@ -218,11 +213,7 @@ std::vector<shape*> split_y(scene* scn, shape* shp, const std::vector<float> v, 
 		nshp->pos.push_back(vec3f{ x0, y + v.at(j)*h, z0 });
 		add_texcoord_to_quad_shape(nshp);
 		nshp->quads.push_back(vec4i{ 0, 1, 2, 3 });
-		material* mat = make_material(types.at(j), vec3f{ 1.0f, 1.0f, 1.0f }, "texture.png"); //this is only for test
-		//note : a material without texture triggers a segmentation fault because add_instance pushes back a nullptr in a vector
-		nshp->mat = mat;
 		newv.push_back(nshp);
-		//TODO add this to the helper functions or reuse existing materials/texture
 		y += v.at(j)*h;
 		std::cout << "Generating  shape " << nshp->name << std::endl;
 	}
@@ -273,17 +264,12 @@ std::vector<shape*> split_x(scene* scn, shape* shp, std::vector<float> v, const 
 		nshp->pos.push_back(vec3f{ x, y1, z });
 		add_texcoord_to_quad_shape(nshp);
 		nshp->quads.push_back(vec4i{ 0, 1, 2, 3 });
-		material* mat = make_material(types.at(j), vec3f{ 1.0f, 1.0f, 1.0f }, "texture.png"); //this is only for test
-		//note : a material without texture triggers a segmentation fault because add_instance pushes back a nullptr in a vector
-		nshp->mat = mat;
 		newv.push_back(nshp);
-		//TODO add this to the helper functions or reuse existing materials/texture
 		x += v.at(j)*w;
 		z += v.at(j)*l;
 		std::cout << "Generating  shape " << nshp->name << std::endl;
 
 	}
-	//TODO remove or reuse shp textures;
 	return newv;
 }
 
@@ -302,7 +288,7 @@ std::vector<shape*> repeat_x(scene* scn, shape* shp, int parts, const std::strin
 	return split_x(scn, shp, v, types);
 }
 
-//causes segfault. Not used for now
+//recursively divides a facade in subparts
 std::vector<shape*> subdiv_facade(scene* scn, instance* inst, shape* shp) {
 	std::vector<shape*> to_add = std::vector<shape*>();
 	if (shp->name == "facade") {
@@ -331,26 +317,37 @@ std::vector<shape*> subdiv_facade(scene* scn, instance* inst, shape* shp) {
 	}
 	else if (shp->name == "vwall") {
 		to_add.push_back(shp);
-		scn->textures.push_back(shp->mat->kd_txt);  //TODO also move out these;
-		scn->materials.push_back(shp->mat);
 	}
 	else if (shp->name == "hwall") {
 		to_add.push_back(shp);
-		scn->textures.push_back(shp->mat->kd_txt);
-		scn->materials.push_back(shp->mat);
 	}
 	else if (shp->name == "window") {
 		to_add.push_back(shp);
+	}
+	return to_add;
+}
+
+//apply texture
+void apply_texture(scene* scn, instance* inst) {
+	material* text = make_material("texture", vec3f{ 1.0f, 1.0f, 1.0f }, "texture.png");
+	material* wind = make_material("window", vec3f{ 1.0f, 1.0f, 1.0f }, "window_test.png");
+	//note : a material without texture triggers a segmentation fault because add_instance pushes back a nullptr in a vector
+	for (shape* shp : inst->shp->shapes) {
+		if (shp->name == "hwall" || shp->name == "vwall" || shp->name == "roof") {
+			shp->mat = text;
+		}
+		else if (shp->name == "window") {
+			shp->mat = wind;
+		}
 		scn->textures.push_back(shp->mat->kd_txt);
 		scn->materials.push_back(shp->mat);
 	}
-	return to_add;
 }
 
 //modified from model.cpp
 scene* init_scene() {
 	auto scn = new scene();
-	// add floor
+	//add floor
 	material* mat = make_material( "floor", { 0.2f, 0.2f, 0.2f }, "grid.png" );
 
 	shape* shp = new shape{ "floor" };
@@ -360,9 +357,11 @@ scene* init_scene() {
 	shp->texcoord = { { -10, -10 },{ 10, -10 },{ 10, 10 },{ -10, 10 } };
 	shp->triangles = { { 0, 1, 2 },{ 0, 2, 3 } };
 
-	add_instance(scn, "floor", identity_frame3f, shp, mat);
+	add_instance(scn, "floor", identity_frame3f, shp);
+	scn->textures.push_back(shp->mat->kd_txt);
+	scn->materials.push_back(shp->mat);
 
-	// add light
+	//add light
 	auto lmat = new material{ "light" };
 	lmat->ke = { 100, 100, 100 };
 	auto lshp = new shape{ "light" };
@@ -399,8 +398,8 @@ int main(int argc, char** argv ) {
 
 	//printf("creating scene %s\n", type.c_str());
 
-	//make material
-	material* mat = make_material("building", { 1.0f, 1.0f, 1.0f }, "colored.png");
+	//make dummy material
+	//material* mat = make_material("building", { 1.0f, 1.0f, 1.0f }, "colored.png");
 
 	//make base
 	shape* base = new shape{ "base" };
@@ -409,7 +408,7 @@ int main(int argc, char** argv ) {
 	base->pos.push_back(vec3f{  1,  0,  1 });
 	base->pos.push_back(vec3f{  1,  0, -1 });
 	base->quads.push_back(vec4i{ 0, 1, 2, 3 });
-	base->mat = mat;
+	//base->mat = mat;
 
 	//make base 2
 	shape* base2 = new shape{ "base" };
@@ -418,32 +417,22 @@ int main(int argc, char** argv ) {
 	base2->pos.push_back(vec3f{  9,  0,  3 });
 	base2->pos.push_back(vec3f{  9,  0, -3 });
 	base2->quads.push_back(vec4i{ 0, 1, 2, 3 });
-	base2->mat = mat;
-
-	//translate base
-	translate(base, vec3f{ -1,  0, -3 });
-
-	//make a single vertical facade
-	shape* facade = new shape{ "facade" };
-	facade->pos.push_back(vec3f{ -1,  0,  0 });
-	facade->pos.push_back(vec3f{  1,  0,  0 });
-	facade->pos.push_back(vec3f{  1,  2,  0 });
-	facade->pos.push_back(vec3f{ -1,  2,  0 });
-	facade->quads.push_back({ 0, 1, 2, 3 });
-	facade->mat = mat;
+	//base2->mat = mat;
 
 	//make scene
 	scene* scn = init_scene();
-	add_instance(scn, "base",  frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, base, mat);
-	add_instance(scn, "base", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, base2, mat);
-	add_instance(scn, "building", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, facade, mat);
+	add_instance(scn, "base",  frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, base);
+	add_instance(scn, "base", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, base2);
 
 	//make buildings from basement
 	instance* building = get_instance_by_shape(scn, base);
 	instance* building2 = get_instance_by_shape(scn, base2);
 	extrude(scn, building, 4.0f);
 	extrude(scn, building2, 10.0f);
+	remove_shape_from_scene(scn, base);
+	remove_shape_from_scene(scn, base2);
 
+	//subdivide building facade
 	for (instance* inst : scn->instances) {
 		std::vector<shape*> to_add = std::vector<shape*>();
 		std::vector<shape*> to_remove = std::vector<shape*>();
@@ -460,10 +449,17 @@ int main(int argc, char** argv ) {
 		}
 	}
 	
+	//
+	for (instance* inst : scn->instances) {
+		if (inst->name == "building") {
+			apply_texture(scn, inst);
+		}
+	}
+
 	//save
 	save_options sopt = save_options();
 	printf("saving scene %s\n", sceneout.c_str());
 	save_scene(sceneout, scn, sopt );
-	delete scn;
+	//delete scn;
 	return 0;
 }
