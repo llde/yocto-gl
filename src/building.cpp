@@ -3,7 +3,8 @@
 
 using namespace ygl;
 
-//note : obj files, mtl files and png files for textures must be all in the same folder!
+//note1 : obj files, mtl files and png files for textures must be all in the same folder!
+//note2 : every object in the scene, must be stored in the proper vector contained in the scene object(the pointer of it), in order to delete it when deleting the scene;
 
 enum building_type { residential, skyscraper, office, tower, house };
 
@@ -443,6 +444,9 @@ void apply_material_and_texture(scene* scn, instance* inst) {
 			shp->mat = make_material("door", vec3f{ 1.0f, 1.0f, 1.0f }, "door.png");
 		}
 		scn->textures.push_back(shp->mat->kd_txt);
+		if (shp->mat->disp_txt != nullptr) {
+			scn->textures.push_back(shp->mat->disp_txt);
+		}
 		scn->materials.push_back(shp->mat);
 	}
 }
