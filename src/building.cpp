@@ -6,39 +6,86 @@ using namespace ygl;
 //note1 : obj files, mtl files and png files for textures must be all in the same folder!
 //note2 : every object in the scene, must be stored in the proper vector contained in the scene object(the pointer of it), in order to delete it when deleting the scene;
 
+//the types of building
 enum building_type { residential, skyscraper, office, tower, house };
 
+//the axis to make subdivisions
 enum subdiv_axis { x, y };
 
-enum element_type {};
+//the type of element obtainable by subidiving facade. Only the terminal elements will be added to the scene and textured
+enum element_type { facade, topfloors, topfloor, wintiles, wintile, windcol, vwall, hwall, window, ledge, bottomfloor, doortile, door };
 
-struct type_info {
-	std::map<building_type, std::string> type_to_str = std::map<building_type, std::string>();
-	building_type type;
-	float min_h, max_h;
-	float max_l, min_l;
-	float max_w, min_w;
-	float max_w_l_ratio, min_w_l_ratio;
-	float max_floor_h, min_floor_h;
-	float max_wind_w, min_wind_w;
-	float max_wind_h, min_wind_h;
-
-	type_info(building_type type) {
-		type_to_str.insert(std::pair<building_type, std::string>(residential, "residential"));
-		type_to_str.insert(std::pair<building_type, std::string>(skyscraper, "skyscraper"));
-		type_to_str.insert(std::pair<building_type, std::string>(office, "office"));
-		type_to_str.insert(std::pair<building_type, std::string>(tower, "tower"));
-		type_to_str.insert(std::pair<building_type, std::string>(house, "house"));
-	}
-
-	~type_info() {
-
-	}
-
+//map building types with strings
+static const std::map <building_type, std::string> building_type_to_string = {
+	{ residential, "residential" }, { skyscraper, "skyscraper" }, { office, "office" }, { tower, "tower" }, { house, "house" },
 };
 
+//map subdivision axis with strings
+static const std::map <subdiv_axis, std::string> axis_to_string = {
+	{ x, "x" }, { y , "y" }
+};
+
+//map element types with strings
+static const std::map <element_type, std::string> element_type_to_string = {
+	{ facade, "facade" }, { topfloors, "topfloors" }, { topfloor, "topfloor" }, { wintiles, "wintiles" }, { windcol, "windcol" },
+	{ vwall, " vwall" }, { hwall, "hwall" }, { window, "window" }, { ledge, "ledge" }, { bottomfloor, "bottomfloor" }, { doortile, "doortile" }, { door, "door" }
+};
+
+//
+struct type_info {
+	std::pair<float, float> h_range;
+	std::pair<float, float> l_range;
+	std::pair<float, float> w_range;
+	std::pair<float, float> wl_ratio_range;
+	std::pair<float, float> floor_h_range;
+	std::pair<float, float> wind_w_range;
+	std::pair<float, float> wind_h_range;
+	std::vector<std::string> door_texture;
+	std::vector<std::string> window_texture;
+	std::vector<std::string> vwall_texture;
+	std::vector<std::string> hwall_texture;
+	std::vector<std::string> ledge_texture;
+	std::map<element_type, std::pair<std::vector<element_type>, subdiv_axis>> subdiv_rules;
+};
+
+//constants for residential buildings
+static const type_info residential_info = {
+	std::pair<float, float>{ 30.0, 100.0 },
+	std::pair<float, float>{ 4.0, 10.0 },
+	std::pair<float, float>{ 4.0, 10.0 },
+	std::pair<float, float>{ (5.0 / 6.0), (6.0 / 5.0) },
+	std::pair<float, float>{ 2.5, 3.5 },
+	std::pair<float, float>{ 2.0, 2.5 },
+	std::pair<float, float>{ 2.0, 2.5 },
+	std::vector<std::string>(),
+	std::vector<std::string>(),
+	std::vector<std::string>(),
+	std::vector<std::string>(),
+	std::vector<std::string>(),
+	std::map<element_type, std::pair<std::vector<element_type>, subdiv_axis>>{}
+};
+
+//constants for skyscrapers
+static const type_info skyscraper_info = {
+	std::pair<float, float>{ 30.0, 100.0 },
+	std::pair<float, float>{ 4.0, 10.0 },
+	std::pair<float, float>{ 4.0, 10.0 },
+	std::pair<float, float>{ (5.0 / 6.0), (6.0 / 5.0) },
+	std::pair<float, float>{ 2.5, 3.5 },
+	std::pair<float, float>{ 2.0, 2.5 },
+	std::pair<float, float>{ 2.0, 2.5 },
+	std::vector<std::string>(),
+	std::vector<std::string>(),
+	std::vector<std::string>(),
+	std::vector<std::string>(),
+	std::vector<std::string>(),
+	std::map<element_type, std::pair<std::vector<element_type>, subdiv_axis>>{}
+};
+
+//
 struct building_info {
 	building_type type;
+	type_info info;
 	float h;
 	float l;
 	float w;
@@ -49,7 +96,7 @@ struct building_info {
 	bool flat_roof;
 	std::map<element_type, std::pair<std::vector<element_type>, subdiv_axis>> subdiv_rules;
 
-	building_info() {
+	building_info(building_type) {
 		
 	}
 
@@ -59,7 +106,7 @@ struct building_info {
 	}
 };
 
-//
+//unused
 struct building {
 	instance* building;
 	building_info info;
