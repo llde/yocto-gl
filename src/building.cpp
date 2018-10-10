@@ -89,7 +89,6 @@ void add_shape_in_instance(instance* inst , shape* shp){
 
 
 void remove_shape_from_scene(scene* scn, shape* shp){
-<<<<<<< HEAD
 	if (shp->mat != nullptr) {
 		auto res1 = std::find(scn->materials.begin(), scn->materials.end(), shp->mat);
 		if (res1 != scn->materials.end()) {
@@ -99,17 +98,6 @@ void remove_shape_from_scene(scene* scn, shape* shp){
 		auto res2 = std::find(scn->textures.begin(), scn->textures.end(), shp->mat->kd_txt);
 		if (res2 != scn->textures.end()) {
 			scn->textures.erase(res2);
-=======
-	if (shp->mat != nullptr){
-		auto res2 = std::find(scn->textures.begin(), scn->textures.end(), shp->mat->kd_txt);
-		if(res2 != scn->textures.end()){
-			scn->textures.erase(res2);
-			delete shp->mat->kd_txt;
-		}
-		auto res1 = std::find(scn->materials.begin(), scn->materials.end(), shp->mat);
-		if(res1 != scn->materials.end()){
-			scn->materials.erase(res1);
->>>>>>> f6bd3b7713d1763892757de3c0aa6ffb11f1dede
 			delete shp->mat;
 		}
 	}
@@ -117,19 +105,11 @@ void remove_shape_from_scene(scene* scn, shape* shp){
 		auto res = std::find(shps->shapes.begin(), shps->shapes.end(), shp);
 		if(res != shps->shapes.end()){
 			shps->shapes.erase(res);
-<<<<<<< HEAD
-//			std::cout << "Removing shape " << shp->name << std::endl;
-=======
 			std::cout << "Removing shape " << shp->name << std::endl;
->>>>>>> f6bd3b7713d1763892757de3c0aa6ffb11f1dede
 			delete shp;
 			break;
 		}
 	}
-<<<<<<< HEAD
-=======
-
->>>>>>> f6bd3b7713d1763892757de3c0aa6ffb11f1dede
 }
 
 
@@ -560,14 +540,8 @@ int main(int argc, char** argv ) {
 	extrude(scn, building, 30.0f);
 	//extrude(scn, building2, 10.0f);
 	remove_shape_from_scene(scn, base);
-<<<<<<< HEAD
-	remove_shape_from_scene(scn, base2);
-	delete base2;
-
-=======
 //	remove_shape_from_scene(scn, base2);
 	delete base2; //Temp
->>>>>>> f6bd3b7713d1763892757de3c0aa6ffb11f1dede
 	//subdivide building facade
 	for (instance* inst : scn->instances) {
 		std::vector<shape*> to_add = std::vector<shape*>();
