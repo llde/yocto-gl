@@ -268,6 +268,7 @@ std::vector<shape*> split_y(scene* scn, shape* shp, const std::vector<float> v, 
 
 	for (int j = 0; j < v.size(); j++) {
 		shape* nshp = new shape();
+
 		nshp->name = types.at(j);
 		nshp->pos.push_back(vec3f{ x0, y, z0 });
 		nshp->pos.push_back(vec3f{ x1, y, z1 });
@@ -366,7 +367,6 @@ std::vector<shape*> subdiv_facade(scene* scn, instance* inst, shape* shp) {
 			std::copy(res.begin(), res.end(), back_inserter(to_add));
 			delete nshp;
 		}
-		delete shp;
 	}
 	else if (shp->name == "bottomfloor") {
 		for (shape* nshp : split_x(scn, shp, std::vector<float>{ 0.4, 0.2, 0.4 }, std::vector<std::string>{ "tiles", "doortile", "tiles" })) {
@@ -374,7 +374,6 @@ std::vector<shape*> subdiv_facade(scene* scn, instance* inst, shape* shp) {
 			std::copy(res.begin(), res.end(), back_inserter(to_add));
 			delete nshp;
 		}
-		delete shp;
 	}
 	else if (shp->name == "doortile") {
 		for (shape* nshp : split_x(scn, shp, std::vector<float>{ 0.1, 0.8, 0.1 }, std::vector<std::string>{ "vwall", "doorcol", "vwall" })) {
@@ -382,14 +381,12 @@ std::vector<shape*> subdiv_facade(scene* scn, instance* inst, shape* shp) {
 			std::copy(res.begin(), res.end(), back_inserter(to_add));
 			if(nshp->name == "doorcol") delete nshp;
 		}
-		delete shp;
 	}
 	else if (shp->name == "doorcol") {
 		for (shape* nshp : split_y(scn, shp, std::vector<float>{ 0.9, 0.1 }, std::vector<std::string>{ "door", "hwall" })) {
 			auto res = subdiv_facade(scn, inst, nshp);
 			std::copy(res.begin(), res.end(), back_inserter(to_add));
 		}
-		delete shp;
 	}
 	else if (shp->name == "tiles") {
 		for (shape* nshp : repeat_x(scn, shp, 2, "tile")) {
@@ -397,7 +394,6 @@ std::vector<shape*> subdiv_facade(scene* scn, instance* inst, shape* shp) {
 			std::copy(res.begin(), res.end(), back_inserter(to_add));
 			delete nshp;
 		}
-		delete shp;
 	}
 	else if (shp->name == "floor") {
 		for (shape* nshp : repeat_x(scn, shp, 5, "tile")) {
@@ -405,7 +401,6 @@ std::vector<shape*> subdiv_facade(scene* scn, instance* inst, shape* shp) {
 			std::copy(res.begin(), res.end(), back_inserter(to_add));
 			delete nshp;
 		}
-		delete shp;
 	}
 	else if (shp->name == "tile") {
 		for (shape* nshp : split_x(scn, shp, std::vector<float>{ 0.1, 0.8, 0.1 }, std::vector<std::string>{ "vwall", "windcol", "vwall" })) {
@@ -413,14 +408,12 @@ std::vector<shape*> subdiv_facade(scene* scn, instance* inst, shape* shp) {
 			std::copy(res.begin(), res.end(), back_inserter(to_add));
 			if(nshp->name == "windcol") delete nshp;
 		}
-		delete shp;
 	}
 	else if (shp->name == "windcol") {
 		for (shape* nshp : split_y(scn, shp, std::vector<float>{ 0.1, 0.8, 0.1 }, std::vector<std::string>{ "hwall", "window", "hwall" })) {
 			auto res = subdiv_facade(scn, inst, nshp);
 			std::copy(res.begin(), res.end(), back_inserter(to_add));
 		}
-		delete shp;
 	}
 	else {
 		to_add.push_back(shp);
