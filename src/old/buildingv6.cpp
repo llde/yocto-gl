@@ -6,13 +6,6 @@ using namespace ygl;
 //note1 : obj files, mtl files and png files for textures must be all in the same folder!
 //note2 : every object in the scene, must be stored in the proper vector contained in the scene object(the pointer of it), in order to delete it when deleting the scene;
 
-static const float min_map_side = 5000.0f;
-static const float max_map_side = 6000.0f;
-static const float min_building_side = 9.0f;
-static const float max_building_side = 30.0f;
-static const float min_street_width = 4.0f;
-static const float max_street_width = 10.0f;
-
 //the types of building
 enum building_type { residential, skyscraper, office, tower, house };
 
@@ -134,6 +127,7 @@ void add_instance(scene* scn, const std::string& name, const frame3f& f,
 	if (std::find(scn->shapes.begin(), scn->shapes.end(), shpgrp) == scn->shapes.end()) {
 		scn->shapes.push_back(shpgrp);
 	}
+	//TODO add material to scene must be in a function to add a shape to an instance.
 }
 
 //Add the shape to the instance
@@ -263,34 +257,7 @@ void translate(shape* shp, const vec3f t) {
 }
 
 //generates the map of the city, as a grid, with random streets width
-void make_map(scene* scn) {
-	//random map size
-	rng_pcg32 rng = rng_pcg32{};
-	seed_rng(rng, rng.state, rng.inc); //not so random, generate same random float at each execution, fix it!
-	advance_rng(rng);
-	float random_n = next_rand1f(rng, min_map_side, max_map_side);
-	float random_m = next_rand1f(rng, min_map_side, max_map_side);
-	printf("n = %f\n", random_n);
-	printf("m = %f\n", random_m);
-
-	std::vector<shape*> v = std::vector<shape*>();
-
-	//
-	float x = -(random_n / 2.0f); //x-axis
-	float z = -(random_m / 2.0f); //z-axis
-	while (z < random_m / 2.0f) {
-		float building_l = next_rand1f(rng, min_building_side, max_building_side);
-		float street_w = next_rand1f(rng, min_street_width, max_street_width);
-		shape* shp = new shape();
-		shp->pos.push_back(vec3f{ x, 0, z });
-		shp->pos.push_back(vec3f{ (random_n / 2.0f), 0, z });
-		shp->pos.push_back(vec3f{ (random_n / 2.0f), 0, z + building_l });
-		shp->pos.push_back(vec3f{ x, 0, z + building_l });
-		shp->quads.push_back(vec4i{ 0, 1, 2, 3 });
-		v.push_back(shp);
-		z += building_l + street_w;
-	}
-	//
+void make_map() {
 
 }
 
@@ -303,8 +270,8 @@ scene* extrude(scene* scn, instance* building, float height) {
 	}
 	//make building material
 	//material* mat = make_material("building", vec3f{ 1.0, 1.0, 1.0 }, "texture.png");
-	//scn->materials.push_back(mat);
-	//scn->textures.push_back(mat->kd_txt);
+//	scn->materials.push_back(mat);
+//	scn->textures.push_back(mat->kd_txt);
 	//make the entire building, creating the other 5 faces
 	shape* roof = new shape{"roof"};
 	for (int i = 0; i < base->pos.size(); i++) {
@@ -334,14 +301,14 @@ scene* extrude(scene* scn, instance* building, float height) {
 
 //facade split on y-axis
 std::vector<shape*> split_y(scene* scn, shape* shp, const std::vector<float> v, const std::vector<std::string> types) {
-	//std::cout << "Splitting y axis of shape " << shp->name << std::endl;
+//	std::cout << "Splitting y axis of shape " << shp->name << std::endl;
 	float check = 0;
 	for (int i = 0; i < v.size(); i++) {
 		check += v.at(i);
 	}
 	std::vector<shape*> newv = std::vector<shape*>();
 	if (check != 1 || v.size() != types.size()) {
-	//printf("unconsistent data\n"); //
+//		printf("unconsistent data\n"); //
 		return newv;
 	}
 
@@ -364,7 +331,7 @@ std::vector<shape*> split_y(scene* scn, shape* shp, const std::vector<float> v, 
 		nshp->quads.push_back(vec4i{ 0, 1, 2, 3 });
 		newv.push_back(nshp);
 		y += v.at(j)*h;
-		//std::cout << "Generating  shape " << nshp->name << std::endl;
+//		std::cout << "Generating  shape " << nshp->name << std::endl;
 	}
 	return newv;
 }
@@ -613,9 +580,6 @@ int main(int argc, char** argv ) {
 
 	//make scene
 	scene* scn = init_scene();
-	//test make map
-	make_map(scn);
-
 	add_instance(scn, "base",  frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, base);
 	//add_instance(scn, "base", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, base2);
 
@@ -625,7 +589,7 @@ int main(int argc, char** argv ) {
 	extrude(scn, building, 30.0f);
 	//extrude(scn, building2, 10.0f);
 	remove_shape_from_scene(scn, base);
-	//remove_shape_from_scene(scn, base2);
+//	remove_shape_from_scene(scn, base2);
 	delete base2; //Temp
 	//subdivide building facade
 	for (instance* inst : scn->instances) {
