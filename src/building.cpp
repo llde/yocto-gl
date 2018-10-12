@@ -1,6 +1,8 @@
 #include <vector>
 #include "../yocto/yocto_gl.h"
-
+#include <random>
+#include <chrono>
+#include <cstdint>
 using namespace ygl;
 
 //note1 : obj files, mtl files and png files for textures must be all in the same folder!
@@ -12,6 +14,16 @@ static const float min_building_side = 9.0f;
 static const float max_building_side = 30.0f;
 static const float min_street_width = 4.0f;
 static const float max_street_width = 10.0f;
+
+/**
+* Generate a randomic function that use the specifyed distribution
+* It seed the random generator with the tcurrent time as entropy
+*Return : a distribution,generator binded function. Use as normal invocation. Voldemort type.
+*/
+auto bind_random_distribution(std::uniform_int_distribution<uint32_t> distrib){  //TODO allow more distributin types
+	std::default_random_engine generator(std::chrono::system_clock::now().time_since_epoch().count());
+	return  std::bind(distrib,generator);
+}
 
 //the types of building
 enum building_type { residential, skyscraper, office, tower, house };
@@ -550,6 +562,7 @@ void apply_material_and_texture(scene* scn, instance* inst) {
 //modified from model.cpp
 scene* init_scene() {
 	auto scn = new scene();
+	
 	//add floor
 	material* mat = make_material( "floor", { 0.2f, 0.2f, 0.2f }, "grid.png" );
 
@@ -633,7 +646,11 @@ int main(int argc, char** argv ) {
 	//make buildings from basement
 	instance* building = get_instance_by_shape(scn, base);
 	//instance* building2 = get_instance_by_shape(scn, base2);
-	extrude(scn, building, 30.0f);
+	std::uniform_int_distribution<uint32_t> h_range(skyscraper_info.h_range.first, skyscraper_info.h_range.second);
+	auto hight = bind_random_distribution(h_range);
+	uint32_t roll = hight();
+	std::cout << "Random: " << roll << std::endl;
+	extrude(scn, building, roll);
 	//extrude(scn, building2, 10.0f);
 	remove_shape_from_scene(scn, base);
 	//remove_shape_from_scene(scn, base2);
