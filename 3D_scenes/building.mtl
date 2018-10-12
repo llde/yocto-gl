@@ -19,7 +19,6 @@ newmtl roof
   Ns 2e+08
   Ni 1
   map_Kd roof.png
-  map_disp displace_roof_test
 
 newmtl vwall
   illum 2

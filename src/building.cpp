@@ -272,10 +272,8 @@ void make_map(scene* scn) {
 	float random_m = next_rand1f(rng, min_map_side, max_map_side);
 	printf("n = %f\n", random_n);
 	printf("m = %f\n", random_m);
-
-	std::vector<shape*> v = std::vector<shape*>();
-
 	//
+	std::vector<shape*> zv = std::vector<shape*>();
 	float x = -(random_n / 2.0f); //x-axis
 	float z = -(random_m / 2.0f); //z-axis
 	while (z < random_m / 2.0f) {
@@ -287,10 +285,23 @@ void make_map(scene* scn) {
 		shp->pos.push_back(vec3f{ (random_n / 2.0f), 0, z + building_l });
 		shp->pos.push_back(vec3f{ x, 0, z + building_l });
 		shp->quads.push_back(vec4i{ 0, 1, 2, 3 });
-		v.push_back(shp);
+		zv.push_back(shp);
 		z += building_l + street_w;
 	}
 	//
+	std::vector<shape*> xv = std::vector<shape*>();
+	while (x < random_n / 2.0f) {
+		float building_w = next_rand1f(rng, min_building_side, max_building_side);
+		float street_w = next_rand1f(rng, min_street_width, max_street_width);
+
+	}
+	//
+	material* mat = make_material("test", vec3f{ 1, 1, 1 }, "test.png"); //test
+	for (shape* shp : zv) {
+		shp->mat = mat;
+		add_instance(scn, "test", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, shp);
+		//scn->materials.push_back(shp->mat);
+	}
 
 }
 
@@ -512,9 +523,9 @@ void apply_material_and_texture(scene* scn, instance* inst) {
 	for (shape* shp : inst->shp->shapes) {
 		if (shp->name == "roof") {
 			shp->mat = make_material("roof", vec3f{ 1.0f, 1.0f, 1.0f }, "roof.png");
-			shp->subdivision = 5;												//
-			tesselate_shape(shp, true, false, false, false);					//
-			shp->mat->disp_txt = new texture{ "roof", "displace_roof_test" };	//test
+			//shp->subdivision = 5;												//
+			//tesselate_shape(shp, true, false, false, false);					//
+			//shp->mat->disp_txt = new texture{ "roof", "displace_roof_test" };	//test
 		}
 		if (shp->name == "vwall") {
 			shp->mat = make_material("vwall", vec3f{ 1.0f, 1.0f, 1.0f }, "vwall.png");
@@ -639,7 +650,7 @@ int main(int argc, char** argv ) {
 			}
 		}
 		remove_shapes_from_scene(scn, to_remove);
-		for(auto shp : to_add) {
+		for (auto shp : to_add) {
 			inst->shp->shapes.push_back(shp);
 		}
 	}
