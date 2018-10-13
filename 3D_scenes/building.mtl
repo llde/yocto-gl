@@ -2100,6 +2100,3006 @@ newmtl vwall
   Ni 1
   map_Kd vwall.png
 
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
 newmtl door
   illum 2
   Kd 1 1 1
@@ -4092,6 +7092,3006 @@ newmtl vwall
   Ni 1
   map_Kd vwall.png
 
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
 newmtl door
   illum 2
   Kd 1 1 1
@@ -6084,6 +12084,3006 @@ newmtl vwall
   Ni 1
   map_Kd vwall.png
 
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
 newmtl door
   illum 2
   Kd 1 1 1
@@ -6091,6 +15091,3006 @@ newmtl door
   Ns 2e+08
   Ni 1
   map_Kd door.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
 
 newmtl hwall
   illum 2
