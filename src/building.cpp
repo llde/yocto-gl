@@ -1,57 +1,69 @@
-#include <vector>
-#include "../yocto/yocto_gl.h"
-#include <random>
 #include <chrono>
 #include <cstdint>
+#include <random>
+#include <vector>
+#include "../yocto/yocto_gl.h"
 using namespace ygl;
 
-//note1 : obj files, mtl files and png files for textures must be all in the same folder!
-//note2 : every object in the scene, must be stored in the proper vector contained in the scene object(the pointer of it), in order to delete it when deleting the scene;
+// note1 : obj files, mtl files and png files for textures must be all in the same folder!
+// note2 : every object in the scene, must be stored in the proper vector 
+// contained in the scene object(the pointer of it), in order to delete it when deleting the scene;
 
-static const float min_map_side = 5000.0f;
-static const float max_map_side = 6000.0f;
+static const float min_map_side = 500.0f;
+static const float max_map_side = 600.0f;
 static const float min_building_side = 9.0f;
 static const float max_building_side = 30.0f;
 static const float min_street_width = 4.0f;
 static const float max_street_width = 10.0f;
 
-/**
-* Generate a randomic function that use the specifyed distribution
-* It seed the random generator with the tcurrent time as entropy
-* Return : a distribution,generator binded function. Use as normal invocation. Voldemort type.
-*/
-auto bind_random_distribution(std::uniform_int_distribution<uint32_t> distrib){  //TODO allow more distributin types
-	std::default_random_engine generator(std::chrono::system_clock::now().time_since_epoch().count());
-	return  std::bind(distrib,generator);
-}
-
-//the types of building
+// the types of building
 enum building_type { residential, skyscraper, office, tower, house };
 
-//the axis to make subdivisions
+// the axis to make subdivisions
 enum subdiv_axis { x, y };
 
-//the type of element obtainable by subidiving facade. Only the terminal elements will be added to the scene and textured
-enum element_type { facade, topfloors, topfloor, wintiles, wintile, windcol, vwall, hwall, window, ledge, bottomfloor, doortile, door };
-
-//map building types with strings
-static const std::map <building_type, std::string> building_type_to_string = {
-	{ residential, "residential" }, { skyscraper, "skyscraper" }, { office, "office" }, { tower, "tower" }, { house, "house" },
+// the type of element obtainable by subidiving facade. 
+// Only the terminal elements will be added to the scene and textured
+enum element_type {
+	facade,
+	topfloors,
+	topfloor,
+	wintiles,
+	wintile,
+	windcol,
+	vwall,
+	hwall,
+	window,
+	ledge,
+	bottomfloor,
+	doortile,
+	door
 };
 
-//map subdivision axis with strings
+// map building types with strings
+static const std::map <building_type, std::string> building_type_to_string = {
+	{ residential, "residential" },
+	{ skyscraper, "skyscraper" },
+	{ office, "office" },
+	{ tower, "tower" },
+	{ house, "house" },
+};
+
+// map subdivision axis with strings
 static const std::map <subdiv_axis, std::string> axis_to_string = {
 	{ x, "x" }, { y , "y" }
 };
 
-//map element types with strings
+// map element types with strings
 static const std::map <element_type, std::string> element_type_to_string = {
-	{ facade, "facade" }, { topfloors, "topfloors" }, { topfloor, "topfloor" }, { wintiles, "wintiles" }, { windcol, "windcol" },
-	{ vwall, " vwall" }, { hwall, "hwall" }, { window, "window" }, { ledge, "ledge" }, { bottomfloor, "bottomfloor" }, { doortile, "doortile" }, { door, "door" }
+	{ facade, "facade" }, { topfloors, "topfloors" }, { topfloor, "topfloor" },
+	{ wintiles, "wintiles" }, { windcol, "windcol" }, { vwall, " vwall" },
+	{ hwall, "hwall" }, { window, "window" }, { ledge, "ledge" },
+	{ bottomfloor, "bottomfloor" }, { doortile, "doortile" }, { door, "door" }
 };
 
 //
-struct type_info {
+struct type_constants {
 	std::pair<float, float> h_range;
 	std::pair<float, float> l_range;
 	std::pair<float, float> w_range;
@@ -67,8 +79,9 @@ struct type_info {
 	std::map<element_type, std::pair<std::vector<element_type>, subdiv_axis>> subdiv_rules;
 };
 
-//constants for residential buildings
-static const type_info residential_info = {
+// constants for residential buildings
+// constants are equal for all types, temporary
+static const type_constants residential_constants = {
 	std::pair<float, float>{ 30.0, 100.0 },
 	std::pair<float, float>{ 4.0, 10.0 },
 	std::pair<float, float>{ 4.0, 10.0 },
@@ -84,8 +97,27 @@ static const type_info residential_info = {
 	std::map<element_type, std::pair<std::vector<element_type>, subdiv_axis>>{}
 };
 
-//constants for skyscrapers
-static const type_info skyscraper_info = {
+// constants for skyscrapers
+// constants are equal for all types, temporary
+static const type_constants skyscraper_constants = {
+	std::pair<float, float>{ 30.0, 100.0 },
+	std::pair<float, float>{ 4.0, 10.0 },
+	std::pair<float, float>{ 4.0, 10.0 },
+	std::pair<float, float>{ (5.0 / 6.0), (6.0 / 5.0) },
+	std::pair<float, float>{ 2.5, 3.5 },
+	std::pair<float, float>{ 2.0, 2.5 },
+	std::pair<float, float>{ 2.0, 2.5 },
+	std::vector<std::string>(),
+	std::vector<std::string>(),
+	std::vector<std::string>(),
+	std::vector<std::string>(),
+	std::vector<std::string>(),
+	std::map<element_type, std::pair<std::vector<element_type>, subdiv_axis>>{}
+};
+
+// constants for houses
+// constants are equal for all types, temporary
+static const type_constants house_info = {
 	std::pair<float, float>{ 30.0, 100.0 },
 	std::pair<float, float>{ 4.0, 10.0 },
 	std::pair<float, float>{ 4.0, 10.0 },
@@ -104,7 +136,7 @@ static const type_info skyscraper_info = {
 //
 struct building_info {
 	building_type type;
-	type_info info;
+	//type_constants info;
 	float h;
 	float l;
 	float w;
@@ -115,25 +147,36 @@ struct building_info {
 	bool flat_roof;
 	std::map<element_type, std::pair<std::vector<element_type>, subdiv_axis>> subdiv_rules;
 
-	building_info(building_type) {
+	//building_info(building_type) {
 		
-	}
+	//}
 
 
-	~building_info() {
+	//~building_info() {
 
-	}
+	//}
 };
 
+building_info prototype = { skyscraper, 10, 1, 1, 1, 3.5f, 1, 1, true };
+
 //unused
-struct building {
+struct building_inst {
 	instance* building;
 	building_info info;
 };
 
+/**
+* Generate a randomic function that use the specifyed distribution
+* It seeds the random generator with the tcurrent time as entropy
+* Return : a distribution, generator binded function. Use as normal invocation. Voldemort type.
+*/
+auto bind_random_distribution(std::uniform_int_distribution<uint32_t> distrib) {  //TODO allow more distribution types
+	std::default_random_engine generator(std::chrono::system_clock::now().time_since_epoch().count());
+	return  std::bind(distrib, generator);
+}
+
 //add instance
-void add_instance(scene* scn, const std::string& name, const frame3f& f,
-	shape* shp) {
+void add_instance(scene* scn, const std::string& name, const frame3f& f, shape* shp) {
 	if (!shp) return;
 
 	shape_group* shpgrp = new shape_group{};
@@ -149,12 +192,12 @@ void add_instance(scene* scn, const std::string& name, const frame3f& f,
 }
 
 //Add the shape to the instance
-void add_shape_in_instance(instance* inst , shape* shp){
+void add_shape_in_instance(instance* inst , shape* shp) {
 	inst->shp->shapes.push_back(shp);
 }
 
-
-void remove_shape_from_scene(scene* scn, shape* shp){
+//
+void remove_shape_from_scene(scene* scn, shape* shp) {
 	if (shp->mat != nullptr) {
 		auto res1 = std::find(scn->materials.begin(), scn->materials.end(), shp->mat);
 		if (res1 != scn->materials.end()) {
@@ -167,33 +210,33 @@ void remove_shape_from_scene(scene* scn, shape* shp){
 			delete shp->mat;
 		}
 	}
-	for(auto shps : scn->shapes){
+	for(auto shps : scn->shapes) {
 		auto res = std::find(shps->shapes.begin(), shps->shapes.end(), shp);
 		if(res != shps->shapes.end()){
 			shps->shapes.erase(res);
-			std::cout << "Removing shape " << shp->name << std::endl;
+			//std::cout << "Removing shape " << shp->name << std::endl;
 			delete shp;
 			break;
 		}
 	}
 }
 
-
-void remove_shapes_from_scene(scene* scn, std::vector<shape*>& vecshp){
+//
+void remove_shapes_from_scene(scene* scn, std::vector<shape*>& vecshp) {
 	for(auto shp : vecshp){
 		remove_shape_from_scene(scn, shp);
 	}
 }
 
-
-void print_vector(std::vector<shape*>& vec){
+//
+void print_vector(std::vector<shape*>& vec) {
 	for(shape* shp : vec){
-		std::cout << shp->name << "   "    << shp << std::endl;
+		std::cout << shp->name << "   " << shp << std::endl;
 	}
 }
 
-
-auto get_instance_by_shape(scene* scn, shape* shp) -> instance*{
+//
+auto get_instance_by_shape(scene* scn, shape* shp) -> instance* {
 	instance* r = nullptr;
     for (auto instance : scn->instances){
 		auto res = std::find(instance->shp->shapes.begin(), instance->shp->shapes.end(), shp);
@@ -204,47 +247,8 @@ auto get_instance_by_shape(scene* scn, shape* shp) -> instance*{
     }
 	return r;
 }
-/*
-void remove_instance(scene* scn, shape* shp) {
-	//remove shape and instance
-	//material and texture?
-    
-    std::vector<int> index = std::vector<int>();
-    size_t currentIndex = 0;
-    
-    for (auto shp_group : scn->shapes){
-	//assuming every shape_group containst one shape / every shape is stored in a different group
-        if(shp_group->shapes.at(0) == shp){
-            index.push_back(currentIndex); 
-            std::cout << "Removing shape of index " << currentIndex << " Shape "<< shp->name << std::endl;
-        }
-        currentIndex++;
-    }
-    for (auto ind = index.rbegin() ; ind != index.rend(); ind++){
-        auto curr_iter = scn->shapes.begin();
-        std::advance(curr_iter, *ind);
-        scn->shapes.erase(curr_iter);
-    }
-    
-    index.clear();
-    currentIndex = 0;
-    
-    for (auto inst : scn->instances){
-	//assuming every shape_group containst one shape / every shape is stored in a different group
-        if(inst->shp->shapes.at(0) == shp){
-            index.push_back(currentIndex); 
-            std::cout << "Removing index " << currentIndex << std::endl;
-        }
-        currentIndex++;
-    }
-    for (auto ind = index.rbegin() ; ind != index.rend(); ind++){
-        auto curr_iter = scn->instances.begin();
-        std::advance(curr_iter, *ind);
-        scn->instances.erase(curr_iter);
-    }
-}*/
 
-//makes material from given kd and kd texture
+// makes material from given kd and kd texture
 material* make_material(const std::string& name, const vec3f& kd,
 	const std::string& kd_txt, const vec3f& ks = { 0.04f, 0.04f, 0.04f },
 	float rs = 0.01f) {
@@ -257,7 +261,7 @@ material* make_material(const std::string& name, const vec3f& kd,
 	return mat;
 }
 
-//add texture coordinates to mono-quad shapes.
+// add texture coordinates to mono-quad shapes.
 void add_texcoord_to_quad_shape(shape* shp) {
 	shp->texcoord.push_back(vec2f{ 0, 1 });
 	shp->texcoord.push_back(vec2f{ 1, 1 });
@@ -265,7 +269,7 @@ void add_texcoord_to_quad_shape(shape* shp) {
 	shp->texcoord.push_back(vec2f{ 0, 0 });
 }
 
-//translate shapes
+// translate shapes
 void translate(shape* shp, const vec3f t) {
 	for (int i = 0; i < shp->pos.size(); i++) {
 		shp->pos.at(i).x += t.x;
@@ -274,7 +278,7 @@ void translate(shape* shp, const vec3f t) {
 	}
 }
 
-//generates the map of the city, as a grid, with random streets width
+// generates the map of the city, as a grid, with random streets width
 void make_map(scene* scn) {
 	//random map size
 	rng_pcg32 rng = rng_pcg32{};
@@ -316,17 +320,23 @@ void make_map(scene* scn) {
 		}
 		x += building_w + street_w;
 	}
+	printf("shapes created\n");
 	//
-	material* mat = make_material("test", vec3f{ 1, 1, 1 }, "test.png"); //test
+	for (shape* shp : zv) {
+		delete shp;
+	}
+	zv.clear();
+	//
+	//material* mat = make_material("test", vec3f{ 1, 1, 1 }, "test.png"); //test
 	for (shape* shp : xv) {
-		shp->mat = mat;
-		add_instance(scn, "test", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, shp);
+		//shp->mat = mat;
+		add_instance(scn, "base", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, shp);
 		//scn->materials.push_back(shp->mat);
 	}
 
 }
 
-//given a base and a height, creates the building
+// given a base and a height, creates the building
 scene* extrude(scene* scn, instance* building, float height) {
 	//initial shape is only a single quad, the base of the building
 	shape* base = building->shp->shapes.at(0);
@@ -362,7 +372,7 @@ scene* extrude(scene* scn, instance* building, float height) {
 	return scn;
 }
 
-//facade split on y-axis
+// facade split on y-axis
 std::vector<shape*> split_y(scene* scn, shape* shp, const std::vector<float> v, const std::vector<std::string> types) {
 	//std::cout << "Splitting y axis of shape " << shp->name << std::endl;
 	float check = 0;
@@ -399,7 +409,7 @@ std::vector<shape*> split_y(scene* scn, shape* shp, const std::vector<float> v, 
 	return newv;
 }
 
-//facade repeat on y-axis
+// facade repeat on y-axis
 std::vector<shape*> repeat_y(scene* scn, shape* shp, int parts, const std::string& type) {
 	if (parts < 1) {
 		return std::vector<shape*>();
@@ -414,7 +424,7 @@ std::vector<shape*> repeat_y(scene* scn, shape* shp, int parts, const std::strin
 	return split_y(scn, shp, v, types);
 }
 
-//facade split on x-axis
+// facade split on x-axis
 std::vector<shape*> split_x(scene* scn, shape* shp, std::vector<float> v, const std::vector<std::string> types) {
 	//std::cout << "Splitting x axis of shape " << shp->name << std::endl;
 	float check = 0;
@@ -452,7 +462,7 @@ std::vector<shape*> split_x(scene* scn, shape* shp, std::vector<float> v, const 
 	return newv;
 }
 
-//facade repeat on x-axis
+// facade repeat on x-axis
 std::vector<shape*> repeat_x(scene* scn, shape* shp, int parts, const std::string& type) {
 	if (parts < 1) {
 		return std::vector<shape*>();
@@ -462,9 +472,16 @@ std::vector<shape*> repeat_x(scene* scn, shape* shp, int parts, const std::strin
 	for (int i = 0; i < parts; i++) {
 		v.push_back(1.0f / (float)parts);
 		types.push_back(type);
-
 	}
 	return split_x(scn, shp, v, types);
+}
+
+//
+uint32_t calculate_floors(uint32_t height) {
+	uint32_t floor_h = height / 3.5;  // hardocded for now TODO, make chose from
+									  // range, maybe using an apporximation
+	std::cout << "Height: " << height << " Number of foors: " << floor_h << std::endl;
+	return floor_h;
 }
 
 //recursively divides a facade in subparts
@@ -537,7 +554,7 @@ std::vector<shape*> subdiv_facade(scene* scn, instance* inst, shape* shp) {
 	return to_add;
 }
 
-//apply texture
+// apply texture
 void apply_material_and_texture(scene* scn, instance* inst) {
 	for (shape* shp : inst->shp->shapes) {
 		if (shp->name == "roof") {
@@ -558,11 +575,12 @@ void apply_material_and_texture(scene* scn, instance* inst) {
 		else if (shp->name == "door") {
 			shp->mat = make_material("door", vec3f{ 1.0f, 1.0f, 1.0f }, "door.png");
 		}
-		scn->textures.push_back(shp->mat->kd_txt);
-		if (shp->mat->disp_txt != nullptr) {
+		if (shp->mat != nullptr) {
+			scn->materials.push_back(shp->mat);
+		}
+		if (shp->mat->disp_txt != nullptr) { //no longer needed
 			scn->textures.push_back(shp->mat->disp_txt);
 		}
-		scn->materials.push_back(shp->mat);
 	}
 }
 
@@ -647,22 +665,32 @@ int main(int argc, char** argv ) {
 	//test make map
 	make_map(scn);
 
-	add_instance(scn, "base",  frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, base);
+	//add_instance(scn, "base",  frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, base);
 	//add_instance(scn, "base", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, base2);
 
 	//make buildings from basement
-	instance* building = get_instance_by_shape(scn, base);
+	//instance* building = get_instance_by_shape(scn, base);
 	//instance* building2 = get_instance_by_shape(scn, base2);
-	std::uniform_int_distribution<uint32_t> h_range(skyscraper_info.h_range.first, skyscraper_info.h_range.second);
-	auto hight = bind_random_distribution(h_range);
-	uint32_t roll = hight();
-	std::cout << "Random: " << roll << std::endl;
-	extrude(scn, building, roll);
-	//extrude(scn, building2, 10.0f);
-	remove_shape_from_scene(scn, base);
+	printf("extruding buildings\n");
+	std::vector<shape*> base_to_remove = std::vector<shape*>();
+	for (instance* inst : scn->instances) {
+		if (inst->name == "base") {
+			//std::uniform_int_distribution<uint32_t> h_range(skyscraper_info.h_range.first, skyscraper_info.h_range.second);
+			//auto hight = bind_random_distribution(h_range);
+			//uint32_t roll = hight();
+			//std::cout << "Random: " << roll << std::endl;
+			extrude(scn, inst, 35.0f);
+			//extrude(scn, building2, 10.0f);
+			base_to_remove.push_back(inst->shp->shapes.at(0));
+		}
+	}
+	remove_shapes_from_scene(scn, base_to_remove);
 	//remove_shape_from_scene(scn, base2);
 	delete base2; //Temp
+	delete base; //Temp
+
 	//subdivide building facade
+	printf("subdividing facades\n");
 	for (instance* inst : scn->instances) {
 		std::vector<shape*> to_add = std::vector<shape*>();
 		std::vector<shape*> to_remove = std::vector<shape*>();
@@ -677,9 +705,15 @@ int main(int argc, char** argv ) {
 		for (auto shp : to_add) {
 			inst->shp->shapes.push_back(shp);
 		}
+		//for (shape* rem_shp : to_remove) {
+		//	delete rem_shp;
+		//}
+		//to_remove.clear();
+		//to_add.clear();
 	}
 	
 	//
+	printf("applying material and textures\n");
 	for (instance* inst : scn->instances) {
 		if (inst->name == "building") {
 			apply_material_and_texture(scn, inst);
