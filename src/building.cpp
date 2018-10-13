@@ -18,7 +18,7 @@ static const float max_street_width = 10.0f;
 /**
 * Generate a randomic function that use the specifyed distribution
 * It seed the random generator with the tcurrent time as entropy
-*Return : a distribution,generator binded function. Use as normal invocation. Voldemort type.
+* Return : a distribution,generator binded function. Use as normal invocation. Voldemort type.
 */
 auto bind_random_distribution(std::uniform_int_distribution<uint32_t> distrib){  //TODO allow more distributin types
 	std::default_random_engine generator(std::chrono::system_clock::now().time_since_epoch().count());
@@ -305,11 +305,20 @@ void make_map(scene* scn) {
 	while (x < random_n / 2.0f) {
 		float building_w = next_rand1f(rng, min_building_side, max_building_side);
 		float street_w = next_rand1f(rng, min_street_width, max_street_width);
-
+		for (shape* zshp : zv) {
+			shape* shp = new shape();
+			shp->quads.push_back(vec4i{ 0, 1, 2, 3 });
+			shp->pos.push_back(vec3f{x, 0, zshp->pos.at(0).z});
+			shp->pos.push_back(vec3f{x + building_w, 0, zshp->pos.at(1).z});
+			shp->pos.push_back(vec3f{x + building_w, 0, zshp->pos.at(2).z});
+			shp->pos.push_back(vec3f{x, 0, zshp->pos.at(3).z});
+			xv.push_back(shp);
+		}
+		x += building_w + street_w;
 	}
 	//
 	material* mat = make_material("test", vec3f{ 1, 1, 1 }, "test.png"); //test
-	for (shape* shp : zv) {
+	for (shape* shp : xv) {
 		shp->mat = mat;
 		add_instance(scn, "test", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, shp);
 		//scn->materials.push_back(shp->mat);
@@ -335,7 +344,6 @@ scene* extrude(scene* scn, instance* building, float height) {
 		roof->pos.push_back(vertex);
 	}
 	roof->quads.push_back(vec4i{ 0, 1, 2, 3 });
-	//roof->mat = mat;
 	add_texcoord_to_quad_shape(roof);
 	building->shp->shapes.push_back(roof);
 
@@ -346,7 +354,6 @@ scene* extrude(scene* scn, instance* building, float height) {
 		facade->pos.push_back(vec3f{ base->pos.at((j + 1) % 4).x, base->pos.at((j + 1) % 4).y + height, base->pos.at((j + 1) % 4).z });
 		facade->pos.push_back(vec3f{ base->pos.at(j).x, base->pos.at(j).y + height, base->pos.at(j).z });
 		facade->quads.push_back(vec4i{ 0, 1, 2, 3 });
-		//facade->mat = mat;
 		add_texcoord_to_quad_shape(facade);
 		building->shp->shapes.push_back(facade);
 	}
@@ -409,7 +416,7 @@ std::vector<shape*> repeat_y(scene* scn, shape* shp, int parts, const std::strin
 
 //facade split on x-axis
 std::vector<shape*> split_x(scene* scn, shape* shp, std::vector<float> v, const std::vector<std::string> types) {
-//	std::cout << "Splitting x axis of shape " << shp->name << std::endl;
+	//std::cout << "Splitting x axis of shape " << shp->name << std::endl;
 	float check = 0;
 	for (int i = 0; i < v.size(); i++) {
 		check += v.at(i);
@@ -439,7 +446,7 @@ std::vector<shape*> split_x(scene* scn, shape* shp, std::vector<float> v, const 
 		newv.push_back(nshp);
 		x += v.at(j)*w;
 		z += v.at(j)*l;
-//		std::cout << "Generating  shape " << nshp->name << std::endl;
+		//std::cout << "Generating  shape " << nshp->name << std::endl;
 
 	}
 	return newv;
