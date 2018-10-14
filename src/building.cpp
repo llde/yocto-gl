@@ -320,7 +320,6 @@ void make_map(scene* scn) {
 		}
 		x += building_w + street_w;
 	}
-	printf("shapes created\n");
 	//
 	for (shape* shp : zv) {
 		delete shp;
@@ -656,6 +655,7 @@ int main(int argc, char** argv ) {
 	scene* scn = init_scene();
 
 	//generate grid map
+	printf("generating map\n");
 	make_map(scn);
 
 	//make buildings from basements
@@ -697,7 +697,8 @@ int main(int argc, char** argv ) {
 		to_remove.clear();
 		to_add.clear();
 	}
-	//
+
+	//material and texture application
 	printf("applying material and textures\n");
 	int count_textured = 1;//
 	for (instance* inst : scn->instances) {
