@@ -9,8 +9,8 @@ using namespace ygl;
 // note2 : every object in the scene, must be stored in the proper vector 
 // contained in the scene object(the pointer of it), in order to delete it when deleting the scene;
 
-static const float min_map_side = 200.0f;
-static const float max_map_side = 200.0f;
+static const float min_map_side = 400.0f;
+static const float max_map_side = 400.0f;
 static const float min_building_side = 9.0f;
 static const float max_building_side = 30.0f;
 static const float min_street_width = 4.0f;
@@ -145,7 +145,7 @@ struct building_info {
 	float wind_w;
 	float wind_h;
 	bool flat_roof;
-	std::map<element_type, std::pair<std::vector<element_type>, subdiv_axis>> subdiv_rules;
+//	std::map<element_type, std::pair<std::vector<element_type>, subdiv_axis>> subdiv_rules;
 
 	//building_info(building_type) {
 		
@@ -381,8 +381,8 @@ std::vector<shape*> split_y(scene* scn, shape* shp, const std::vector<float> v, 
 	}
 	std::vector<shape*> newv = std::vector<shape*>();
 	if (check != 1 || v.size() != types.size()) {
-	//printf("unconsistent data\n"); //
-		return newv;
+		std::cout << check << "   " << v.size() << "   " << types.size() << std::endl;
+  //    return newv;
 	}
 
 	float x0 = shp->pos.at(0).x; //same x for v0 and v3
@@ -484,18 +484,24 @@ uint32_t calculate_floors(uint32_t height) {
 	return floor_h;
 }
 
+float calculate_floors_part(uint32_t height) {
+	float part_f = 1.0f / (height / 3.5);
+	return part_f;
+}
+
 //recursively divides a facade in subparts
-std::vector<shape*> subdiv_facade(scene* scn, instance* inst, shape* shp) {
+std::vector<shape*> subdiv_facade(scene* scn, building_inst inst, shape* shp) {
 	std::vector<shape*> to_add = std::vector<shape*>();
 	if (shp->name == "facade") {
-		for (shape* nshp : split_y(scn, shp, std::vector<float>{ 0.1, 0.9 }, std::vector<std::string>{ "bottomfloor", "topfloors" })) {
+		float bottomfloor_p = calculate_floors_part(inst.info.h);
+		for (shape* nshp : split_y(scn, shp, std::vector<float>{bottomfloor_p, 1.0f - bottomfloor_p}, std::vector<std::string>{ "bottomfloor", "topfloors" })) {
 			auto res = subdiv_facade(scn, inst, nshp);
 			std::copy(res.begin(), res.end(), back_inserter(to_add));
 			delete nshp;
 		}		
 	}
 	else if (shp->name == "topfloors") {
-		for (shape* nshp : repeat_y(scn, shp, 9, "floor")) {
+		for (shape* nshp : repeat_y(scn, shp, calculate_floors(inst.info.h -1 ), "floor")) {
 			auto res = subdiv_facade(scn, inst, nshp);
 			std::copy(res.begin(), res.end(), back_inserter(to_add));
 			delete nshp;
@@ -647,14 +653,15 @@ int main(int argc, char** argv ) {
 	//make buildings from basements
 	printf("extruding buildings\n");
 	int count_extruded = 1;//
+	std::uniform_int_distribution<uint32_t> h_range(skyscraper_constants.h_range.first, skyscraper_constants.h_range.second);
+	auto hight = bind_random_distribution(h_range);	
 	std::vector<shape*> base_to_remove = std::vector<shape*>();
 	for (instance* inst : scn->instances) {
 		if (inst->name == "base") {
-			//std::uniform_int_distribution<uint32_t> h_range(skyscraper_info.h_range.first, skyscraper_info.h_range.second);
-			//auto hight = bind_random_distribution(h_range);
-			//uint32_t roll = hight();
-			//std::cout << "Random: " << roll << std::endl;
-			extrude(scn, inst, 35.0f);
+			building_info bin = {skyscraper,0,0,0,0,0,0,true}; //TODO generate building structure correctly
+			bin.h = 35; 
+			building_inst bv = {inst, bin};
+			extrude(scn, inst, bin.h);
 			printf("extruded %d\n", count_extruded);//
 			count_extruded++;//
 			//extrude(scn, building2, 10.0f);
@@ -662,15 +669,17 @@ int main(int argc, char** argv ) {
 		}
 	}
 	remove_shapes_from_scene(scn, base_to_remove);
-
 	//subdivide building facade
 	printf("subdividing facades\n");
 	for (instance* inst : scn->instances) {
 		std::vector<shape*> to_add = std::vector<shape*>();
 		std::vector<shape*> to_remove = std::vector<shape*>();
 		for (shape* shp : inst->shp->shapes) {
-			if (shp->name == "facade") {
-				auto res = subdiv_facade(scn, inst, shp);
+		if (shp->name == "facade") {
+				building_info bin = {skyscraper,0,0,0,0,0,0,true}; //TODO reuse previous generated building
+				bin.h = 35; 
+				building_inst bv = {inst, bin};
+				auto res = subdiv_facade(scn, bv, shp);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				to_remove.push_back(shp);
 			}
@@ -679,20 +688,17 @@ int main(int argc, char** argv ) {
 		for (auto shp : to_add) {
 			inst->shp->shapes.push_back(shp);
 		}
-		//for (shape* rem_shp : to_remove) {
-		//	delete rem_shp;
-		//}
-		//to_remove.clear();
-		//to_add.clear();
+		to_remove.clear();
+		to_add.clear();
 	}
 	//
 	printf("applying material and textures\n");
 	int count_textured = 1;//
 	for (instance* inst : scn->instances) {
 		if (inst->name == "building") {
-			apply_material_and_texture(scn, inst);
-			printf("textured %d\n", count_textured);//
-			count_textured++;//
+//			apply_material_and_texture(scn, inst);
+//			printf("textured %d\n", count_textured);//
+//			count_textured++;//
 		}
 	}
 
