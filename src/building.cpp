@@ -9,8 +9,8 @@ using namespace ygl;
 // note2 : every object in the scene, must be stored in the proper vector 
 // contained in the scene object(the pointer of it), in order to delete it when deleting the scene;
 
-static const float min_map_side = 500.0f;
-static const float max_map_side = 600.0f;
+static const float min_map_side = 200.0f;
+static const float max_map_side = 200.0f;
 static const float min_building_side = 9.0f;
 static const float max_building_side = 30.0f;
 static const float min_street_width = 4.0f;
@@ -286,8 +286,8 @@ void make_map(scene* scn) {
 	advance_rng(rng);
 	float random_n = next_rand1f(rng, min_map_side, max_map_side);
 	float random_m = next_rand1f(rng, min_map_side, max_map_side);
-	printf("n = %f\n", random_n);
-	printf("m = %f\n", random_m);
+	//printf("n = %f\n", random_n);
+	//printf("m = %f\n", random_m);
 	//
 	std::vector<shape*> zv = std::vector<shape*>();
 	float x = -(random_n / 2.0f); //x-axis
@@ -350,7 +350,7 @@ scene* extrude(scene* scn, instance* building, float height) {
 	//make the entire building, creating the other 5 faces
 	shape* roof = new shape{"roof"};
 	for (int i = 0; i < base->pos.size(); i++) {
-		vec3f vertex = vec3f{ base->pos.at(i).x, base->pos.at(i).y + height, base->pos.at(i).z }; //the x axis is for lenght, the y axis is for height, the z axis is for depth
+		vec3f vertex = vec3f{ base->pos.at(i).x, base->pos.at(i).y + height, base->pos.at(i).z }; //the x axis is for width the y axis is for height, the z axis is for length
 		roof->pos.push_back(vertex);
 	}
 	roof->quads.push_back(vec4i{ 0, 1, 2, 3 });
@@ -577,6 +577,7 @@ void apply_material_and_texture(scene* scn, instance* inst) {
 		}
 		if (shp->mat != nullptr) {
 			scn->materials.push_back(shp->mat);
+			scn->textures.push_back(shp->mat->kd_txt);
 		}
 		if (shp->mat->disp_txt != nullptr) { //no longer needed
 			scn->textures.push_back(shp->mat->disp_txt);
@@ -587,20 +588,19 @@ void apply_material_and_texture(scene* scn, instance* inst) {
 //modified from model.cpp
 scene* init_scene() {
 	auto scn = new scene();
-	
 	//add floor
-	material* mat = make_material( "floor", { 0.2f, 0.2f, 0.2f }, "grid.png" );
+	material* mat = make_material( "terrain", { 0.2f, 0.2f, 0.2f }, "grid.png" );
+	float p = max_map_side / 2.0f;
+	shape* terrain = new shape{ "terrain" };
+	terrain->mat = mat;
+	terrain->pos = { { -p , 0, -p },{ p, 0, -p },{ p, 0, p },{ -p, 0, p } };
+	terrain->norm = { { 0, 1, 0 },{ 0, 1, 0 },{ 0, 1, 0 },{ 0, 1, 0 } };
+	terrain->quads.push_back(vec4i{ 0, 1, 2, 3 });
+	add_texcoord_to_quad_shape(terrain);
 
-	shape* shp = new shape{ "floor" };
-	shp->mat = mat;
-	shp->pos = { { -20, 0, -20 },{ 20, 0, -20 },{ 20, 0, 20 },{ -20, 0, 20 } };
-	shp->norm = { { 0, 1, 0 },{ 0, 1, 0 },{ 0, 1, 0 },{ 0, 1, 0 } };
-	shp->texcoord = { { -10, -10 },{ 10, -10 },{ 10, 10 },{ -10, 10 } };
-	shp->triangles = { { 0, 1, 2 },{ 0, 2, 3 } };
-
-	add_instance(scn, "floor", identity_frame3f, shp);
-	scn->textures.push_back(shp->mat->kd_txt);
-	scn->materials.push_back(shp->mat);
+	add_instance(scn, "terrain", identity_frame3f, terrain);
+	scn->textures.push_back(terrain->mat->kd_txt);
+	scn->materials.push_back(terrain->mat);
 
 	//add light
 	auto lmat = new material{ "light" };
@@ -613,8 +613,7 @@ scene* init_scene() {
 	lshpgrp->shapes.push_back(lshp);
 	scn->shapes.push_back(lshpgrp);
 	scn->materials.push_back(lmat);
-	scn->instances.push_back(
-		new instance{ "light", identity_frame3f, lshpgrp });
+	scn->instances.push_back(new instance{ "light", identity_frame3f, lshpgrp });
 	// add camera
 	auto cam = new camera{ "cam" };
 	vec3f x = vec3f{ 0, 4, 10 };
@@ -639,39 +638,15 @@ int main(int argc, char** argv ) {
 
 	//printf("creating scene %s\n", type.c_str());
 
-	//make dummy material
-	//material* mat = make_material("building", { 1.0f, 1.0f, 1.0f }, "colored.png");
-
-	//make base
-	shape* base = new shape{ "base" };
-	base->pos.push_back(vec3f{ -5,  0, -5 });
-	base->pos.push_back(vec3f{ -5,  0,  5 });
-	base->pos.push_back(vec3f{  5,  0,  5 });
-	base->pos.push_back(vec3f{  5,  0, -5 });
-	base->quads.push_back(vec4i{ 0, 1, 2, 3 });
-	//base->mat = mat;
-
-	//make base 2
-	shape* base2 = new shape{ "base" };
-	base2->pos.push_back(vec3f{  3,  0, -1 });
-	base2->pos.push_back(vec3f{  3,  0,  1 });
-	base2->pos.push_back(vec3f{  9,  0,  3 });
-	base2->pos.push_back(vec3f{  9,  0, -3 });
-	base2->quads.push_back(vec4i{ 0, 1, 2, 3 });
-	//base2->mat = mat;
-
 	//make scene
 	scene* scn = init_scene();
-	//test make map
+
+	//generate grid map
 	make_map(scn);
 
-	//add_instance(scn, "base",  frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, base);
-	//add_instance(scn, "base", frame3f{ { 1, 0, 0 },{ 0, 1, 0 },{ 0, 0, 1 },{ 0, 1.25f, 0 } }, base2);
-
-	//make buildings from basement
-	//instance* building = get_instance_by_shape(scn, base);
-	//instance* building2 = get_instance_by_shape(scn, base2);
+	//make buildings from basements
 	printf("extruding buildings\n");
+	int count_extruded = 1;//
 	std::vector<shape*> base_to_remove = std::vector<shape*>();
 	for (instance* inst : scn->instances) {
 		if (inst->name == "base") {
@@ -680,14 +655,13 @@ int main(int argc, char** argv ) {
 			//uint32_t roll = hight();
 			//std::cout << "Random: " << roll << std::endl;
 			extrude(scn, inst, 35.0f);
+			printf("extruded %d\n", count_extruded);//
+			count_extruded++;//
 			//extrude(scn, building2, 10.0f);
 			base_to_remove.push_back(inst->shp->shapes.at(0));
 		}
 	}
 	remove_shapes_from_scene(scn, base_to_remove);
-	//remove_shape_from_scene(scn, base2);
-	delete base2; //Temp
-	delete base; //Temp
 
 	//subdivide building facade
 	printf("subdividing facades\n");
@@ -711,12 +685,14 @@ int main(int argc, char** argv ) {
 		//to_remove.clear();
 		//to_add.clear();
 	}
-	
 	//
 	printf("applying material and textures\n");
+	int count_textured = 1;//
 	for (instance* inst : scn->instances) {
 		if (inst->name == "building") {
 			apply_material_and_texture(scn, inst);
+			printf("textured %d\n", count_textured);//
+			count_textured++;//
 		}
 	}
 
