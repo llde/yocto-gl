@@ -145,7 +145,7 @@ struct building_info {
 	float wind_w;
 	float wind_h;
 	bool flat_roof;
-//	std::map<element_type, std::pair<std::vector<element_type>, subdiv_axis>> subdiv_rules;
+	//std::map<element_type, std::pair<std::vector<element_type>, subdiv_axis>> subdiv_rules;
 
 	//building_info(building_type) {
 		
@@ -381,8 +381,8 @@ std::vector<shape*> split_y(scene* scn, shape* shp, const std::vector<float> v, 
 	}
 	std::vector<shape*> newv = std::vector<shape*>();
 	if (check != 1 || v.size() != types.size()) {
-		std::cout << check << "   " << v.size() << "   " << types.size() << std::endl;
-  //    return newv;
+		//std::cout << check << "   " << v.size() << "   " << types.size() << std::endl;
+		//return newv;
 	}
 
 	float x0 = shp->pos.at(0).x; //same x for v0 and v3
@@ -479,11 +479,12 @@ std::vector<shape*> repeat_x(scene* scn, shape* shp, int parts, const std::strin
 //
 uint32_t calculate_floors(uint32_t height) {
 	uint32_t floor_h = height / 3.5;  // hardocded for now TODO, make chose from
-									  // range, maybe using an apporximation
-	std::cout << "Height: " << height << " Number of foors: " << floor_h << std::endl;
+									  // range, maybe using an approximation
+	//std::cout << "Height: " << height << " Number of foors: " << floor_h << std::endl;
 	return floor_h;
 }
 
+//
 float calculate_floors_part(uint32_t height) {
 	float part_f = 1.0f / (height / 3.5);
 	return part_f;
@@ -493,15 +494,15 @@ float calculate_floors_part(uint32_t height) {
 std::vector<shape*> subdiv_facade(scene* scn, building_inst inst, shape* shp) {
 	std::vector<shape*> to_add = std::vector<shape*>();
 	if (shp->name == "facade") {
-		float bottomfloor_p = calculate_floors_part(inst.info.h);
-		for (shape* nshp : split_y(scn, shp, std::vector<float>{bottomfloor_p, 1.0f - bottomfloor_p}, std::vector<std::string>{ "bottomfloor", "topfloors" })) {
+		float bottomfloor_p = calculate_floors_part(inst.info.h);//
+		for (shape* nshp : split_y(scn, shp, std::vector<float>{ bottomfloor_p, 1.0f - bottomfloor_p }, std::vector<std::string>{ "bottomfloor", "topfloors" })) {
 			auto res = subdiv_facade(scn, inst, nshp);
 			std::copy(res.begin(), res.end(), back_inserter(to_add));
 			delete nshp;
 		}		
 	}
 	else if (shp->name == "topfloors") {
-		for (shape* nshp : repeat_y(scn, shp, calculate_floors(inst.info.h -1 ), "floor")) {
+		for (shape* nshp : repeat_y(scn, shp, calculate_floors(inst.info.h - 1), "floor")) {
 			auto res = subdiv_facade(scn, inst, nshp);
 			std::copy(res.begin(), res.end(), back_inserter(to_add));
 			delete nshp;
@@ -562,31 +563,38 @@ std::vector<shape*> subdiv_facade(scene* scn, building_inst inst, shape* shp) {
 
 // apply texture
 void apply_material_and_texture(scene* scn, instance* inst) {
+
+	material* roof = make_material("roof", vec3f{ 1.0f, 1.0f, 1.0f }, "roof.png");
+	material* vwall = make_material("vwall", vec3f{ 1.0f, 1.0f, 1.0f }, "vwall.png");
+	material* hwall = make_material("hwall", vec3f{ 1.0f, 1.0f, 1.0f }, "hwall.png");
+	material* window = make_material("window", vec3f{ 1.0f, 1.0f, 1.0f }, "window.png", vec3f{ 0.4f, 0.4f, 0.4f });
+	material* door = make_material("door", vec3f{ 1.0f, 1.0f, 1.0f }, "door.png");
+	scn->materials.push_back(roof);
+	scn->textures.push_back(roof->kd_txt);
+	scn->materials.push_back(vwall);
+	scn->textures.push_back(vwall->kd_txt);
+	scn->materials.push_back(hwall);
+	scn->textures.push_back(hwall->kd_txt);
+	scn->materials.push_back(window);
+	scn->textures.push_back(window->kd_txt);
+	scn->materials.push_back(door);
+	scn->textures.push_back(door->kd_txt);
+
 	for (shape* shp : inst->shp->shapes) {
 		if (shp->name == "roof") {
-			shp->mat = make_material("roof", vec3f{ 1.0f, 1.0f, 1.0f }, "roof.png");
-			//shp->subdivision = 5;												//
-			//tesselate_shape(shp, true, false, false, false);					//
-			//shp->mat->disp_txt = new texture{ "roof", "displace_roof_test" };	//test
+			shp->mat = roof;
 		}
 		if (shp->name == "vwall") {
-			shp->mat = make_material("vwall", vec3f{ 1.0f, 1.0f, 1.0f }, "vwall.png");
+			shp->mat = vwall;
 		}
 		if (shp->name == "hwall") {
-			shp->mat = make_material("hwall", vec3f{ 1.0f, 1.0f, 1.0f }, "hwall.png");
+			shp->mat = hwall;
 		}
 		else if (shp->name == "window") {
-			shp->mat = make_material("window", vec3f{ 1.0f, 1.0f, 1.0f }, "window.png", vec3f{ 0.4f, 0.4f, 0.4f });
+			shp->mat = window;
 		}
 		else if (shp->name == "door") {
-			shp->mat = make_material("door", vec3f{ 1.0f, 1.0f, 1.0f }, "door.png");
-		}
-		if (shp->mat != nullptr) {
-			scn->materials.push_back(shp->mat);
-			scn->textures.push_back(shp->mat->kd_txt);
-		}
-		if (shp->mat->disp_txt != nullptr) { //no longer needed
-			scn->textures.push_back(shp->mat->disp_txt);
+			shp->mat = door;
 		}
 	}
 }
@@ -654,31 +662,29 @@ int main(int argc, char** argv ) {
 	printf("extruding buildings\n");
 	int count_extruded = 1;//
 	std::uniform_int_distribution<uint32_t> h_range(skyscraper_constants.h_range.first, skyscraper_constants.h_range.second);
-	auto hight = bind_random_distribution(h_range);	
+	auto height = bind_random_distribution(h_range);
 	std::vector<shape*> base_to_remove = std::vector<shape*>();
 	for (instance* inst : scn->instances) {
 		if (inst->name == "base") {
-			building_info bin = {skyscraper,0,0,0,0,0,0,true}; //TODO generate building structure correctly
-			bin.h = 35; 
-			building_inst bv = {inst, bin};
-			extrude(scn, inst, bin.h);
-			printf("extruded %d\n", count_extruded);//
+			uint32_t roll = height();
+			extrude(scn, inst, roll);
+			//printf("extruded %d\n", count_extruded);//
 			count_extruded++;//
-			//extrude(scn, building2, 10.0f);
 			base_to_remove.push_back(inst->shp->shapes.at(0));
 		}
 	}
 	remove_shapes_from_scene(scn, base_to_remove);
+
 	//subdivide building facade
 	printf("subdividing facades\n");
 	for (instance* inst : scn->instances) {
 		std::vector<shape*> to_add = std::vector<shape*>();
 		std::vector<shape*> to_remove = std::vector<shape*>();
 		for (shape* shp : inst->shp->shapes) {
-		if (shp->name == "facade") {
-				building_info bin = {skyscraper,0,0,0,0,0,0,true}; //TODO reuse previous generated building
-				bin.h = 35; 
-				building_inst bv = {inst, bin};
+			if (shp->name == "facade") {
+				building_info bin = { skyscraper,0,0,0,0,0,0,true }; //TODO reuse previous generated building
+				bin.h = shp->pos.at(2).y - shp->pos.at(1).y;
+				building_inst bv = { inst, bin };
 				auto res = subdiv_facade(scn, bv, shp);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				to_remove.push_back(shp);
@@ -696,9 +702,9 @@ int main(int argc, char** argv ) {
 	int count_textured = 1;//
 	for (instance* inst : scn->instances) {
 		if (inst->name == "building") {
-//			apply_material_and_texture(scn, inst);
-//			printf("textured %d\n", count_textured);//
-//			count_textured++;//
+			//apply_material_and_texture(scn, inst);
+			//printf("textured %d\n", count_textured);//
+			//count_textured++;//
 		}
 	}
 
