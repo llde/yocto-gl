@@ -12,3 +12,43 @@ newmtl light
   Ns 2e+16
   Ni 1
 
+newmtl roof
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd roof.png
+
+newmtl vwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd vwall.png
+
+newmtl hwall
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd hwall.png
+
+newmtl window
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 2e+08
+  Ni 1
+  map_Kd window.png
+
+newmtl door
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 2e+08
+  Ni 1
+  map_Kd door.png
+
