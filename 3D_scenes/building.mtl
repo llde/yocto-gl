@@ -39,7 +39,7 @@ newmtl hwall
 newmtl window
   illum 2
   Kd 1 1 1
-  Ks 0.4 0.4 0.4
+  Ks 0.5 0.5 0.5
   Ns 2e+08
   Ni 1
   map_Kd window.png

@@ -861,7 +861,7 @@ int main(int argc, char** argv ) {
 			else {
 				building_type = "house";
 			}
-			uint32_t roll = height();
+			uint32_t roll = skyscraper_height();
 			extrude(scn, inst, roll, building_type);
 			//printf("extruded %d\n", count_extruded);//
 			count_extruded++;//
