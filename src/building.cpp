@@ -184,34 +184,33 @@ static const type_textures house_textures = {
 //
 struct building_info {
 	building_type type;
-	//type_constants info;
 	float h;
-	float l;
-	float w;
-	float w_l_ratio;
-	float floor_h;
-	float wind_w;
-	float wind_h;
-	bool flat_roof;
+//	float l;
+//	float w;
+//	float w_l_ratio;
+//	float floor_h;
+//	float wind_w;
+//	float wind_h;
+//	bool flat_roof;
 	//std::map<element_type, std::pair<std::vector<element_type>, subdiv_axis>> subdiv_rules;
+	//TODO texture fields.
+	building_info(building_type type, std::function<uint32_t()> random_gen ) {
+		this->type = type;
+		this->h = random_gen(); // Note use floats?. 
 
-	//building_info(building_type) {
-		
-	//}
+		//w and l are decided in the map generation.
+	}
 
-
-	//~building_info() {
-
-	//}
 };
-
-building_info prototype = { skyscraper, 10, 1, 1, 1, 3.5f, 1, 1, true };
 
 //unused
 struct building_inst {
 	instance* building;
 	building_info info;
-	std::string name = "";
+	
+	building_inst(building_type type, instance* inst, std::function<uint32_t()> random_gen) : info(type, random_gen){
+		this->building = inst;
+	}
 };
 
 /**
@@ -382,12 +381,13 @@ void make_map(scene* scn) {
 }
 
 // given a base and a height, creates the building
-scene* extrude(scene* scn, instance* building, float height, std::string type) {
+scene* extrude(scene* scn, building_inst& inst) {
 	//initial shape is only a single quad, the base of the building
-	shape* base = building->shp->shapes.at(0);
+	shape* base = inst.building->shp->shapes.at(0);
 	if ( (base->quads.size() != 1) && (base->pos.size() != 4) ) {
 		return nullptr;
 	}
+	uint32_t height = inst.info.h;
 	//make the entire building, creating the other 5 faces
 	shape* roof = new shape{"roof"};
 	for (int i = 0; i < base->pos.size(); i++) {
@@ -396,8 +396,7 @@ scene* extrude(scene* scn, instance* building, float height, std::string type) {
 	}
 	roof->quads.push_back(vec4i{ 0, 1, 2, 3 });
 	add_texcoord_to_quad_shape(roof);
-	building->shp->shapes.push_back(roof);
-
+	inst.building->shp->shapes.push_back(roof);
 	for (int j = 0; j < base->pos.size(); j++) {
 		shape* facade = new shape{"facade"};
 		facade->pos.push_back(vec3f{ base->pos.at(j).x, base->pos.at(j).y, base->pos.at(j).z });
@@ -406,10 +405,9 @@ scene* extrude(scene* scn, instance* building, float height, std::string type) {
 		facade->pos.push_back(vec3f{ base->pos.at(j).x, base->pos.at(j).y + height, base->pos.at(j).z });
 		facade->quads.push_back(vec4i{ 0, 1, 2, 3 });
 		add_texcoord_to_quad_shape(facade);
-		building->shp->shapes.push_back(facade);
+		inst.building->shp->shapes.push_back(facade);
 	}
 
-	building->name = type;
 	return scn;
 }
 
@@ -533,10 +531,10 @@ float calculate_floors_part(uint32_t height) {
 
 // recursively divides a facade in subparts
 // hardcoded for now, will be adjusted in future
-std::vector<shape*> subdiv_facade(scene* scn, building_inst inst, shape* shp) {
+std::vector<shape*> subdiv_facade(scene* scn, building_inst& inst, shape* shp) {
 	std::vector<shape*> to_add = std::vector<shape*>();
 	//case skyscraper
-	if (inst.building->name == "skyscraper") {
+	if (inst.info.type == skyscraper) {
 		if (shp->name == "facade") {
 			float bottomfloor_p = calculate_floors_part(inst.info.h);//
 			for (shape* nshp : split_y(scn, shp, std::vector<float>{ bottomfloor_p, 1.0f - bottomfloor_p }, std::vector<std::string>{ "bottomfloor", "topfloors" })) {
@@ -604,7 +602,7 @@ std::vector<shape*> subdiv_facade(scene* scn, building_inst inst, shape* shp) {
 		}
 	}
 	//case residential
-	else if (inst.building->name == "residential") {
+	else if (inst.info.type == residential) {
 		if (shp->name == "facade") {
 			float bottomfloor_p = calculate_floors_part(inst.info.h);//
 			for (shape* nshp : split_y(scn, shp, std::vector<float>{ bottomfloor_p, 1.0f - bottomfloor_p }, std::vector<std::string>{ "bottomfloor", "topfloors" })) {
@@ -679,7 +677,7 @@ std::vector<shape*> subdiv_facade(scene* scn, building_inst inst, shape* shp) {
 		}
 	}
 	//case house
-	else if (inst.building->name == "house") {
+	else if (inst.info.type == house) {
 		if (shp->name == "facade") {
 			for (shape* nshp : split_y(scn, shp, std::vector<float>{ 0.5, 0.5 }, std::vector<std::string>{ "bottomfloor", "topfloor" })) {
 				auto res = subdiv_facade(scn, inst, nshp);
@@ -845,6 +843,7 @@ int main(int argc, char** argv ) {
 	auto skyscraper_height = bind_random_distribution(skyscraper_h_range);
 	std::vector<shape*> base_to_remove = std::vector<shape*>();
 	float max_map_diam = std::sqrt(2.0f)*(max_map_side);//maybe better formula
+	std::vector<building_inst> buildings = std::vector<building_inst>();
 	for (instance* inst : scn->instances) {
 		if (inst->name == "base") {
 			//choosing type from center distance
@@ -852,43 +851,42 @@ int main(int argc, char** argv ) {
 			float z = inst->shp->shapes.at(0)->pos.at(0).z;
 			float center_dist = std::sqrt(std::pow(x, 2.0f) + std::pow(z, 2.0f));
 			float ratio = center_dist / max_map_diam;
-			std::string building_type = "";
+			building_type building_type;
 			if (ratio <= 1.0f) { //0.3f but temp 1.0f
-				building_type = "skyscraper";
+				building_type = skyscraper;
 			}
 			else if (ratio >= 3.0f && ratio <= 0.6f) {
-				building_type = "residential";
+				building_type = residential;
 			}
 			else {
-				building_type = "house";
+				building_type = house;
 			}
+			building_inst b_inst(building_type, inst, skyscraper_height);
 			uint32_t roll = skyscraper_height();
-			extrude(scn, inst, roll, building_type);
+			extrude(scn, b_inst);
 			//printf("extruded %d\n", count_extruded);//
 			count_extruded++;//
 			base_to_remove.push_back(inst->shp->shapes.at(0));
+			buildings.push_back(b_inst);
 		}
 	}
 	remove_shapes_from_scene(scn, base_to_remove);
 
 	//subdivide building facade
 	printf("subdividing facades\n");
-	for (instance* inst : scn->instances) {
+	for (building_inst& inst : buildings) {
 		std::vector<shape*> to_add = std::vector<shape*>();
 		std::vector<shape*> to_remove = std::vector<shape*>();
-		for (shape* shp : inst->shp->shapes) {
+		for (shape* shp : inst.building->shp->shapes) {
 			if (shp->name == "facade") {
-				building_info bin = { skyscraper,0,0,0,0,0,0,true }; //TODO reuse previous generated building
-				bin.h = shp->pos.at(2).y - shp->pos.at(1).y;
-				building_inst bv = { inst, bin };
-				auto res = subdiv_facade(scn, bv, shp);
+				auto res = subdiv_facade(scn, inst, shp);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				to_remove.push_back(shp);
 			}
 		}
 		remove_shapes_from_scene(scn, to_remove);
 		for (auto shp : to_add) {
-			inst->shp->shapes.push_back(shp);
+			inst.building->shp->shapes.push_back(shp);
 		}
 		to_remove.clear();
 		to_add.clear();
@@ -909,15 +907,15 @@ int main(int argc, char** argv ) {
 	//material and texture application
 	printf("applying material and textures\n");
 	int count_textured = 1;//
-	for (instance* inst : scn->instances) {
-		if (inst->name == "skyscraper") {
-			apply_material_and_texture(scn, inst);
+	for (building_inst& inst : buildings) {
+		if (inst.info.type == skyscraper) {
+			apply_material_and_texture(scn, inst.building);
 		}
-		else if (inst->name == "residential") {
-			apply_material_and_texture(scn, inst);
+		else if (inst.info.type == residential) {
+			apply_material_and_texture(scn, inst.building);
 		}
-		else if (inst->name == "house") {
-			apply_material_and_texture(scn, inst);
+		else if (inst.info.type == house) {
+			apply_material_and_texture(scn, inst.building);
 		}
 	}
 
