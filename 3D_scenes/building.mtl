@@ -2,21 +2,21 @@ newmtl terrain
   illum 2
   Kd 0.2 0.2 0.2
   Ks 0.04 0.04 0.04
-  Ns 2e+08
+  Ns 1e+06
   Ni 1
   map_Kd grid.png
 
 newmtl light
   illum 2
   Ke 100 100 100
-  Ns 2e+16
+  Ns 1e+06
   Ni 1
 
 newmtl roof
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
-  Ns 2e+08
+  Ns 1e+06
   Ni 1
   map_Kd roof.png
 
@@ -24,7 +24,7 @@ newmtl vwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
-  Ns 2e+08
+  Ns 1e+06
   Ni 1
   map_Kd vwall.png
 
@@ -32,7 +32,7 @@ newmtl hwall
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
-  Ns 2e+08
+  Ns 1e+06
   Ni 1
   map_Kd hwall.png
 
@@ -40,7 +40,7 @@ newmtl window
   illum 2
   Kd 1 1 1
   Ks 0.5 0.5 0.5
-  Ns 2e+08
+  Ns 1e+06
   Ni 1
   map_Kd window.png
 
@@ -48,7 +48,7 @@ newmtl door
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
-  Ns 2e+08
+  Ns 1e+06
   Ni 1
   map_Kd door.png
 

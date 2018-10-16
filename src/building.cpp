@@ -300,7 +300,7 @@ auto get_instance_by_shape(scene* scn, shape* shp) -> instance* {
 // makes material from given kd and kd texture
 material* make_material(const std::string& name, const vec3f& kd,
 	const std::string& kd_txt, const vec3f& ks = { 0.04f, 0.04f, 0.04f },
-	float rs = 0.01f) {
+	float rs = 0) {
 
 	material* mat = new material{ name };
 	mat->kd = kd;
@@ -796,6 +796,7 @@ scene* init_scene() {
 	//add light
 	auto lmat = new material{ "light" };
 	lmat->ke = { 100, 100, 100 };
+	lmat->rs = 0;
 	auto lshp = new shape{ "light" };
 	lshp->mat = lmat;
 	lshp->pos = { { 1.4f, 8, 6 },{ -1.4f, 8, 6 } };
