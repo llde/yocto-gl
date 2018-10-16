@@ -10,12 +10,12 @@ using namespace ygl;
 // note2 : every object in the scene, must be stored in the proper vector 
 // contained in the scene object(the pointer of it), in order to delete it when deleting the scene;
 
-static const float min_map_side = 800.0f;
-static const float max_map_side = 800.0f;
-static const float min_building_side = 18.0f;
-static const float max_building_side = 60.0f;
-static const float min_street_width = 8.0f;
-static const float max_street_width = 20.0f;
+static const float min_map_side = 400.0f;
+static const float max_map_side = 400.0f;
+static const float min_building_side = 9.0f;
+static const float max_building_side = 30.0f;
+static const float min_street_width = 4.0f;
+static const float max_street_width = 10.0f;
 
 // the types of building
 enum building_type { residential, skyscraper, house };
@@ -68,8 +68,6 @@ static const std::map <element_type, std::string> element_type_to_string = {
 // defined by an instance of type_constants
 struct type_constants {
 	std::pair<float, float> h_range;
-	std::pair<float, float> l_range;
-	std::pair<float, float> w_range;
 	std::pair<float, float> wl_ratio_range;
 	std::pair<float, float> floor_h_range;
 	std::pair<float, float> wind_w_range;
@@ -81,8 +79,6 @@ struct type_constants {
 // constants are equal for all types, temporary
 static const type_constants residential_constants = {
 	std::pair<float, float>{ 30.0, 100.0 },
-	std::pair<float, float>{ 4.0, 10.0 },
-	std::pair<float, float>{ 4.0, 10.0 },
 	std::pair<float, float>{ (5.0 / 6.0), (6.0 / 5.0) },
 	std::pair<float, float>{ 2.5, 3.5 },
 	std::pair<float, float>{ 2.0, 2.5 },
@@ -104,8 +100,6 @@ static const type_constants residential_constants = {
 // constants are equal for all types, temporary
 static const type_constants skyscraper_constants = {
 	std::pair<float, float>{ 30.0, 100.0 },
-	std::pair<float, float>{ 4.0, 10.0 },
-	std::pair<float, float>{ 4.0, 10.0 },
 	std::pair<float, float>{ (5.0 / 6.0), (6.0 / 5.0) },
 	std::pair<float, float>{ 2.5, 3.5 },
 	std::pair<float, float>{ 2.0, 2.5 },
@@ -127,8 +121,6 @@ static const type_constants skyscraper_constants = {
 // constants are equal for all types, temporary
 static const type_constants house_info = {
 	std::pair<float, float>{ 30.0, 100.0 },
-	std::pair<float, float>{ 4.0, 10.0 },
-	std::pair<float, float>{ 4.0, 10.0 },
 	std::pair<float, float>{ (5.0 / 6.0), (6.0 / 5.0) },
 	std::pair<float, float>{ 2.5, 3.5 },
 	std::pair<float, float>{ 2.0, 2.5 },
@@ -689,14 +681,71 @@ std::vector<shape*> subdiv_facade(scene* scn, building_inst inst, shape* shp) {
 	//case house
 	else if (inst.building->name == "house") {
 		if (shp->name == "facade") {
-			float bottomfloor_p = calculate_floors_part(inst.info.h);//
-			for (shape* nshp : split_y(scn, shp, std::vector<float>{ bottomfloor_p, 1.0f - bottomfloor_p }, std::vector<std::string>{ "bottomfloor", "topfloor" })) {
+			for (shape* nshp : split_y(scn, shp, std::vector<float>{ 0.5, 0.5 }, std::vector<std::string>{ "bottomfloor", "topfloor" })) {
 				auto res = subdiv_facade(scn, inst, nshp);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
 			}
 		}
-		
+		else if (shp->name == "topfloor") {
+			for (shape* nshp : repeat_x(scn, shp, 3, "topwindtile")) {
+				auto res = subdiv_facade(scn, inst, nshp);
+				std::copy(res.begin(), res.end(), back_inserter(to_add));
+				delete nshp;
+			}
+		}
+		else if (shp->name == "bottomfloor") {
+			for (shape* nshp : split_x(scn, shp, std::vector<float>{ 1/3, 1/3, 1/3 }, std::vector<std::string>{ "botwindtile", "doortile", "botwindtile" })) {
+				auto res = subdiv_facade(scn, inst, nshp);
+				std::copy(res.begin(), res.end(), back_inserter(to_add));
+				delete nshp;
+			}
+		}
+		else if (shp->name == "topwindtile") {
+			for (shape* nshp : split_x(scn, shp, std::vector<float>{ 0.25, 0.5, 0.25 }, std::vector<std::string>{ "vwall", "topwindcol", "vwall" })) {
+				auto res = subdiv_facade(scn, inst, nshp);
+				std::copy(res.begin(), res.end(), back_inserter(to_add));
+				delete nshp;
+			}
+		}
+		else if (shp->name == "topwindcol") {
+			for (shape* nshp : split_y(scn, shp, std::vector<float>{ 0.25, 0.5, 0.25 }, std::vector<std::string>{ "hwall", "topwindow", "hwall" })) {
+				auto res = subdiv_facade(scn, inst, nshp);
+				std::copy(res.begin(), res.end(), back_inserter(to_add));
+				delete nshp;
+			}
+		}
+		else if (shp->name == "botwindtile") {
+			for (shape* nshp : split_x(scn, shp, std::vector<float>{ 0.15, 0.7, 0.15 }, std::vector<std::string>{ "vwall", "botwindcol", "vwall" })) {
+				auto res = subdiv_facade(scn, inst, nshp);
+				std::copy(res.begin(), res.end(), back_inserter(to_add));
+				delete nshp;
+			}
+		}
+		else if (shp->name == "botwindcol") {
+			for (shape* nshp : split_y(scn, shp, std::vector<float>{ 0.15, 0.7, 0.15 }, std::vector<std::string>{ "hwall", "botwindow", "hwall" })) {
+				auto res = subdiv_facade(scn, inst, nshp);
+				std::copy(res.begin(), res.end(), back_inserter(to_add));
+				delete nshp;
+			}
+		}
+		else if (shp->name == "doortile") {
+			for (shape* nshp : split_x(scn, shp, std::vector<float>{ 0.15, 0.7, 0.15 }, std::vector<std::string>{ "vwall", "doorcol", "vwall" })) {
+				auto res = subdiv_facade(scn, inst, nshp);
+				std::copy(res.begin(), res.end(), back_inserter(to_add));
+				if (nshp->name == "doorcol") delete nshp;
+			}
+		}
+		else if (shp->name == "doorcol") {
+			for (shape* nshp : split_y(scn, shp, std::vector<float>{ 0.85, 0.15 }, std::vector<std::string>{ "door", "hwall" })) {
+				auto res = subdiv_facade(scn, inst, nshp);
+				std::copy(res.begin(), res.end(), back_inserter(to_add));
+			}
+		}
+		else {
+			to_add.push_back(shp);
+		}
+
 	}
 	return to_add;
 }
@@ -704,7 +753,7 @@ std::vector<shape*> subdiv_facade(scene* scn, building_inst inst, shape* shp) {
 static material* roof_tx = make_material("roof", vec3f{ 1.0f, 1.0f, 1.0f }, "roof.png");
 static material* vwall_tx = make_material("vwall", vec3f{ 1.0f, 1.0f, 1.0f }, "vwall.png");
 static material* hwall_tx = make_material("hwall", vec3f{ 1.0f, 1.0f, 1.0f }, "hwall.png");
-static material* window_tx = make_material("window", vec3f{ 1.0f, 1.0f, 1.0f }, "window.png", vec3f{ 0.4f, 0.4f, 0.4f });
+static material* window_tx = make_material("window", vec3f{ 1.0f, 1.0f, 1.0f }, "window.png", vec3f{ 0.5f, 0.5f, 0.5f });
 static material* door_tx = make_material("door", vec3f{ 1.0f, 1.0f, 1.0f }, "door.png");
 
 // apply texture
@@ -791,8 +840,8 @@ int main(int argc, char** argv ) {
 	//make buildings from basements
 	printf("extruding buildings\n");
 	int count_extruded = 1;//
-	std::uniform_int_distribution<uint32_t> h_range(skyscraper_constants.h_range.first, skyscraper_constants.h_range.second);
-	auto height = bind_random_distribution(h_range);
+	std::uniform_int_distribution<uint32_t> skyscraper_h_range(skyscraper_constants.h_range.first, skyscraper_constants.h_range.second);
+	auto skyscraper_height = bind_random_distribution(skyscraper_h_range);
 	std::vector<shape*> base_to_remove = std::vector<shape*>();
 	float max_map_diam = std::sqrt(2.0f)*(max_map_side);//maybe better formula
 	for (instance* inst : scn->instances) {
@@ -862,8 +911,12 @@ int main(int argc, char** argv ) {
 	for (instance* inst : scn->instances) {
 		if (inst->name == "skyscraper") {
 			apply_material_and_texture(scn, inst);
-			//printf("textured %d\n", count_textured);//
-			//count_textured++;//
+		}
+		else if (inst->name == "residential") {
+			apply_material_and_texture(scn, inst);
+		}
+		else if (inst->name == "house") {
+			apply_material_and_texture(scn, inst);
 		}
 	}
 
