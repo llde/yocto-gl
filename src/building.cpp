@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <chrono>
 #include <cmath>
 #include <cstdint>
@@ -750,29 +751,66 @@ std::vector<shape*> subdiv_facade(scene* scn, building_inst& inst, shape* shp) {
 	return to_add;
 }
 
-static material* roof_tx = make_material("roof", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_roof_1.png");
-static material* vwall_tx = make_material("vwall", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_vwall_1.png");
-static material* hwall_tx = make_material("hwall", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_hwall_1.png");
-static material* window_tx = make_material("window", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_window_1.png", vec3f{ 0.5f, 0.5f, 0.5f });
-static material* door_tx = make_material("door", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_door_1.png");
+// create all the scene materials
+
+// skyscrapers roof materials
+material* sky_roof_1 = make_material("sky_roof_1", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_roof_1.png", vec3f{ 0.2f, 0.2f, 0.2f });
+material* sky_roof_2 = make_material("sky_roof_2", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_roof_2.png");
+material* sky_roof_3 = make_material("sky_roof_3", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_roof_3.png");
+material* sky_roof_4 = make_material("sky_roof_4", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_roof_4.png", vec3f{ 0.2f, 0.2f, 0.2f });
+material* sky_roof_materials[4] = { sky_roof_1, sky_roof_2, sky_roof_3, sky_roof_4 };
+// skyscrapers vertical wall materials
+material* sky_vwall_1 = make_material("sky_vwall_1", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_vwall_1.png");
+material* sky_vwall_2 = make_material("sky_vwall_2", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_vwall_2.png");
+material* sky_vwall_3 = make_material("sky_vwall_3", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_vwall_3.png", vec3f{ 0.4f, 0.4f, 0.4f });
+material* sky_vwall_4 = make_material("sky_vwall_4", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_vwall_4.png", vec3f{ 0.4f, 0.4f, 0.4f });
+material* sky_vwall_materials[4] = { sky_vwall_1, sky_vwall_2, sky_vwall_3, sky_vwall_4 };
+// skyscrapers horizontal wall materials
+material* sky_hwall_1 = make_material("sky_hwall_1", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_hwall_1.png");
+material* sky_hwall_2 = make_material("sky_hwall_2", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_hwall_2.png");
+material* sky_hwall_3 = make_material("sky_hwall_3", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_hwall_3.png", vec3f{ 0.4f, 0.4f, 0.4f });
+material* sky_hwall_4 = make_material("sky_hwall_4", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_hwall_4.png", vec3f{ 0.4f, 0.4f, 0.4f });
+material* sky_hwall_materials[4] = { sky_vwall_1, sky_vwall_2, sky_vwall_3, sky_vwall_4 };
+// skyscrapers window materials
+material* sky_window_1 = make_material("sky_window_1", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_window_1.png", vec3f{ 0.6f, 0.6f, 0.6f });
+material* sky_window_2 = make_material("sky_window_2", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_window_2.png", vec3f{ 0.6f, 0.6f, 0.6f });
+material* sky_window_3 = make_material("sky_window_3", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_window_3.png", vec3f{ 0.6f, 0.6f, 0.6f });
+material* sky_window_4 = make_material("sky_window_4", vec3f{ 0.8f, 0.8f, 0.8f }, "skyscraper_window_4.png", vec3f{ 0.6f, 0.6f, 0.6f });
+material* sky_window_materials[4] = { sky_window_1, sky_window_2, sky_window_3, sky_window_4 };
+// skyscrapers door materials
+material* sky_door_1 = make_material("sky_door_1", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_door_1.png");
+material* sky_door_2 = make_material("sky_door_2", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_door_2.png");
+material* sky_door_3 = make_material("sky_door_3", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_door_3.png");
+material* sky_door_4 = make_material("sky_door_4", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_door_4.png");
+material* sky_door_materials[4] = { sky_door_1, sky_door_2, sky_door_3, sky_door_4 };
+
+// array with all scenes materials
+material* scene_materials[18] = {
+	sky_roof_1, sky_roof_2, sky_roof_3, sky_roof_4,
+	sky_vwall_1, sky_vwall_2, sky_vwall_3, sky_vwall_4,
+	sky_hwall_1, sky_hwall_2, sky_hwall_3, sky_hwall_4,
+	sky_window_1, sky_window_2, sky_window_3, sky_window_4,
+	sky_door_1, sky_door_2
+};
 
 // apply texture
 void apply_material_and_texture(scene* scn, instance* inst) {
+	
 	for (shape* shp : inst->shp->shapes) {
 		if (shp->name == "roof") {
-			shp->mat = roof_tx;
+			shp->mat = sky_roof_materials[2];
 		}
 		if (shp->name == "vwall") {
-			shp->mat = vwall_tx;
+			shp->mat = sky_vwall_materials[0];
 		}
 		if (shp->name == "hwall") {
-			shp->mat = hwall_tx;
+			shp->mat = sky_hwall_materials[0];
 		}
 		else if (shp->name == "window") {
-			shp->mat = window_tx;
+			shp->mat = sky_window_materials[1];
 		}
 		else if (shp->name == "door") {
-			shp->mat = door_tx;
+			shp->mat = sky_door_materials[0];
 		}
 	}
 }
@@ -895,16 +933,10 @@ int main(int argc, char** argv ) {
 	}
 
 	//adding material to the scene
-	scn->materials.push_back(roof_tx);
-	scn->textures.push_back(roof_tx->kd_txt);
-	scn->materials.push_back(vwall_tx);
-	scn->textures.push_back(vwall_tx->kd_txt);
-	scn->materials.push_back(hwall_tx);
-	scn->textures.push_back(hwall_tx->kd_txt);
-	scn->materials.push_back(window_tx);
-	scn->textures.push_back(window_tx->kd_txt);
-	scn->materials.push_back(door_tx);
-	scn->textures.push_back(door_tx->kd_txt);
+	for (material* mat : scene_materials) {
+		scn->materials.push_back(mat);
+		scn->textures.push_back(mat->kd_txt);
+	}
 
 	//material and texture application
 	printf("applying material and textures\n");
