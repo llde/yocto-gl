@@ -539,6 +539,12 @@ uint32_t calculate_num_wind(float w) {
 	return floor_w;
 }
 
+float calculate_door_part(float w){
+	return 1.0f/ (w / 2.0f);
+}
+float calculate_rem_part(float w, float d){
+	return (1.0f - d) / 2.0f;
+}
 
 float calculate_floors_part(uint32_t height) {
 	float part_f = 1.0f / (height / 3.5);
@@ -567,7 +573,25 @@ std::vector<shape*> subdiv_facade(scene* scn, building_info& info, shape* shp, s
 			}
 		}
 		else if (shp->name == "bottomfloor") {
-			for (shape* nshp : split_x(scn, shp, std::vector<float>{ 0.4, 0.2, 0.4 }, std::vector<std::string>{ "tiles", "doortile", "tiles" })) {
+			uint32_t num_t = calculate_num_wind(axe == x ? info.w : info.l);
+			float door_t = 1.0f / (float) num_t;
+			std::vector<float> obj;
+			std::vector<std::string> names;
+			uint32_t h = num_t / 2;
+			for(uint32_t i = 0; i < num_t; i++){
+				if(i == h){
+					obj.push_back(door_t);
+					names.push_back("doortile");
+				}
+				else{
+					obj.push_back(door_t);
+					names.push_back("tile");
+				}
+			}
+			float t = 0;
+			for(float i : obj) t += i;
+			std::cout << "Bottomfloor " << t << std::endl;
+			for (shape* nshp : split_x(scn, shp, obj, names)) {
 				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
