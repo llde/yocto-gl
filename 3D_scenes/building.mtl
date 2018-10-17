@@ -18,7 +18,7 @@ newmtl roof
   Ks 0.04 0.04 0.04
   Ns 1e+06
   Ni 1
-  map_Kd roof.png
+  map_Kd skyscraper_roof_1.png
 
 newmtl vwall
   illum 2
@@ -42,7 +42,7 @@ newmtl window
   Ks 0.5 0.5 0.5
   Ns 1e+06
   Ni 1
-  map_Kd window.png
+  map_Kd skyscraper_window_1.png
 
 newmtl door
   illum 2
@@ -50,5 +50,5 @@ newmtl door
   Ks 0.04 0.04 0.04
   Ns 1e+06
   Ni 1
-  map_Kd door.png
+  map_Kd skyscraper_door_1.png
 
