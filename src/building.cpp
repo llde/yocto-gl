@@ -23,7 +23,8 @@ static const float max_street_width = 10.0f;
 enum building_type { residential, skyscraper, house };
 
 // the axis to make subdivisions
-enum subdiv_axis { x, y };
+
+enum subdiv_axis { x, y , z};
 
 // the type of element obtainable by subidiving facade. 
 // Only the terminal elements will be added to the scene and textured
@@ -187,8 +188,8 @@ static const type_textures house_textures = {
 struct building_info {
 	building_type type;
 	float h;
-	//float l;
-	//float w;
+	float l;
+	float w;
 	//float w_l_ratio;
 	//float floor_h;
 	//float wind_w;
@@ -199,7 +200,6 @@ struct building_info {
 	building_info(building_type type, std::function<uint32_t()> random_gen ) {
 		this->type = type;
 		this->h = random_gen(); // Note use floats?. 
-
 		//w and l are decided in the map generation.
 	}
 
@@ -209,8 +209,10 @@ struct building_info {
 struct building_inst {
 	instance* building;
 	building_info info;
-	
+	std::pair<shape*,shape*> x_facade;
+	std::pair<shape*,shape*> z_facade;
 	building_inst(building_type type, instance* inst, std::function<uint32_t()> random_gen) : info(type, random_gen){
+		
 		this->building = inst;
 	}
 };
@@ -264,7 +266,7 @@ void remove_shape_from_scene(scene* scn, shape* shp) {
 		auto res = std::find(shps->shapes.begin(), shps->shapes.end(), shp);
 		if(res != shps->shapes.end()){
 			shps->shapes.erase(res);
-			//std::cout << "Removing shape " << shp->name << std::endl;
+//			std::cout << "Removing shape " << shp->name << std::endl;
 			delete shp;
 			break;
 		}
@@ -274,6 +276,7 @@ void remove_shape_from_scene(scene* scn, shape* shp) {
 // remove a group of shapes from the scene
 void remove_shapes_from_scene(scene* scn, std::vector<shape*>& vecshp) {
 	for(auto shp : vecshp){
+//		std::cout << "Removing " << shp->name << std::endl;
 		remove_shape_from_scene(scn, shp);
 	}
 }
@@ -360,7 +363,7 @@ void make_map(scene* scn) {
 		float building_w = next_rand1f(rng, min_building_side, max_building_side);
 		float street_w = next_rand1f(rng, min_street_width, max_street_width);
 		for (shape* zshp : zv) {
-			shape* shp = new shape();
+			shape* shp = new shape{"base"};
 			shp->quads.push_back(vec4i{ 0, 1, 2, 3 });
 			shp->pos.push_back(vec3f{x, 0, zshp->pos.at(0).z});
 			shp->pos.push_back(vec3f{x + building_w, 0, zshp->pos.at(1).z});
@@ -390,6 +393,9 @@ scene* extrude(scene* scn, building_inst& inst) {
 		return nullptr;
 	}
 	uint32_t height = inst.info.h;
+	inst.info.w = std::abs(base->pos.at(0).x - base->pos.at(1).x); 
+	inst.info.l = std::abs(base->pos.at(0).z - base->pos.at(2).z); 
+
 	//make the entire building, creating the other 5 faces
 	shape* roof = new shape{"roof"};
 	for (int i = 0; i < base->pos.size(); i++) {
@@ -409,7 +415,8 @@ scene* extrude(scene* scn, building_inst& inst) {
 		add_texcoord_to_quad_shape(facade);
 		inst.building->shp->shapes.push_back(facade);
 	}
-
+	inst.x_facade = std::pair<shape*,shape*>(inst.building->shp->shapes.at(2), inst.building->shp->shapes.at(4));
+	inst.z_facade = std::pair<shape*,shape*>(inst.building->shp->shapes.at(3), inst.building->shp->shapes.at(5));
 	inst.building->name = "building";
 	return scn;
 }
@@ -475,8 +482,8 @@ std::vector<shape*> split_x(scene* scn, shape* shp, std::vector<float> v, const 
 	}
 	std::vector<shape*> newv = std::vector<shape*>();
 	if (check != 1) {
-		printf("fail\n"); //
-		return newv;
+		//printf("fail\n"); //
+		//return newv;
 	}
 
 	float y0 = shp->pos.at(0).y; //same y for v0 and v1
@@ -526,7 +533,13 @@ uint32_t calculate_floors(uint32_t height) {
 	return floor_h;
 }
 
-//
+uint32_t calculate_num_wind(float w) {
+	uint32_t floor_w = w / 2.0f;  // hardocded for now TODO, make chose from
+									  // range, maybe using an approximation
+	return floor_w;
+}
+
+
 float calculate_floors_part(uint32_t height) {
 	float part_f = 1.0f / (height / 3.5);
 	return part_f;
@@ -534,69 +547,69 @@ float calculate_floors_part(uint32_t height) {
 
 // recursively divides a facade in subparts
 // hardcoded for now, will be adjusted in future
-std::vector<shape*> subdiv_facade(scene* scn, building_inst& inst, shape* shp) {
+std::vector<shape*> subdiv_facade(scene* scn, building_info& info, shape* shp, subdiv_axis axe) {
 	std::vector<shape*> to_add = std::vector<shape*>();
 	//case skyscraper
-	if (inst.info.type == skyscraper) {
+	if (info.type == skyscraper) {
 		if (shp->name == "facade") {
-			float bottomfloor_p = calculate_floors_part(inst.info.h);//
+			float bottomfloor_p = calculate_floors_part(info.h);//
 			for (shape* nshp : split_y(scn, shp, std::vector<float>{ bottomfloor_p, 1.0f - bottomfloor_p }, std::vector<std::string>{ "bottomfloor", "topfloors" })) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
 			}
 		}
 		else if (shp->name == "topfloors") {
-			for (shape* nshp : repeat_y(scn, shp, calculate_floors(inst.info.h - 1), "floor")) {
-				auto res = subdiv_facade(scn, inst, nshp);
+			for (shape* nshp : repeat_y(scn, shp, calculate_floors(info.h - 1), "floor")) {
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
 			}
 		}
 		else if (shp->name == "bottomfloor") {
 			for (shape* nshp : split_x(scn, shp, std::vector<float>{ 0.4, 0.2, 0.4 }, std::vector<std::string>{ "tiles", "doortile", "tiles" })) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
 			}
 		}
 		else if (shp->name == "doortile") {
 			for (shape* nshp : split_x(scn, shp, std::vector<float>{ 0.1, 0.8, 0.1 }, std::vector<std::string>{ "vwall", "doorcol", "vwall" })) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				if (nshp->name == "doorcol") delete nshp;
 			}
 		}
 		else if (shp->name == "doorcol") {
 			for (shape* nshp : split_y(scn, shp, std::vector<float>{ 0.9, 0.1 }, std::vector<std::string>{ "door", "hwall" })) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 			}
 		}
 		else if (shp->name == "tiles") {
 			for (shape* nshp : repeat_x(scn, shp, 2, "tile")) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
 			}
 		}
 		else if (shp->name == "floor") {
-			for (shape* nshp : repeat_x(scn, shp, 5, "tile")) {
-				auto res = subdiv_facade(scn, inst, nshp);
+			for (shape* nshp : repeat_x(scn, shp, calculate_num_wind(axe == x ?  info.w : info.l), "tile")) {
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
 			}
 		}
 		else if (shp->name == "tile") {
 			for (shape* nshp : split_x(scn, shp, std::vector<float>{ 0.1, 0.8, 0.1 }, std::vector<std::string>{ "vwall", "windcol", "vwall" })) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				if (nshp->name == "windcol") delete nshp;
 			}
 		}
 		else if (shp->name == "windcol") {
 			for (shape* nshp : split_y(scn, shp, std::vector<float>{ 0.1, 0.8, 0.1 }, std::vector<std::string>{ "hwall", "window", "hwall" })) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 			}
 		}
@@ -605,73 +618,73 @@ std::vector<shape*> subdiv_facade(scene* scn, building_inst& inst, shape* shp) {
 		}
 	}
 	//case residential
-	else if (inst.info.type == residential) {
+	else if (info.type == residential) {
 		if (shp->name == "facade") {
-			float bottomfloor_p = calculate_floors_part(inst.info.h);//
+			float bottomfloor_p = calculate_floors_part(info.h);//
 			for (shape* nshp : split_y(scn, shp, std::vector<float>{ bottomfloor_p, 1.0f - bottomfloor_p }, std::vector<std::string>{ "bottomfloor", "topfloors" })) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
 			}
 		}
 		else if (shp->name == "topfloors") {
-			for (shape* nshp : repeat_y(scn, shp, calculate_floors(inst.info.h - 1), "floor")) {
-				auto res = subdiv_facade(scn, inst, nshp);
+			for (shape* nshp : repeat_y(scn, shp, calculate_floors(info.h - 1), "floor")) {
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
 			}
 		}
 		else if (shp->name == "bottomfloor") {
 			for (shape* nshp : split_x(scn, shp, std::vector<float>{ 0.4, 0.2, 0.4 }, std::vector<std::string>{ "walltiles", "doortile", "walltiles" })) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
 			}
 		}
 		else if (shp->name == "doortile") {
 			for (shape* nshp : split_x(scn, shp, std::vector<float>{ 0.1, 0.8, 0.1 }, std::vector<std::string>{ "vwall", "doorcol", "vwall" })) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				if (nshp->name == "doorcol") delete nshp;
 			}
 		}
 		else if (shp->name == "doorcol") {
 			for (shape* nshp : split_y(scn, shp, std::vector<float>{ 0.9, 0.1 }, std::vector<std::string>{ "door", "hwall" })) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 			}
 		}
 		else if (shp->name == "walltiles") {
 			for (shape* nshp : repeat_x(scn, shp, 2, "walltile")) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
 			}
 		}
 		else if (shp->name == "floor") {
 			for (shape* nshp : split_y(scn, shp, std::vector<float>{ 0.08, 0.92 }, std::vector<std::string>{ "ledge", "windtiles" })) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
 			}
 		}
 		else if (shp->name == "windtiles") {
 			for (shape* nshp : repeat_x(scn, shp, 5, "windtile")) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
 			}
 		}
 		else if (shp->name == "windtile") {
 			for (shape* nshp : split_x(scn, shp, std::vector<float>{ 0.1, 0.8, 0.1 }, std::vector<std::string>{ "vwall", "windcol", "vwall" })) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				if (nshp->name == "windcol") delete nshp;
 			}
 		}
 		else if (shp->name == "windcol") {
 			for (shape* nshp : split_y(scn, shp, std::vector<float>{ 0.1, 0.8, 0.1 }, std::vector<std::string>{ "hwall", "window", "hwall" })) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 			}
 		}
@@ -680,66 +693,66 @@ std::vector<shape*> subdiv_facade(scene* scn, building_inst& inst, shape* shp) {
 		}
 	}
 	//case house
-	else if (inst.info.type == house) {
+	else if (info.type == house) {
 		if (shp->name == "facade") {
 			for (shape* nshp : split_y(scn, shp, std::vector<float>{ 0.5, 0.5 }, std::vector<std::string>{ "bottomfloor", "topfloor" })) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
 			}
 		}
 		else if (shp->name == "topfloor") {
 			for (shape* nshp : repeat_x(scn, shp, 3, "topwindtile")) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
 			}
 		}
 		else if (shp->name == "bottomfloor") {
 			for (shape* nshp : split_x(scn, shp, std::vector<float>{ 1/3, 1/3, 1/3 }, std::vector<std::string>{ "botwindtile", "doortile", "botwindtile" })) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
 			}
 		}
 		else if (shp->name == "topwindtile") {
 			for (shape* nshp : split_x(scn, shp, std::vector<float>{ 0.25, 0.5, 0.25 }, std::vector<std::string>{ "vwall", "topwindcol", "vwall" })) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
 			}
 		}
 		else if (shp->name == "topwindcol") {
 			for (shape* nshp : split_y(scn, shp, std::vector<float>{ 0.25, 0.5, 0.25 }, std::vector<std::string>{ "hwall", "topwindow", "hwall" })) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
 			}
 		}
 		else if (shp->name == "botwindtile") {
 			for (shape* nshp : split_x(scn, shp, std::vector<float>{ 0.15, 0.7, 0.15 }, std::vector<std::string>{ "vwall", "botwindcol", "vwall" })) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
 			}
 		}
 		else if (shp->name == "botwindcol") {
 			for (shape* nshp : split_y(scn, shp, std::vector<float>{ 0.15, 0.7, 0.15 }, std::vector<std::string>{ "hwall", "botwindow", "hwall" })) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
 			}
 		}
 		else if (shp->name == "doortile") {
 			for (shape* nshp : split_x(scn, shp, std::vector<float>{ 0.15, 0.7, 0.15 }, std::vector<std::string>{ "vwall", "doorcol", "vwall" })) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				if (nshp->name == "doorcol") delete nshp;
 			}
 		}
 		else if (shp->name == "doorcol") {
 			for (shape* nshp : split_y(scn, shp, std::vector<float>{ 0.85, 0.15 }, std::vector<std::string>{ "door", "hwall" })) {
-				auto res = subdiv_facade(scn, inst, nshp);
+				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 			}
 		}
@@ -999,13 +1012,19 @@ int main(int argc, char** argv ) {
 	for (building_inst& inst : buildings) {
 		std::vector<shape*> to_add = std::vector<shape*>();
 		std::vector<shape*> to_remove = std::vector<shape*>();
-		for (shape* shp : inst.building->shp->shapes) {
-			if (shp->name == "facade") {
-				auto res = subdiv_facade(scn, inst, shp);
-				std::copy(res.begin(), res.end(), back_inserter(to_add));
-				to_remove.push_back(shp);
-			}
-		}
+
+		auto res = subdiv_facade(scn, inst.info, inst.x_facade.first, x);
+		std::copy(res.begin(), res.end(), back_inserter(to_add));
+		res = subdiv_facade(scn, inst.info, inst.x_facade.second, x);
+		std::copy(res.begin(), res.end(), back_inserter(to_add));
+		res = subdiv_facade(scn, inst.info, inst.z_facade.first, z);
+		std::copy(res.begin(), res.end(), back_inserter(to_add));
+		res = subdiv_facade(scn, inst.info, inst.z_facade.second, z);
+		std::copy(res.begin(), res.end(), back_inserter(to_add));
+		to_remove.push_back(inst.x_facade.first);
+		to_remove.push_back(inst.x_facade.second);
+		to_remove.push_back(inst.z_facade.first);
+		to_remove.push_back(inst.z_facade.second);
 		remove_shapes_from_scene(scn, to_remove);
 		for (auto shp : to_add) {
 			inst.building->shp->shapes.push_back(shp);
