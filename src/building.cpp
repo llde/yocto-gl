@@ -6,8 +6,9 @@
 #include "../yocto/yocto_gl.h"
 using namespace ygl;
 
-// note1 : obj files, mtl files and png files for textures must be all in the same folder!
-// note2 : every object in the scene, must be stored in the proper vector 
+// note1 : the x axis is for width the y axis is for height, the z axis is for length
+// note2 : obj files, mtl files and png files for textures must be all in the same folder!
+// note3 : every object in the scene, must be stored in the proper vector
 // contained in the scene object(the pointer of it), in order to delete it when deleting the scene;
 
 static const float min_map_side = 400.0f;
@@ -185,13 +186,13 @@ static const type_textures house_textures = {
 struct building_info {
 	building_type type;
 	float h;
-//	float l;
-//	float w;
-//	float w_l_ratio;
-//	float floor_h;
-//	float wind_w;
-//	float wind_h;
-//	bool flat_roof;
+	//float l;
+	//float w;
+	//float w_l_ratio;
+	//float floor_h;
+	//float wind_w;
+	//float wind_h;
+	//bool flat_roof;
 	//std::map<element_type, std::pair<std::vector<element_type>, subdiv_axis>> subdiv_rules;
 	//TODO texture fields.
 	building_info(building_type type, std::function<uint32_t()> random_gen ) {
@@ -391,7 +392,7 @@ scene* extrude(scene* scn, building_inst& inst) {
 	//make the entire building, creating the other 5 faces
 	shape* roof = new shape{"roof"};
 	for (int i = 0; i < base->pos.size(); i++) {
-		vec3f vertex = vec3f{ base->pos.at(i).x, base->pos.at(i).y + height, base->pos.at(i).z }; //the x axis is for width the y axis is for height, the z axis is for length
+		vec3f vertex = vec3f{ base->pos.at(i).x, base->pos.at(i).y + height, base->pos.at(i).z };
 		roof->pos.push_back(vertex);
 	}
 	roof->quads.push_back(vec4i{ 0, 1, 2, 3 });
@@ -408,6 +409,7 @@ scene* extrude(scene* scn, building_inst& inst) {
 		inst.building->shp->shapes.push_back(facade);
 	}
 
+	building_inst.building->name = "building";
 	return scn;
 }
 
@@ -748,11 +750,11 @@ std::vector<shape*> subdiv_facade(scene* scn, building_inst& inst, shape* shp) {
 	return to_add;
 }
 
-static material* roof_tx = make_material("roof", vec3f{ 1.0f, 1.0f, 1.0f }, "roof.png");
+static material* roof_tx = make_material("roof", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_roof_1.png");
 static material* vwall_tx = make_material("vwall", vec3f{ 1.0f, 1.0f, 1.0f }, "vwall.png");
 static material* hwall_tx = make_material("hwall", vec3f{ 1.0f, 1.0f, 1.0f }, "hwall.png");
-static material* window_tx = make_material("window", vec3f{ 1.0f, 1.0f, 1.0f }, "window.png", vec3f{ 0.5f, 0.5f, 0.5f });
-static material* door_tx = make_material("door", vec3f{ 1.0f, 1.0f, 1.0f }, "door.png");
+static material* window_tx = make_material("window", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_window_1.png", vec3f{ 0.5f, 0.5f, 0.5f });
+static material* door_tx = make_material("door", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_door_1.png");
 
 // apply texture
 void apply_material_and_texture(scene* scn, instance* inst) {
