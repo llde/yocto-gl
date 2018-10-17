@@ -746,13 +746,13 @@ std::vector<shape*> subdiv_facade(scene* scn, building_inst& inst, shape* shp) {
 		else {
 			to_add.push_back(shp);
 		}
-
 	}
 	return to_add;
 }
 
 // create all the scene materials
 
+// skyscraper materials
 // skyscrapers roof materials
 material* sky_roof_1 = make_material("sky_roof_1", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_roof_1.png", vec3f{ 0.2f, 0.2f, 0.2f });
 material* sky_roof_2 = make_material("sky_roof_2", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_roof_2.png");
@@ -784,7 +784,54 @@ material* sky_door_3 = make_material("sky_door_3", vec3f{ 1.0f, 1.0f, 1.0f }, "s
 material* sky_door_4 = make_material("sky_door_4", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_door_4.png");
 material* sky_door_materials[4] = { sky_door_1, sky_door_2, sky_door_3, sky_door_4 };
 
-// array with all scenes materials
+// residential materials
+// residential buildings roof materials
+material* res_roof_1 = make_material("res_roof_1", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_roof_1.png");
+material* res_roof_2 = make_material("res_roof_2", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_roof_2.png");
+material* res_roof_3 = make_material("res_roof_3", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_roof_3.png");
+material* res_roof_4 = make_material("res_roof_4", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_roof_4.png");
+material* res_roof_materials[4] = { res_roof_1, res_roof_2, res_roof_3, res_roof_4 };
+// residential buildings vertical wall materials
+material* res_vwall_1 = make_material("res_vwall_1", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_vwall_1.png");
+material* res_vwall_2 = make_material("res_vwall_2", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_vwall_2.png");
+material* res_vwall_3 = make_material("res_vwall_3", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_vwall_3.png");
+material* res_vwall_4 = make_material("res_vwall_4", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_vwall_4.png");
+material* res_vwall_materials[4] = { res_vwall_1, res_vwall_2, res_vwall_3, res_vwall_4 };
+// residential buildings horizontal wall materials
+material* res_hwall_1 = make_material("res_hwall_1", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_hwall_1.png");
+material* res_hwall_2 = make_material("res_hwall_2", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_hwall_2.png");
+material* res_hwall_3 = make_material("res_hwall_3", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_hwall_3.png");
+material* res_hwall_4 = make_material("res_hwall_4", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_hwall_4.png");
+material* res_hwall_materials[4] = { res_vwall_1, res_vwall_2, res_vwall_3, res_vwall_4 };
+// residential buildings ledge materials
+material* res_ledge_1 = make_material("res_ledge_1", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_ledge_1.png");
+material* res_ledge_2 = make_material("res_ledge_2", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_ledge_2.png");
+material* res_ledge_3 = make_material("res_ledge_3", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_ledge_3.png");
+material* res_ledge_4 = make_material("res_ledge_4", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_ledge_4.png");
+material* res_ledge_materials[4] = { res_ledge_1, res_ledge_2, res_ledge_3, res_ledge_4 };
+// residential buildings window materials
+material* res_window_1 = make_material("res_window_1", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_window_1.png");
+material* res_window_2 = make_material("res_window_2", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_window_2.png");
+material* res_window_3 = make_material("res_window_3", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_window_3.png");
+material* res_window_4 = make_material("res_window_4", vec3f{ 0.8f, 0.8f, 0.8f }, "residential_window_4.png");
+material* res_window_materials[4] = { res_window_1, res_window_2, res_window_3, res_window_4 };
+// residential buildings walltile materials
+material* res_walltile_1 = make_material("res_walltile_1", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_walltile_1.png");
+material* res_walltile_2 = make_material("res_walltile_2", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_walltile_2.png");
+material* res_walltile_3 = make_material("res_walltile_3", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_walltile_3.png");
+material* res_walltile_4 = make_material("res_walltile_4", vec3f{ 0.8f, 0.8f, 0.8f }, "residential_walltile_4.png");
+material* res_walltile_materials[4] = { res_walltile_1, res_walltile_2, res_walltile_3, res_walltile_4 };
+// residential buildings door materials
+material* res_door_1 = make_material("res_door_1", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_door_1.png");
+material* res_door_2 = make_material("res_door_2", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_door_2.png");
+material* res_door_3 = make_material("res_door_3", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_door_3.png");
+material* res_door_4 = make_material("res_door_4", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_door_4.png");
+material* res_door_materials[4] = { res_door_1, res_door_2, res_door_3, res_door_4 };
+
+// houses materials
+
+
+// array with all scenes materials. TODO : create all the other textures and add to the array
 material* scene_materials[18] = {
 	sky_roof_1, sky_roof_2, sky_roof_3, sky_roof_4,
 	sky_vwall_1, sky_vwall_2, sky_vwall_3, sky_vwall_4,
