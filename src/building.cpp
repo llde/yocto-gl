@@ -802,7 +802,7 @@ material* res_hwall_1 = make_material("res_hwall_1", vec3f{ 1.0f, 1.0f, 1.0f }, 
 material* res_hwall_2 = make_material("res_hwall_2", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_hwall_2.png");
 material* res_hwall_3 = make_material("res_hwall_3", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_hwall_3.png");
 material* res_hwall_4 = make_material("res_hwall_4", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_hwall_4.png");
-material* res_hwall_materials[4] = { res_vwall_1, res_vwall_2, res_vwall_3, res_vwall_4 };
+material* res_hwall_materials[4] = { res_hwall_1, res_hwall_2, res_hwall_3, res_hwall_4 };
 // residential buildings ledge materials
 material* res_ledge_1 = make_material("res_ledge_1", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_ledge_1.png");
 material* res_ledge_2 = make_material("res_ledge_2", vec3f{ 1.0f, 1.0f, 1.0f }, "residential_ledge_2.png");
@@ -829,7 +829,42 @@ material* res_door_4 = make_material("res_door_4", vec3f{ 1.0f, 1.0f, 1.0f }, "r
 material* res_door_materials[4] = { res_door_1, res_door_2, res_door_3, res_door_4 };
 
 // houses materials
-
+// houses roof materials
+material* house_roof_1 = make_material("house_roof_1", vec3f{ 1.0f, 1.0f, 1.0f }, "house_roof_1.png");
+material* house_roof_2 = make_material("house_roof_2", vec3f{ 1.0f, 1.0f, 1.0f }, "house_roof_2.png");
+material* house_roof_3 = make_material("house_roof_3", vec3f{ 1.0f, 1.0f, 1.0f }, "house_roof_3.png");
+material* house_roof_4 = make_material("house_roof_4", vec3f{ 1.0f, 1.0f, 1.0f }, "house_roof_4.png");
+material* house_roof_materials[4] = { house_roof_1, house_roof_2, house_roof_3, house_roof_4 };
+// houses vertical wall materials
+material* house_vwall_1 = make_material("house_vwall_1", vec3f{ 1.0f, 1.0f, 1.0f }, "house_vwall_1.png");
+material* house_vwall_2 = make_material("house_vwall_2", vec3f{ 1.0f, 1.0f, 1.0f }, "house_vwall_2.png");
+material* house_vwall_3 = make_material("house_vwall_3", vec3f{ 1.0f, 1.0f, 1.0f }, "house_vwall_3.png");
+material* house_vwall_4 = make_material("house_vwall_4", vec3f{ 1.0f, 1.0f, 1.0f }, "house_vwall_4.png");
+material* house_vwall_materials[4] = { house_vwall_1, house_vwall_2, house_vwall_3, house_vwall_4 };
+// houses horizontal wall materials
+material* house_hwall_1 = make_material("house_hwall_1", vec3f{ 1.0f, 1.0f, 1.0f }, "house_hwall_1.png");
+material* house_hwall_2 = make_material("house_hwall_2", vec3f{ 1.0f, 1.0f, 1.0f }, "house_hwall_2.png");
+material* house_hwall_3 = make_material("house_hwall_3", vec3f{ 1.0f, 1.0f, 1.0f }, "house_hwall_3.png");
+material* house_hwall_4 = make_material("house_hwall_4", vec3f{ 1.0f, 1.0f, 1.0f }, "house_hwall_4.png");
+material* house_hwall_materials[4] = { house_hwall_1, house_hwall_2, house_hwall_3, house_hwall_4 };
+// houses top window materials
+material* house_topwindow_1 = make_material("house_topwindow_1", vec3f{ 1.0f, 1.0f, 1.0f }, "house_topwindow_1.png");
+material* house_topwindow_2 = make_material("house_topwindow_2", vec3f{ 1.0f, 1.0f, 1.0f }, "house_topwindow_2.png");
+material* house_topwindow_3 = make_material("house_topwindow_3", vec3f{ 1.0f, 1.0f, 1.0f }, "house_topwindow_3.png");
+material* house_topwindow_4 = make_material("house_topwindow_4", vec3f{ 0.8f, 0.8f, 0.8f }, "house_topwindow_4.png");
+material* house_topwindow_materials[4] = { house_topwindow_1, house_topwindow_2, house_topwindow_3, house_topwindow_4 };
+// houses bottom window materials
+material* house_botwindow_1 = make_material("house_botwindow_1", vec3f{ 1.0f, 1.0f, 1.0f }, "house_botwindow_1.png");
+material* house_botwindow_2 = make_material("house_botwindow_2", vec3f{ 1.0f, 1.0f, 1.0f }, "house_botwindow_2.png");
+material* house_botwindow_3 = make_material("house_botwindow_3", vec3f{ 1.0f, 1.0f, 1.0f }, "house_botwindow_3.png");
+material* house_botwindow_4 = make_material("house_botwindow_4", vec3f{ 0.8f, 0.8f, 0.8f }, "house_botwindow_4.png");
+material* house_botwindow_materials[4] = { house_botwindow_1, house_botwindow_2, house_botwindow_3, house_botwindow_4 };
+// houses door materials
+material* house_door_1 = make_material("house_door_1", vec3f{ 1.0f, 1.0f, 1.0f }, "house_door_1.png");
+material* house_door_2 = make_material("house_door_2", vec3f{ 1.0f, 1.0f, 1.0f }, "house_door_2.png");
+material* house_door_3 = make_material("house_door_3", vec3f{ 1.0f, 1.0f, 1.0f }, "house_door_3.png");
+material* house_door_4 = make_material("house_door_4", vec3f{ 1.0f, 1.0f, 1.0f }, "house_door_4.png");
+material* house_door_materials[4] = { house_door_1, house_door_2, house_door_3, house_door_4 };
 
 // array with all scenes materials. TODO : create all the other textures and add to the array
 material* scene_materials[18] = {
