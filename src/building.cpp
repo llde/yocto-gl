@@ -751,8 +751,8 @@ std::vector<shape*> subdiv_facade(scene* scn, building_inst& inst, shape* shp) {
 }
 
 static material* roof_tx = make_material("roof", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_roof_1.png");
-static material* vwall_tx = make_material("vwall", vec3f{ 1.0f, 1.0f, 1.0f }, "vwall.png");
-static material* hwall_tx = make_material("hwall", vec3f{ 1.0f, 1.0f, 1.0f }, "hwall.png");
+static material* vwall_tx = make_material("vwall", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_vwall_1.png");
+static material* hwall_tx = make_material("hwall", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_hwall.png");
 static material* window_tx = make_material("window", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_window_1.png", vec3f{ 0.5f, 0.5f, 0.5f });
 static material* door_tx = make_material("door", vec3f{ 1.0f, 1.0f, 1.0f }, "skyscraper_door_1.png");
 
