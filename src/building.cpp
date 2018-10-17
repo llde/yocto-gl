@@ -409,7 +409,7 @@ scene* extrude(scene* scn, building_inst& inst) {
 		inst.building->shp->shapes.push_back(facade);
 	}
 
-	building_inst.building->name = "building";
+	inst.building->name = "building";
 	return scn;
 }
 
