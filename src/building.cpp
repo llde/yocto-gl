@@ -908,7 +908,7 @@ material* house_door_4 = make_material("house_door_4", vec3f{ 1.0f, 1.0f, 1.0f }
 material* house_door_materials[4] = { house_door_1, house_door_2, house_door_3, house_door_4 };
 
 // array with all scenes materials. TODO : create all the other textures and add to the array
-material* scene_materials[52] = {
+material* scene_materials[54] = {
 	sky_roof_1, sky_roof_2, sky_roof_3, sky_roof_4,
 	sky_vwall_1, sky_vwall_2, sky_vwall_3, sky_vwall_4,
 	sky_hwall_1, sky_hwall_2, sky_hwall_3, sky_hwall_4,
@@ -917,10 +917,12 @@ material* scene_materials[52] = {
 	res_roof_1, res_roof_2, res_roof_3, res_roof_4,
 	res_vwall_1, res_vwall_2, res_vwall_3, res_vwall_4,
 	res_hwall_1, res_hwall_2, res_hwall_3, res_hwall_4,
-	res_window_1, res_window_2, res_window_3, res_window_4
+	res_window_1, res_window_2, res_window_3, res_window_4,
 	res_ledge_1, res_ledge_2, res_ledge_3, res_ledge_4,
 	res_walltile_1, res_walltile_2, res_walltile_3, res_walltile_4,
 	res_door_1, res_door_2,
+	house_hwall_1,
+	house_vwall_1,
 	house_topwindow_1, house_topwindow_2,
 	house_botwindow_1, house_botwindow_2,
 	house_door_1, house_door_2, house_door_3, house_door_4
@@ -952,7 +954,7 @@ void apply_material_and_texture(building_inst& inst) {
 		for (shape* shp : inst.building->shp->shapes) {
 			//std::cout << shp->name << std::endl;
 			if (shp->name == "roof") {
-				shp->mat = sky_roof_materials[2]; //TODO create textures for every type of shape
+				shp->mat = res_roof_materials[0]; //TODO create textures for every type of shape
 			}
 			else if (shp->name == "vwall") {
 				shp->mat = res_vwall_materials[0];
@@ -964,7 +966,7 @@ void apply_material_and_texture(building_inst& inst) {
 				shp->mat = res_ledge_materials[0];
 			}
 			else if (shp->name == "window") {
-				shp->mat = sky_window_materials[1];
+				shp->mat = res_window_materials[0];
 			}
 			else if (shp->name == "walltile") {
 				shp->mat = res_walltile_materials[0];
@@ -981,10 +983,10 @@ void apply_material_and_texture(building_inst& inst) {
 				shp->mat = sky_roof_materials[2];
 			}
 			else if (shp->name == "vwall") {
-				shp->mat = sky_vwall_materials[0];
+				shp->mat = house_vwall_materials[0];
 			}
 			else if (shp->name == "hwall") {
-				shp->mat = sky_hwall_materials[0];
+				shp->mat = house_hwall_materials[0];
 			}
 			else if (shp->name == "topwindow") {
 				shp->mat = house_topwindow_materials[0];
