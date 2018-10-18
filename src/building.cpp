@@ -908,18 +908,22 @@ material* house_door_4 = make_material("house_door_4", vec3f{ 1.0f, 1.0f, 1.0f }
 material* house_door_materials[4] = { house_door_1, house_door_2, house_door_3, house_door_4 };
 
 // array with all scenes materials. TODO : create all the other textures and add to the array
-material* scene_materials[35] = {
+material* scene_materials[52] = {
 	sky_roof_1, sky_roof_2, sky_roof_3, sky_roof_4,
 	sky_vwall_1, sky_vwall_2, sky_vwall_3, sky_vwall_4,
 	sky_hwall_1, sky_hwall_2, sky_hwall_3, sky_hwall_4,
 	sky_window_1, sky_window_2, sky_window_3, sky_window_4,
 	sky_door_1, sky_door_2,
+	res_roof_1, res_roof_2, res_roof_3, res_roof_4,
 	res_vwall_1, res_vwall_2, res_vwall_3, res_vwall_4,
 	res_hwall_1, res_hwall_2, res_hwall_3, res_hwall_4,
-	res_ledge_1,
+	res_window_1, res_window_2, res_window_3, res_window_4
+	res_ledge_1, res_ledge_2, res_ledge_3, res_ledge_4,
 	res_walltile_1, res_walltile_2, res_walltile_3, res_walltile_4,
+	res_door_1, res_door_2,
 	house_topwindow_1, house_topwindow_2,
-	house_botwindow_1, house_botwindow_2
+	house_botwindow_1, house_botwindow_2,
+	house_door_1, house_door_2, house_door_3, house_door_4
 };
 
 // apply texture
@@ -997,9 +1001,9 @@ void apply_material_and_texture(building_inst& inst) {
 
 //modified from model.cpp
 scene* init_scene() {
-	auto scn = new scene();
+	auto scn = new scene(); //TODO change ambient color, move camera
 	//add floor
-	material* mat = make_material( "terrain", { 0.2f, 0.2f, 0.2f }, "grid.png" );
+	material* mat = make_material( "terrain", { 0.2f, 0.2f, 0.2f }, "terrain.png" );
 	float p = max_map_side / 2.0f;
 	shape* terrain = new shape{ "terrain" };
 	terrain->mat = mat;
