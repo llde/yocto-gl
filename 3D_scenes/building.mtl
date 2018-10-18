@@ -4,7 +4,7 @@ newmtl terrain
   Ks 0.04 0.04 0.04
   Ns 1e+06
   Ni 1
-  map_Kd grid.png
+  map_Kd terrain.png
 
 newmtl light
   illum 2
@@ -156,6 +156,38 @@ newmtl sky_door_2
   Ni 1
   map_Kd skyscraper_door_2.png
 
+newmtl res_roof_1
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd residential_roof_1.png
+
+newmtl res_roof_2
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd residential_roof_2.png
+
+newmtl res_roof_3
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd residential_roof_3.png
+
+newmtl res_roof_4
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd residential_roof_4.png
+
 newmtl res_vwall_1
   illum 2
   Kd 1 1 1
@@ -220,6 +252,38 @@ newmtl res_hwall_4
   Ni 1
   map_Kd residential_hwall_4.png
 
+newmtl res_window_1
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd residential_window_1.png
+
+newmtl res_window_2
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd residential_window_2.png
+
+newmtl res_window_3
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd residential_window_3.png
+
+newmtl res_window_4
+  illum 2
+  Kd 0.8 0.8 0.8
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd residential_window_4.png
+
 newmtl res_ledge_1
   illum 2
   Kd 1 1 1
@@ -227,6 +291,30 @@ newmtl res_ledge_1
   Ns 1e+06
   Ni 1
   map_Kd residential_ledge_1.png
+
+newmtl res_ledge_2
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd residential_ledge_2.png
+
+newmtl res_ledge_3
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd residential_ledge_3.png
+
+newmtl res_ledge_4
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd residential_ledge_4.png
 
 newmtl res_walltile_1
   illum 2
@@ -260,6 +348,38 @@ newmtl res_walltile_4
   Ni 1
   map_Kd residential_walltile_4.png
 
+newmtl res_door_1
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd residential_door_1.png
+
+newmtl res_door_2
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd residential_door_2.png
+
+newmtl house_hwall_1
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd house_hwall_1.png
+
+newmtl house_vwall_1
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd house_vwall_1.png
+
 newmtl house_topwindow_1
   illum 2
   Kd 1 1 1
@@ -291,4 +411,36 @@ newmtl house_botwindow_2
   Ns 1e+06
   Ni 1
   map_Kd house_botwindow_2.png
+
+newmtl house_door_1
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd house_door_1.png
+
+newmtl house_door_2
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd house_door_2.png
+
+newmtl house_door_3
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd house_door_3.png
+
+newmtl house_door_4
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd house_door_4.png
 
