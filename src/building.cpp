@@ -81,7 +81,7 @@ struct type_constants {
 // constants for residential buildings
 // constants are equal for all types, temporary
 static const type_constants residential_constants = {
-	std::pair<float, float>{ 30.0, 100.0 },
+	std::pair<float, float>{ 30.0, 50.0 },
 	std::pair<float, float>{ (5.0 / 6.0), (6.0 / 5.0) },
 	std::pair<float, float>{ 2.5, 3.5 },
 	std::pair<float, float>{ 2.0, 2.5 },
@@ -102,7 +102,7 @@ static const type_constants residential_constants = {
 // constants for skyscrapers
 // constants are equal for all types, temporary
 static const type_constants skyscraper_constants = {
-	std::pair<float, float>{ 30.0, 100.0 },
+	std::pair<float, float>{ 30.0, 90.0 }, //TODO change to (70, 150)
 	std::pair<float, float>{ (5.0 / 6.0), (6.0 / 5.0) },
 	std::pair<float, float>{ 2.5, 3.5 },
 	std::pair<float, float>{ 2.0, 2.5 },
@@ -122,8 +122,8 @@ static const type_constants skyscraper_constants = {
 
 // constants for houses
 // constants are equal for all types, temporary
-static const type_constants house_info = {
-	std::pair<float, float>{ 30.0, 100.0 },
+static const type_constants house_constants = {
+	std::pair<float, float>{ 10.0, 15.0 },
 	std::pair<float, float>{ (5.0 / 6.0), (6.0 / 5.0) },
 	std::pair<float, float>{ 2.5, 3.5 },
 	std::pair<float, float>{ 2.0, 2.5 },
@@ -590,7 +590,7 @@ std::vector<shape*> subdiv_facade(scene* scn, building_info& info, shape* shp, s
 			}
 			float t = 0;
 			for(float i : obj) t += i;
-			std::cout << "Bottomfloor " << t << std::endl;
+			//std::cout << "Bottomfloor " << t << std::endl;
 			for (shape* nshp : split_x(scn, shp, obj, names)) {
 				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
@@ -913,23 +913,71 @@ material* scene_materials[18] = {
 };
 
 // apply texture
-void apply_material_and_texture(scene* scn, instance* inst) {
-	
-	for (shape* shp : inst->shp->shapes) {
-		if (shp->name == "roof") {
-			shp->mat = sky_roof_materials[2];
+void apply_material_and_texture(building_inst& inst) {
+	if (inst.info.type == skyscraper) {
+		for (shape* shp : inst.building->shp->shapes) {
+			if (shp->name == "roof") {
+				shp->mat = sky_roof_materials[2];
+			}
+			else if (shp->name == "vwall") {
+				shp->mat = sky_vwall_materials[0];
+			}
+			else if (shp->name == "hwall") {
+				shp->mat = sky_hwall_materials[0];
+			}
+			else if (shp->name == "window") {
+				shp->mat = sky_window_materials[1];
+			}
+			else if (shp->name == "door") {
+				shp->mat = sky_door_materials[0];
+			}
 		}
-		if (shp->name == "vwall") {
-			shp->mat = sky_vwall_materials[0];
+	}
+	else if (inst.info.type == residential) {
+		for (shape* shp : inst.building->shp->shapes) {
+			if (shp->name == "roof") {
+				shp->mat = sky_roof_materials[2]; //TODO create textures for every type of shape
+			}
+			else if (shp->name == "vwall") {
+				shp->mat = res_vwall_materials[0];
+			}
+			else if (shp->name == "hwall") {
+				shp->mat = res_hwall_materials[0];
+			}
+			else if (shp->name == "ledge") {
+				shp->mat = res_ledge_materials[0];
+			}
+			else if (shp->name == "window") {
+				shp->mat = sky_window_materials[1];
+			}
+			else if (shp->name == "walltile") {
+				shp->mat = res_walltile_materials[0];
+			}
+			else if (shp->name == "door") {
+				shp->mat = sky_door_materials[0];
+			}
 		}
-		if (shp->name == "hwall") {
-			shp->mat = sky_hwall_materials[0];
-		}
-		else if (shp->name == "window") {
-			shp->mat = sky_window_materials[1];
-		}
-		else if (shp->name == "door") {
-			shp->mat = sky_door_materials[0];
+	}
+	else if (inst.info.type == house) {
+		for (shape* shp : inst.building->shp->shapes) {
+			if (shp->name == "roof") {
+				shp->mat = sky_roof_materials[2];
+			}
+			else if (shp->name == "vwall") {
+				shp->mat = sky_vwall_materials[0];
+			}
+			else if (shp->name == "hwall") {
+				shp->mat = sky_hwall_materials[0];
+			}
+			else if (shp->name == "topwindow") {
+				shp->mat = house_topwindow_materials[0];
+			}
+			else if (shp->name == "botwindow") {
+				shp->mat = house_botwindow_materials[0];
+			}
+			else if (shp->name == "door") {
+				shp->mat = sky_door_materials[0];
+			}
 		}
 	}
 }
@@ -998,8 +1046,12 @@ int main(int argc, char** argv ) {
 	//make buildings from basements
 	printf("extruding buildings\n");
 	int count_extruded = 1;//
-	std::uniform_int_distribution<uint32_t> skyscraper_h_range(skyscraper_constants.h_range.first, skyscraper_constants.h_range.second);
-	auto skyscraper_height = bind_random_distribution(skyscraper_h_range);
+	std::uniform_int_distribution<uint32_t> sky_h_range(skyscraper_constants.h_range.first, skyscraper_constants.h_range.second);
+	std::uniform_int_distribution<uint32_t> res_h_range(residential_constants.h_range.first, residential_constants.h_range.second);
+	std::uniform_int_distribution<uint32_t> house_h_range(house_constants.h_range.first, house_constants.h_range.second); //TODO set also these height range
+	auto sky_height = bind_random_distribution(sky_h_range);
+	auto res_height = bind_random_distribution(res_h_range);
+	auto house_height = bind_random_distribution(house_h_range);
 	std::vector<shape*> base_to_remove = std::vector<shape*>();
 	float max_map_diam = std::sqrt(2.0f)*(max_map_side);//maybe better formula
 	std::vector<building_inst> buildings = std::vector<building_inst>();
@@ -1020,8 +1072,8 @@ int main(int argc, char** argv ) {
 			else {
 				building_type = house;
 			}
-			building_inst b_inst(building_type, inst, skyscraper_height);
-			uint32_t roll = skyscraper_height();
+			building_inst b_inst(building_type, inst, sky_height);
+			uint32_t roll = sky_height();
 			extrude(scn, b_inst);
 			//printf("extruded %d\n", count_extruded);//
 			count_extruded++;//
@@ -1067,15 +1119,7 @@ int main(int argc, char** argv ) {
 	printf("applying material and textures\n");
 	int count_textured = 1;//
 	for (building_inst& inst : buildings) {
-		if (inst.info.type == skyscraper) {
-			apply_material_and_texture(scn, inst.building);
-		}
-		else if (inst.info.type == residential) {
-			apply_material_and_texture(scn, inst.building);
-		}
-		else if (inst.info.type == house) {
-			apply_material_and_texture(scn, inst.building);
-		}
+		apply_material_and_texture(inst);
 	}
 
 	//save
