@@ -183,7 +183,9 @@ static const type_textures house_textures = {
 		{ roof,  std::vector<std::string>{} }
 	}
 };
-typedef std::_Bind<std::uniform_int_distribution<unsigned int> (std::linear_congruential_engine<unsigned long, 16807, 0, 2147483647>)> BindFun;
+
+typedef std::_Bind<std::uniform_int_distribution<unsigned int>(std::linear_congruential_engine<unsigned long, 16807, 0, 2147483647>)> bind_fun;
+
 //
 struct building_info {
 	building_type type;
@@ -196,8 +198,8 @@ struct building_info {
 	//float wind_h;
 	//bool flat_roof;
 	//std::map<element_type, std::pair<std::vector<element_type>, subdiv_axis>> subdiv_rules;
-	//TODO texture fields
-	building_info(building_type type, BindFun& random_gen ) {
+	//TODO texture fields.
+	building_info(building_type type, std::function<uint32_t()> random_gen ) {
 		this->type = type;
 		this->h = random_gen(); // Note use floats?. 
 		//w and l are decided in the map generation.
@@ -208,15 +210,14 @@ struct building_info {
 
 };
 
-//unused
+// information of an instance of building
 struct building_inst {
 	instance* building;
 	building_info info;
 	std::pair<shape*,shape*> x_facade;
 	std::pair<shape*,shape*> z_facade;
 
-
-	building_inst(building_type type, instance* inst, BindFun& random_gen) : info(type, random_gen){
+	building_inst(building_type type, instance* inst, bind_fun& random_gen) : info(type, random_gen){
 		
 		this->building = inst;
 	}
@@ -225,11 +226,10 @@ struct building_inst {
 
 };
 
-/**
-* Generate a randomic function that use the specifyed distribution
-* It seeds the random generator with the tcurrent time as entropy
-* Return : a distribution, generator binded function. Use as normal invocation. Voldemort type.
-*/
+
+// Generate a randomic function that use the specifyed distribution
+// It seeds the random generator with the tcurrent time as entropy
+// Return : a distribution, generator binded function. Use as normal invocation. Voldemort type.
 auto bind_random_distribution(std::uniform_int_distribution<uint32_t> distrib) {  //TODO allow more distribution types
 	std::default_random_engine generator(std::chrono::system_clock::now().time_since_epoch().count());
 	return  std::bind(distrib, generator);
@@ -274,7 +274,6 @@ void remove_shape_from_scene(scene* scn, shape* shp) {
 		auto res = std::find(shps->shapes.begin(), shps->shapes.end(), shp);
 		if(res != shps->shapes.end()){
 			shps->shapes.erase(res);
-			//std::cout << "Removing shape " << shp->name << std::endl;
 			delete shp;
 			break;
 		}
@@ -284,7 +283,6 @@ void remove_shape_from_scene(scene* scn, shape* shp) {
 // remove a group of shapes from the scene
 void remove_shapes_from_scene(scene* scn, std::vector<shape*>& vecshp) {
 	for(auto shp : vecshp){
-		//std::cout << "Removing " << shp->name << std::endl;
 		remove_shape_from_scene(scn, shp);
 	}
 }
@@ -347,8 +345,6 @@ void make_map(scene* scn) {
 	advance_rng(rng);
 	float random_n = next_rand1f(rng, min_map_side, max_map_side);
 	float random_m = next_rand1f(rng, min_map_side, max_map_side);
-	//printf("n = %f\n", random_n);
-	//printf("m = %f\n", random_m);
 	//
 	std::vector<shape*> zv = std::vector<shape*>();
 	float x = -(random_n / 2.0f); //x-axis
@@ -431,7 +427,6 @@ scene* extrude(scene* scn, building_inst& inst) {
 
 // facade split on y-axis
 std::vector<shape*> split_y(scene* scn, shape* shp, const std::vector<float> v, const std::vector<std::string> types) {
-	//std::cout << "Splitting y axis of shape " << shp->name << std::endl;
 	float check = 0;
 	for (int i = 0; i < v.size(); i++) {
 		check += v.at(i);
@@ -461,7 +456,6 @@ std::vector<shape*> split_y(scene* scn, shape* shp, const std::vector<float> v, 
 		nshp->quads.push_back(vec4i{ 0, 1, 2, 3 });
 		newv.push_back(nshp);
 		y += v.at(j)*h;
-		//std::cout << "Generating  shape " << nshp->name << std::endl;
 	}
 	return newv;
 }
@@ -483,14 +477,13 @@ std::vector<shape*> repeat_y(scene* scn, shape* shp, int parts, const std::strin
 
 // facade split on x-axis
 std::vector<shape*> split_x(scene* scn, shape* shp, std::vector<float> v, const std::vector<std::string> types) {
-	//std::cout << "Splitting x axis of shape " << shp->name << std::endl;
 	float check = 0;
 	for (int i = 0; i < v.size(); i++) {
 		check += v.at(i);
 	}
 	std::vector<shape*> newv = std::vector<shape*>();
 	if (check != 1) {
-		//printf("fail\n"); //
+		//printf("fail\n");
 		//return newv;
 	}
 
@@ -513,8 +506,6 @@ std::vector<shape*> split_x(scene* scn, shape* shp, std::vector<float> v, const 
 		newv.push_back(nshp);
 		x += v.at(j)*w;
 		z += v.at(j)*l;
-		//std::cout << "Generating  shape " << nshp->name << std::endl;
-
 	}
 	return newv;
 }
@@ -541,19 +532,24 @@ uint32_t calculate_floors(uint32_t height) {
 	return floor_h;
 }
 
+//
 uint32_t calculate_num_wind(float w) {
 	uint32_t floor_w = w / 2.0f;  // hardocded for now TODO, make chose from
-									  // range, maybe using an approximation
+								  // range, maybe using an approximation
 	return floor_w;
 }
 
+//
 float calculate_door_part(float w){
 	return 1.0f/ (w / 2.0f);
 }
+
+//
 float calculate_rem_part(float w, float d){
 	return (1.0f - d) / 2.0f;
 }
 
+//
 float calculate_floors_part(uint32_t height) {
 	float part_f = 1.0f / (height / 3.5);
 	return part_f;
@@ -598,7 +594,6 @@ std::vector<shape*> subdiv_facade(scene* scn, building_info& info, shape* shp, s
 			}
 			float t = 0;
 			for(float i : obj) t += i;
-			//std::cout << "Bottomfloor " << t << std::endl;
 			for (shape* nshp : split_x(scn, shp, obj, names)) {
 				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
@@ -740,9 +735,9 @@ std::vector<shape*> subdiv_facade(scene* scn, building_info& info, shape* shp, s
 			}
 		}
 		else if (shp->name == "bottomfloor") {
-		for (shape* nshp : split_x(scn, shp, std::vector<float>{ 1.0f / 3.0f, 1.0f / 3.0f,1.0f / 3.0f }, std::vector<std::string>{ "botwindtile", "doortile", "botwindtile" })) {
-				auto res = subdiv_facade(scn, info, nshp, axe);	
-                std::copy(res.begin(), res.end(), back_inserter(to_add));
+			for (shape* nshp : split_x(scn, shp, std::vector<float>{ 1.0f / 3.0f, 1.0f / 3.0f, 1.0f / 3.0f }, std::vector<std::string>{ "botwindtile", "doortile", "botwindtile" })) {
+				auto res = subdiv_facade(scn, info, nshp, axe);
+				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
 			}
 		}
@@ -908,8 +903,8 @@ material* house_door_3 = make_material("house_door_3", vec3f{ 1.0f, 1.0f, 1.0f }
 material* house_door_4 = make_material("house_door_4", vec3f{ 1.0f, 1.0f, 1.0f }, "house_door_4.png");
 material* house_door_materials[4] = { house_door_1, house_door_2, house_door_3, house_door_4 };
 
-// array with all scenes materials. TODO : create all the other textures and add to the array
-material* scene_materials[54] = {
+// array with all scenes materials.
+material* scene_materials[60] = {
 	sky_roof_1, sky_roof_2, sky_roof_3, sky_roof_4,
 	sky_vwall_1, sky_vwall_2, sky_vwall_3, sky_vwall_4,
 	sky_hwall_1, sky_hwall_2, sky_hwall_3, sky_hwall_4,
@@ -922,29 +917,32 @@ material* scene_materials[54] = {
 	res_ledge_1, res_ledge_2, res_ledge_3, res_ledge_4,
 	res_walltile_1, res_walltile_2, res_walltile_3, res_walltile_4,
 	res_door_1, res_door_2,
+	house_roof_1, house_roof_2, house_roof_3, house_roof_4,
 	house_hwall_1,
 	house_vwall_1,
-	house_topwindow_1, house_topwindow_2,
-	house_botwindow_1, house_botwindow_2,
+	house_topwindow_1, house_topwindow_2, house_topwindow_3,
+	house_botwindow_1, house_botwindow_2, house_botwindow_3,
 	house_door_1, house_door_2, house_door_3, house_door_4
 };
 
 // apply texture
 void apply_material_and_texture(building_inst& inst) {
 	if (inst.info.type == skyscraper) {
+		int r = std::rand() % 4;
+		int w = std::rand() % 4;
+		int n = std::rand() % 4;
 		for (shape* shp : inst.building->shp->shapes) {
-			//std::cout << shp->name << std::endl;
 			if (shp->name == "roof") {
-				shp->mat = sky_roof_materials[2];
+				shp->mat = sky_roof_materials[r];
 			}
 			else if (shp->name == "vwall") {
-				shp->mat = sky_vwall_materials[0];
+				shp->mat = sky_vwall_materials[w];
 			}
 			else if (shp->name == "hwall") {
-				shp->mat = sky_hwall_materials[0];
+				shp->mat = sky_hwall_materials[w];
 			}
 			else if (shp->name == "window") {
-				shp->mat = sky_window_materials[1];
+				shp->mat = sky_window_materials[n];
 			}
 			else if (shp->name == "door") {
 				shp->mat = sky_door_materials[0];
@@ -952,36 +950,39 @@ void apply_material_and_texture(building_inst& inst) {
 		}
 	}
 	else if (inst.info.type == residential) {
+		int b = std::rand() % 4;
+		int l = std::rand() % 4;
+		int w = std::rand() % 4;
 		for (shape* shp : inst.building->shp->shapes) {
-			//std::cout << shp->name << std::endl;
 			if (shp->name == "roof") {
-				shp->mat = res_roof_materials[0]; //TODO create textures for every type of shape
+				shp->mat = res_roof_materials[b];
 			}
 			else if (shp->name == "vwall") {
-				shp->mat = res_vwall_materials[0];
+				shp->mat = res_vwall_materials[b];
 			}
 			else if (shp->name == "hwall") {
-				shp->mat = res_hwall_materials[0];
+				shp->mat = res_hwall_materials[b];
 			}
 			else if (shp->name == "ledge") {
-				shp->mat = res_ledge_materials[0];
+				shp->mat = res_ledge_materials[l];
 			}
 			else if (shp->name == "window") {
-				shp->mat = res_window_materials[0];
+				shp->mat = res_window_materials[w];
 			}
 			else if (shp->name == "walltile") {
-				shp->mat = res_walltile_materials[0];
+				shp->mat = res_walltile_materials[b];
 			}
 			else if (shp->name == "door") {
-				shp->mat = sky_door_materials[0];
+				shp->mat = res_door_materials[0];
 			}
 		}
 	}
 	else if (inst.info.type == house) {
+		int r = std::rand() % 4;
+		int d = std::rand() % 4;
 		for (shape* shp : inst.building->shp->shapes) {
-			//std::cout << shp->name << std::endl;
 			if (shp->name == "roof") {
-				shp->mat = sky_roof_materials[2];
+				shp->mat = house_roof_materials[r];
 			}
 			else if (shp->name == "vwall") {
 				shp->mat = house_vwall_materials[0];
@@ -996,7 +997,7 @@ void apply_material_and_texture(building_inst& inst) {
 				shp->mat = house_botwindow_materials[0];
 			}
 			else if (shp->name == "door") {
-				shp->mat = sky_door_materials[0];
+				shp->mat = house_door_materials[d];
 			}
 		}
 	}
@@ -1055,7 +1056,6 @@ int main(int argc, char** argv ) {
 		parser, "--output", "-o", "output scene", "out.obj"s);
 
 	//printf("creating scene %s\n", type.c_str());
-
 	//make scene
 	scene* scn = init_scene();
 
@@ -1065,10 +1065,9 @@ int main(int argc, char** argv ) {
 
 	//make buildings from basements
 	printf("extruding buildings\n");
-	int count_extruded = 1;//
 	std::uniform_int_distribution<uint32_t> sky_h_range(skyscraper_constants.h_range.first, skyscraper_constants.h_range.second);
 	std::uniform_int_distribution<uint32_t> res_h_range(residential_constants.h_range.first, residential_constants.h_range.second);
-	std::uniform_int_distribution<uint32_t> house_h_range(house_constants.h_range.first, house_constants.h_range.second); //TODO set also these height range
+	std::uniform_int_distribution<uint32_t> house_h_range(house_constants.h_range.first, house_constants.h_range.second);
 	auto sky_height = bind_random_distribution(sky_h_range);
 	auto res_height = bind_random_distribution(res_h_range);
 	auto house_height = bind_random_distribution(house_h_range);
@@ -1086,20 +1085,21 @@ int main(int argc, char** argv ) {
 			building_inst b_inst;
 			if (ratio <= 0.21f) {
 				building_type = skyscraper;
+				sky_height();
 				b_inst = building_inst(building_type, inst, sky_height);
 			}
 			else if (ratio > 0.21f && ratio <= 0.58f) {
 				building_type = residential;
+				res_height();
 				b_inst = building_inst(building_type, inst, res_height);
 
 			}
 			else {
 				building_type = house;
+				house_height();
 				b_inst = building_inst(building_type, inst, house_height);
 			}
 			extrude(scn, b_inst);
-			//printf("extruded %d\n", count_extruded);//
-			//count_extruded++;//
 			base_to_remove.push_back(inst->shp->shapes.at(0));
 			buildings.push_back(b_inst);
 		}
@@ -1140,7 +1140,6 @@ int main(int argc, char** argv ) {
 
 	//material and texture application
 	printf("applying material and textures\n");
-	int count_textured = 1;//
 	for (building_inst& inst : buildings) {
 		apply_material_and_texture(inst);
 	}
