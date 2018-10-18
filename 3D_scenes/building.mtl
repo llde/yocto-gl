@@ -12,43 +12,147 @@ newmtl light
   Ns 1e+06
   Ni 1
 
-newmtl roof
+newmtl sky_roof_1
   illum 2
   Kd 1 1 1
-  Ks 0.04 0.04 0.04
+  Ks 0.2 0.2 0.2
   Ns 1e+06
   Ni 1
   map_Kd skyscraper_roof_1.png
 
-newmtl vwall
+newmtl sky_roof_2
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 1e+06
   Ni 1
-  map_Kd vwall.png
+  map_Kd skyscraper_roof_2.png
 
-newmtl hwall
+newmtl sky_roof_3
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 1e+06
   Ni 1
-  map_Kd hwall.png
+  map_Kd skyscraper_roof_3.png
 
-newmtl window
+newmtl sky_roof_4
   illum 2
   Kd 1 1 1
-  Ks 0.5 0.5 0.5
+  Ks 0.2 0.2 0.2
+  Ns 1e+06
+  Ni 1
+  map_Kd skyscraper_roof_4.png
+
+newmtl sky_vwall_1
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd skyscraper_vwall_1.png
+
+newmtl sky_vwall_2
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd skyscraper_vwall_2.png
+
+newmtl sky_vwall_3
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 1e+06
+  Ni 1
+  map_Kd skyscraper_vwall_3.png
+
+newmtl sky_vwall_4
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 1e+06
+  Ni 1
+  map_Kd skyscraper_vwall_4.png
+
+newmtl sky_hwall_1
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd skyscraper_hwall_1.png
+
+newmtl sky_hwall_2
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd skyscraper_hwall_2.png
+
+newmtl sky_hwall_3
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 1e+06
+  Ni 1
+  map_Kd skyscraper_hwall_3.png
+
+newmtl sky_hwall_4
+  illum 2
+  Kd 1 1 1
+  Ks 0.4 0.4 0.4
+  Ns 1e+06
+  Ni 1
+  map_Kd skyscraper_hwall_4.png
+
+newmtl sky_window_1
+  illum 2
+  Kd 1 1 1
+  Ks 0.6 0.6 0.6
   Ns 1e+06
   Ni 1
   map_Kd skyscraper_window_1.png
 
-newmtl door
+newmtl sky_window_2
+  illum 2
+  Kd 1 1 1
+  Ks 0.6 0.6 0.6
+  Ns 1e+06
+  Ni 1
+  map_Kd skyscraper_window_2.png
+
+newmtl sky_window_3
+  illum 2
+  Kd 1 1 1
+  Ks 0.6 0.6 0.6
+  Ns 1e+06
+  Ni 1
+  map_Kd skyscraper_window_3.png
+
+newmtl sky_window_4
+  illum 2
+  Kd 0.8 0.8 0.8
+  Ks 0.6 0.6 0.6
+  Ns 1e+06
+  Ni 1
+  map_Kd skyscraper_window_4.png
+
+newmtl sky_door_1
   illum 2
   Kd 1 1 1
   Ks 0.04 0.04 0.04
   Ns 1e+06
   Ni 1
   map_Kd skyscraper_door_1.png
+
+newmtl sky_door_2
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd skyscraper_door_2.png
 
