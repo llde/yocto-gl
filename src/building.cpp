@@ -14,17 +14,17 @@ using namespace ygl;
 
 static const float min_map_side = 1000.0f;
 static const float max_map_side = 1000.0f;
-static const float min_building_side = 9.0f;
+static const float min_building_side = 15.0f;
 static const float max_building_side = 30.0f;
-static const float min_street_width = 4.0f;
-static const float max_street_width = 10.0f;
+static const float min_street_width = 10.0f;
+static const float max_street_width = 18.0f;
 
 // the types of building
 enum building_type { residential, skyscraper, house };
 
 // the axis to make subdivisions
 
-enum subdiv_axis { x, y , z};
+enum subdiv_axis { x, y, z};
 
 // the type of element obtainable by subidiving facade. 
 // Only the terminal elements will be added to the scene and textured
@@ -81,7 +81,7 @@ struct type_constants {
 // constants for residential buildings
 // constants are equal for all types, temporary
 static const type_constants residential_constants = {
-	std::pair<float, float>{ 30.0, 50.0 },
+	std::pair<float, float>{ 34.0, 60.0 },
 	std::pair<float, float>{ (5.0 / 6.0), (6.0 / 5.0) },
 	std::pair<float, float>{ 2.5, 3.5 },
 	std::pair<float, float>{ 2.0, 2.5 },
@@ -102,7 +102,7 @@ static const type_constants residential_constants = {
 // constants for skyscrapers
 // constants are equal for all types, temporary
 static const type_constants skyscraper_constants = {
-	std::pair<float, float>{ 70.0, 150.0 }, //TODO change to (70, 150)
+	std::pair<float, float>{ 70.0, 160.0 }, //TODO change to (70, 150)
 	std::pair<float, float>{ (5.0 / 6.0), (6.0 / 5.0) },
 	std::pair<float, float>{ 2.5, 3.5 },
 	std::pair<float, float>{ 2.0, 2.5 },
@@ -123,7 +123,7 @@ static const type_constants skyscraper_constants = {
 // constants for houses
 // constants are equal for all types, temporary
 static const type_constants house_constants = {
-	std::pair<float, float>{ 10.0, 15.0 },
+	std::pair<float, float>{ 10.0, 22.0 },
 	std::pair<float, float>{ (5.0 / 6.0), (6.0 / 5.0) },
 	std::pair<float, float>{ 2.5, 3.5 },
 	std::pair<float, float>{ 2.0, 2.5 },
@@ -739,7 +739,7 @@ std::vector<shape*> subdiv_facade(scene* scn, building_info& info, shape* shp, s
 			}
 		}
 		else if (shp->name == "bottomfloor") {
-			for (shape* nshp : split_x(scn, shp, std::vector<float>{ 1/3, 1/3, 1/3 }, std::vector<std::string>{ "botwindtile", "doortile", "botwindtile" })) {
+			for (shape* nshp : split_x(scn, shp, std::vector<float>{ 1.0f/3.0f, 1.0f/3.0f, 1.0f/3.0f }, std::vector<std::string>{ "botwindtile", "doortile", "botwindtile" })) {
 				auto res = subdiv_facade(scn, info, nshp, axe);
 				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
@@ -1083,12 +1083,12 @@ int main(int argc, char** argv ) {
 			float ratio = center_dist / (max_map_diam/2.0f);
 			building_type building_type;
 			building_inst b_inst;
-			if (ratio <= 0.1f) {
+			if (ratio <= 0.21f) {
 				building_type = skyscraper;
 				uint32_t roll = sky_height();
 				b_inst = building_inst(building_type, inst, sky_height);
 			}
-			else if (ratio > 0.1f && ratio <= 0.4f) {
+			else if (ratio > 0.21f && ratio <= 0.58f) {
 				building_type = residential;
 				uint32_t roll = res_height();
 				b_inst = building_inst(building_type, inst, res_height);
