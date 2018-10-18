@@ -183,7 +183,7 @@ static const type_textures house_textures = {
 		{ roof,  std::vector<std::string>{} }
 	}
 };
-
+typedef std::_Bind<std::uniform_int_distribution<unsigned int> (std::linear_congruential_engine<unsigned long, 16807, 0, 2147483647>)> BindFun;
 //
 struct building_info {
 	building_type type;
@@ -196,8 +196,8 @@ struct building_info {
 	//float wind_h;
 	//bool flat_roof;
 	//std::map<element_type, std::pair<std::vector<element_type>, subdiv_axis>> subdiv_rules;
-	//TODO texture fields.
-	building_info(building_type type, std::function<uint32_t()> random_gen ) {
+	//TODO texture fields
+	building_info(building_type type, BindFun& random_gen ) {
 		this->type = type;
 		this->h = random_gen(); // Note use floats?. 
 		//w and l are decided in the map generation.
@@ -215,7 +215,8 @@ struct building_inst {
 	std::pair<shape*,shape*> x_facade;
 	std::pair<shape*,shape*> z_facade;
 
-	building_inst(building_type type, instance* inst, std::function<uint32_t()> random_gen) : info(type, random_gen){
+
+	building_inst(building_type type, instance* inst, BindFun& random_gen) : info(type, random_gen){
 		
 		this->building = inst;
 	}
@@ -739,9 +740,8 @@ std::vector<shape*> subdiv_facade(scene* scn, building_info& info, shape* shp, s
 			}
 		}
 		else if (shp->name == "bottomfloor") {
-			for (shape* nshp : split_x(scn, shp, std::vector<float>{ 1.0f/3.0f, 1.0f/3.0f, 1.0f/3.0f }, std::vector<std::string>{ "botwindtile", "doortile", "botwindtile" })) {
-				auto res = subdiv_facade(scn, info, nshp, axe);
-				std::copy(res.begin(), res.end(), back_inserter(to_add));
+		for (shape* nshp : split_x(scn, shp, std::vector<float>{ 1.0f / 3.0f, 1.0f / 3.0f,1.0f / 3.0f }, std::vector<std::string>{ "botwindtile", "doortile", "botwindtile" })) {				auto res = subdiv_facade(scn, info, nshp, axe);
+				auto res = subdiv_facade(scn, info, nshp, axe);				std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
 			}
 		}
@@ -1085,18 +1085,15 @@ int main(int argc, char** argv ) {
 			building_inst b_inst;
 			if (ratio <= 0.21f) {
 				building_type = skyscraper;
-				uint32_t roll = sky_height();
 				b_inst = building_inst(building_type, inst, sky_height);
 			}
 			else if (ratio > 0.21f && ratio <= 0.58f) {
 				building_type = residential;
-				uint32_t roll = res_height();
 				b_inst = building_inst(building_type, inst, res_height);
 
 			}
 			else {
 				building_type = house;
-				uint32_t roll = house_height();
 				b_inst = building_inst(building_type, inst, house_height);
 			}
 			extrude(scn, b_inst);
