@@ -740,8 +740,9 @@ std::vector<shape*> subdiv_facade(scene* scn, building_info& info, shape* shp, s
 			}
 		}
 		else if (shp->name == "bottomfloor") {
-		for (shape* nshp : split_x(scn, shp, std::vector<float>{ 1.0f / 3.0f, 1.0f / 3.0f,1.0f / 3.0f }, std::vector<std::string>{ "botwindtile", "doortile", "botwindtile" })) {				auto res = subdiv_facade(scn, info, nshp, axe);
-				auto res = subdiv_facade(scn, info, nshp, axe);				std::copy(res.begin(), res.end(), back_inserter(to_add));
+		for (shape* nshp : split_x(scn, shp, std::vector<float>{ 1.0f / 3.0f, 1.0f / 3.0f,1.0f / 3.0f }, std::vector<std::string>{ "botwindtile", "doortile", "botwindtile" })) {
+				auto res = subdiv_facade(scn, info, nshp, axe);	
+                std::copy(res.begin(), res.end(), back_inserter(to_add));
 				delete nshp;
 			}
 		}
