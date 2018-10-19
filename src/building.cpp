@@ -199,7 +199,7 @@ struct building_info {
 	//bool flat_roof;
 	//std::map<element_type, std::pair<std::vector<element_type>, subdiv_axis>> subdiv_rules;
 	//TODO texture fields.
-	building_info(building_type type, std::function<uint32_t()> random_gen ) {
+	building_info(building_type type, bind_fun& random_gen ) {
 		this->type = type;
 		this->h = random_gen(); // Note use floats?. 
 		//w and l are decided in the map generation.
@@ -1035,15 +1035,17 @@ scene* init_scene() {
 
 	// add camera
 	auto cam = new camera{ "cam" };
-	vec3f x = vec3f{ 0, 4, 10 };
+//	vec3f x = vec3f{1000, 500, 1000 };
+	vec3f x = vec3f{ 0, 50, 1200 };
 	vec3f y = vec3f{ 0, 1, 0 };
 	vec3f z = vec3f{ 0, 1, 0 };
 	cam->frame = lookat_frame(x,y,z);
 	cam->yfov= 15 * pif / 180.f;
 	cam->aspect = 16.0f / 9.0f;
 	cam->aperture = 0;
-	cam->focus = length(vec3f{ 0, 4, 10 } -vec3f{ 0, 1, 0 });
-	scn->cameras.push_back(cam);
+	cam->focus = length(vec3f{ 0, 50, 1200 } -vec3f{ 0, 1, 0 });
+	scn->cameras.push_back(cam); 
+	
 	return scn;
 }
 
@@ -1085,18 +1087,15 @@ int main(int argc, char** argv ) {
 			building_inst b_inst;
 			if (ratio <= 0.21f) {
 				building_type = skyscraper;
-				sky_height();
 				b_inst = building_inst(building_type, inst, sky_height);
 			}
 			else if (ratio > 0.21f && ratio <= 0.58f) {
 				building_type = residential;
-				res_height();
 				b_inst = building_inst(building_type, inst, res_height);
 
 			}
 			else {
 				building_type = house;
-				house_height();
 				b_inst = building_inst(building_type, inst, house_height);
 			}
 			extrude(scn, b_inst);
@@ -1143,7 +1142,7 @@ int main(int argc, char** argv ) {
 	for (building_inst& inst : buildings) {
 		apply_material_and_texture(inst);
 	}
-
+//	scn->cameras.push_back(make_view_camera(scn, 1));
 	//save
 	save_options sopt = save_options();
 	printf("saving scene %s\n", sceneout.c_str());
