@@ -916,33 +916,34 @@ material* house_door_4 = make_material("house_door_4", vec3f{ 1.0f, 1.0f, 1.0f }
 material* house_door_materials[4] = { house_door_1, house_door_2, house_door_3, house_door_4 };
 
 // array with all scenes materials.
-material* scene_materials[60] = {
+material* scene_materials[72] = {
 	sky_roof_1, sky_roof_2, sky_roof_3, sky_roof_4,
 	sky_vwall_1, sky_vwall_2, sky_vwall_3, sky_vwall_4,
 	sky_hwall_1, sky_hwall_2, sky_hwall_3, sky_hwall_4,
 	sky_window_1, sky_window_2, sky_window_3, sky_window_4,
-	sky_door_1, sky_door_2,
+	sky_door_1, sky_door_2, sky_door_3, sky_door_4,
 	res_roof_1, res_roof_2, res_roof_3, res_roof_4,
 	res_vwall_1, res_vwall_2, res_vwall_3, res_vwall_4,
 	res_hwall_1, res_hwall_2, res_hwall_3, res_hwall_4,
 	res_window_1, res_window_2, res_window_3, res_window_4,
 	res_ledge_1, res_ledge_2, res_ledge_3, res_ledge_4,
 	res_walltile_1, res_walltile_2, res_walltile_3, res_walltile_4,
-	res_door_1, res_door_2,
+	res_door_1, res_door_2, res_door_3, res_door_4,
 	house_roof_1, house_roof_2, house_roof_3, house_roof_4,
-	house_hwall_1,
-	house_vwall_1,
-	house_topwindow_1, house_topwindow_2, house_topwindow_3,
-	house_botwindow_1, house_botwindow_2, house_botwindow_3,
+	house_hwall_1, house_hwall_2, house_hwall_3, house_hwall_4,
+	house_vwall_1, house_vwall_2, house_vwall_3, house_vwall_4,
+	house_topwindow_1, house_topwindow_2, house_topwindow_3, house_topwindow_4,
+	house_botwindow_1, house_botwindow_2, house_botwindow_3, house_botwindow_4,
 	house_door_1, house_door_2, house_door_3, house_door_4
 };
 
 // apply texture
 void apply_material_and_texture(building_inst& inst, bind_fun& rand) {
 	if (inst.info.type == skyscraper) {
-		int r = rand() ;
-		int w =rand() ;
-		int n = rand() ;
+		int r = rand();
+		int w = rand();
+		int n = rand();
+		int d = rand();
 		for (shape* shp : inst.building->shp->shapes) {
 			if (shp->name == "roof") {
 				shp->mat = sky_roof_materials[r];
@@ -957,14 +958,15 @@ void apply_material_and_texture(building_inst& inst, bind_fun& rand) {
 				shp->mat = sky_window_materials[n];
 			}
 			else if (shp->name == "door") {
-				shp->mat = sky_door_materials[0];
+				shp->mat = sky_door_materials[d];
 			}
 		}
 	}
 	else if (inst.info.type == residential) {
 		int b = rand();
-		int l = rand() ;
-		int w = rand() ;
+		int l = rand();
+		int w = rand();
+		int d = rand();
 		for (shape* shp : inst.building->shp->shapes) {
 			if (shp->name == "roof") {
 				shp->mat = res_roof_materials[b];
@@ -985,28 +987,30 @@ void apply_material_and_texture(building_inst& inst, bind_fun& rand) {
 				shp->mat = res_walltile_materials[b];
 			}
 			else if (shp->name == "door") {
-				shp->mat = res_door_materials[0];
+				shp->mat = res_door_materials[d];
 			}
 		}
 	}
 	else if (inst.info.type == house) {
-		int r = rand() ;
+		int r = rand();
+		int b = rand();
+		int w = rand();
 		int d = rand();
 		for (shape* shp : inst.building->shp->shapes) {
 			if (shp->name == "roof") {
 				shp->mat = house_roof_materials[r];
 			}
 			else if (shp->name == "vwall") {
-				shp->mat = house_vwall_materials[0];
+				shp->mat = house_vwall_materials[b];
 			}
 			else if (shp->name == "hwall") {
-				shp->mat = house_hwall_materials[0];
+				shp->mat = house_hwall_materials[b];
 			}
 			else if (shp->name == "topwindow") {
-				shp->mat = house_topwindow_materials[0];
+				shp->mat = house_topwindow_materials[w];
 			}
 			else if (shp->name == "botwindow") {
-				shp->mat = house_botwindow_materials[0];
+				shp->mat = house_botwindow_materials[w];
 			}
 			else if (shp->name == "door") {
 				shp->mat = house_door_materials[d];
@@ -1047,8 +1051,8 @@ scene* init_scene() {
 
 	// add camera
 	auto cam = new camera{ "cam" };
-//	vec3f x = vec3f{1000, 500, 1000 };
-//	vec3f x = vec3f{0, 50, 1200 };
+	//vec3f x = vec3f{1000, 500, 1000 };
+	//vec3f x = vec3f{0, 50, 1200 };
 	vec3f x = vec3f{ 500, 500, 1200 };
 	vec3f y = vec3f{ 0, 10, 10 };
 	vec3f z = vec3f{ 0, 1, 0 };
@@ -1156,7 +1160,7 @@ int main(int argc, char** argv ) {
 	for (building_inst& inst : buildings) {
 		apply_material_and_texture(inst, material_random);
 	}
-//	scn->cameras.push_back(make_view_camera(scn, 1));
+    //scn->cameras.push_back(make_view_camera(scn, 1));
 	//save
 	save_options sopt = save_options();
 	printf("saving scene %s\n", sceneout.c_str());

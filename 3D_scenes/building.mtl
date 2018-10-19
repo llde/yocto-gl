@@ -156,6 +156,22 @@ newmtl sky_door_2
   Ni 1
   map_Kd skyscraper_door_2.png
 
+newmtl sky_door_3
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd skyscraper_door_3.png
+
+newmtl sky_door_4
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd skyscraper_door_4.png
+
 newmtl res_roof_1
   illum 2
   Kd 1 1 1
@@ -364,6 +380,22 @@ newmtl res_door_2
   Ni 1
   map_Kd residential_door_2.png
 
+newmtl res_door_3
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd residential_door_3.png
+
+newmtl res_door_4
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd residential_door_4.png
+
 newmtl house_roof_1
   illum 2
   Kd 1 1 1
@@ -404,6 +436,30 @@ newmtl house_hwall_1
   Ni 1
   map_Kd house_hwall_1.png
 
+newmtl house_hwall_2
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd house_hwall_2.png
+
+newmtl house_hwall_3
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd house_hwall_3.png
+
+newmtl house_hwall_4
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd house_hwall_4.png
+
 newmtl house_vwall_1
   illum 2
   Kd 1 1 1
@@ -411,6 +467,30 @@ newmtl house_vwall_1
   Ns 1e+06
   Ni 1
   map_Kd house_vwall_1.png
+
+newmtl house_vwall_2
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd house_vwall_2.png
+
+newmtl house_vwall_3
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd house_vwall_3.png
+
+newmtl house_vwall_4
+  illum 2
+  Kd 1 1 1
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd house_vwall_4.png
 
 newmtl house_topwindow_1
   illum 2
@@ -436,6 +516,14 @@ newmtl house_topwindow_3
   Ni 1
   map_Kd house_topwindow_3.png
 
+newmtl house_topwindow_4
+  illum 2
+  Kd 0.8 0.8 0.8
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd house_topwindow_4.png
+
 newmtl house_botwindow_1
   illum 2
   Kd 1 1 1
@@ -459,6 +547,14 @@ newmtl house_botwindow_3
   Ns 1e+06
   Ni 1
   map_Kd house_botwindow_3.png
+
+newmtl house_botwindow_4
+  illum 2
+  Kd 0.8 0.8 0.8
+  Ks 0.04 0.04 0.04
+  Ns 1e+06
+  Ni 1
+  map_Kd house_botwindow_4.png
 
 newmtl house_door_1
   illum 2
