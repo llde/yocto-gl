@@ -235,6 +235,11 @@ auto bind_random_distribution(std::uniform_int_distribution<uint32_t> distrib) {
 	return  std::bind(distrib, generator);
 }
 
+auto bind_random_float_distribution(std::uniform_real_distribution<float> distrib) {  //TODO allow more distribution types
+	std::default_random_engine generator(std::chrono::system_clock::now().time_since_epoch().count());
+	return  std::bind(distrib, generator);
+}
+
 //add instance
 void add_instance(scene* scn, const std::string& name, const frame3f& f, shape* shp) {
 	if (!shp) return;
@@ -340,18 +345,25 @@ void translate(shape* shp, const vec3f t) {
 // generates the map of the city, as a grid, with random streets width
 void make_map(scene* scn) {
 	//random map size
+	std::uniform_real_distribution<float> map_range(min_map_side, max_map_side);
+	auto map_h = bind_random_float_distribution(map_range);
+	std::uniform_real_distribution<float> building_range(min_building_side, max_building_side);
+	auto build_dim = bind_random_float_distribution(building_range);
+	std::uniform_real_distribution<float> street_range(min_street_width, max_street_width);
+	auto street_dim = bind_random_float_distribution(street_range);
+
 	rng_pcg32 rng = rng_pcg32{};
 	seed_rng(rng, rng.state, rng.inc); //not so random, generate same random float at each execution, fix it!
 	advance_rng(rng);
-	float random_n = next_rand1f(rng, min_map_side, max_map_side);
-	float random_m = next_rand1f(rng, min_map_side, max_map_side);
+	float random_n = map_h();
+	float random_m = map_h();
 	//
 	std::vector<shape*> zv = std::vector<shape*>();
 	float x = -(random_n / 2.0f); //x-axis
 	float z = -(random_m / 2.0f); //z-axis
 	while (z < random_m / 2.0f) {
-		float building_l = next_rand1f(rng, min_building_side, max_building_side);
-		float street_w = next_rand1f(rng, min_street_width, max_street_width);
+		float building_l = build_dim();
+		float street_w = street_dim();
 		shape* shp = new shape();
 		shp->pos.push_back(vec3f{ x, 0, z });
 		shp->pos.push_back(vec3f{ (random_n / 2.0f), 0, z });
@@ -364,8 +376,8 @@ void make_map(scene* scn) {
 	//
 	std::vector<shape*> xv = std::vector<shape*>();
 	while (x < random_n / 2.0f) {
-		float building_w = next_rand1f(rng, min_building_side, max_building_side);
-		float street_w = next_rand1f(rng, min_street_width, max_street_width);
+		float building_w = build_dim();
+		float street_w = street_dim();
 		for (shape* zshp : zv) {
 			shape* shp = new shape{"base"};
 			shp->quads.push_back(vec4i{ 0, 1, 2, 3 });
