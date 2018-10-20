@@ -926,11 +926,11 @@ material* scene_materials[60] = {
 };
 
 // apply texture
-void apply_material_and_texture(building_inst& inst) {
+void apply_material_and_texture(building_inst& inst, bind_fun& rand) {
 	if (inst.info.type == skyscraper) {
-		int r = std::rand() % 4;
-		int w = std::rand() % 4;
-		int n = std::rand() % 4;
+		int r = rand() ;
+		int w =rand() ;
+		int n = rand() ;
 		for (shape* shp : inst.building->shp->shapes) {
 			if (shp->name == "roof") {
 				shp->mat = sky_roof_materials[r];
@@ -950,9 +950,9 @@ void apply_material_and_texture(building_inst& inst) {
 		}
 	}
 	else if (inst.info.type == residential) {
-		int b = std::rand() % 4;
-		int l = std::rand() % 4;
-		int w = std::rand() % 4;
+		int b = rand();
+		int l = rand() ;
+		int w = rand() ;
 		for (shape* shp : inst.building->shp->shapes) {
 			if (shp->name == "roof") {
 				shp->mat = res_roof_materials[b];
@@ -978,8 +978,8 @@ void apply_material_and_texture(building_inst& inst) {
 		}
 	}
 	else if (inst.info.type == house) {
-		int r = std::rand() % 4;
-		int d = std::rand() % 4;
+		int r = rand() ;
+		int d = rand();
 		for (shape* shp : inst.building->shp->shapes) {
 			if (shp->name == "roof") {
 				shp->mat = house_roof_materials[r];
@@ -1036,14 +1036,15 @@ scene* init_scene() {
 	// add camera
 	auto cam = new camera{ "cam" };
 //	vec3f x = vec3f{1000, 500, 1000 };
-	vec3f x = vec3f{ 0, 50, 1200 };
-	vec3f y = vec3f{ 0, 1, 0 };
+//	vec3f x = vec3f{0, 50, 1200 };
+	vec3f x = vec3f{ 500, 500, 1200 };
+	vec3f y = vec3f{ 0, 10, 10 };
 	vec3f z = vec3f{ 0, 1, 0 };
 	cam->frame = lookat_frame(x,y,z);
-	cam->yfov= 15 * pif / 180.f;
-	cam->aspect = 16.0f / 9.0f;
+	cam->yfov= 25 * pif / 180.f;
+	cam->aspect = 27.0f / 9.0f;
 	cam->aperture = 0;
-	cam->focus = length(vec3f{ 0, 50, 1200 } -vec3f{ 0, 1, 0 });
+	cam->focus = length(vec3f{500, 500, 1200 } -vec3f{ 0, 1, 0 });
 	scn->cameras.push_back(cam); 
 	
 	return scn;
@@ -1136,11 +1137,12 @@ int main(int argc, char** argv ) {
 		scn->materials.push_back(mat);
 		scn->textures.push_back(mat->kd_txt);
 	}
-
+	std::uniform_int_distribution<uint32_t>  mat_dist(0,3);
+	auto material_random = bind_random_distribution(mat_dist);
 	//material and texture application
 	printf("applying material and textures\n");
 	for (building_inst& inst : buildings) {
-		apply_material_and_texture(inst);
+		apply_material_and_texture(inst, material_random);
 	}
 //	scn->cameras.push_back(make_view_camera(scn, 1));
 	//save
